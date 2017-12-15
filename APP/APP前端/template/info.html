@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../js/mui.min.js"></script>
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+	</head>
+
+	<body >
+		
+		<header class="mui-bar mui-bar-nav ">
+
+					<!--左边的 图标-->
+					<span class="mui-icon mui-icon-bars mui-icon-arrowleft mui-action-back" id="header_left"></span>
+					<span class="mui-icon mui-icon-star"></span>
+					<a class="mui-title">详情页面</a>
+					<!-- 侧滑导航根容器 -->
+
+					<!--右边的图标-->
+					<span class="mui-icon mui-icon-more mui-pull-right" id="header_right"></span>
+		</header>
+		
+		<footer class="mui-bar mui-bar-footer" >
+			<input type="text" />
+		</footer>
+	</body>
+
+</html>
+<script type="text/javascript" charset="utf-8">
+	//mui的初始化，做mui的配置项，每个窗口必须存在
+	mui.init({
+			//当页面打开时，加载子页面
+		subpages: [{
+			url: "info_info.html", //子页面HTML地址，支持本地地址和网络地址
+			id: "info_info", //子页面标志
+			styles: {
+				top: "43px", //子页面顶部位置
+				bottom: "0px", //子页面底部位置
+				//		        width:subpage-width,//子页面宽度，默认为100%
+				//		        height:subpage-height,//子页面高度，默认为100%
+			}
+		}]
+	});
+	
+	mui.plusReady(function(){
+			
+			//接收传参
+			var info=plus.webview.currentWebview();
+//			当前窗口变量名
+			console.log(info.title);
+			
+			//返回上一个页面，
+			document.getElementById("header_left").addEventListener("tap",function(){
+				mui.back();
+			});
+			document.getElementById("header_right").addEventListener("tap",function(){
+//					先选择要操作的这个id的窗口对象
+				var info_info=plus.webview.getWebviewById("info_info");
+				info_info.evalJS("redFix()");
+			});
+			
+	});
+</script>

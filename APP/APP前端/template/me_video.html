@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../js/mui.min.js"></script>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+		<style>
+			#icon {
+				width: 100%;
+				list-style: none;
+				position: absolute;
+				z-index: 999;
+				bottom: 5px;
+				padding-left: 37%;
+			}
+			
+			.mui-slider-item img {
+				height: 150px;
+			}
+			
+			#icon li {
+				width: 12px;
+				height: 12px;
+				border-radius: 6px;
+				border: 1px solid black;
+				float: left;
+				margin: 0px 5px;
+			}
+			
+			.active {
+				background: white;
+			}
+			
+			#button_top {
+				padding-left: 300px;
+				padding-top: 20px;
+			}
+			
+			#button_bottom {
+				padding-left: 138px;
+				padding-top: 450px;
+				display: none;
+			}
+			
+			.tou {
+				width: 80px;
+				height: 80px;
+				border-radius: 40px;
+				margin: 0 auto;
+				background-image: url(../images/qqtou.jpg);
+				border: 1px solid white;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!-- 侧滑导航根容器 -->
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 菜单容器 -->
+
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<div class="mui-scroll">
+				<header class="mui-bar mui-bar-nav ">
+
+					<!--左边的 图标-->
+					<span class="mui-icon mui-icon-arrowleft mui-pull-left" id="header_left"></span>
+
+					<a class="mui-title">我的视频</a>
+					<!-- 侧滑导航根容器 -->
+
+					<!--右边的图标-->
+					
+				</header>
+				<!--内容页面-->
+			
+						<div class="mui-content">
+							
+							<div class="mui-row" id="list">
+								
+								<div class="mui-col-sm-6" style="padding: 5px;">
+									<div class="mui-card">
+										<!--内容区-->
+										<a href="#">
+					 					<div class="mui-card-contentmui-card-media" style="width: 150px; height: 200px;background-image:url(../images/1.jpg)">
+										</div>
+										</a>
+										<!--页脚，放置补充信息或支持的操作-->
+							
+									</div>
+								</div>
+								<div class="mui-col-sm-6" style="padding: 5px;">
+									<div class="mui-card">
+										<!--内容区-->
+										<a href="#">
+										<div class="mui-card-contentmui-card-media" style="width: 150px; height: 200px;background-image:url(../images/1.jpg)">
+										</div>
+										</a>
+										<!--页脚，放置补充信息或支持的操作-->
+										
+									</div>
+								</div>
+								<div class="mui-col-sm-6" style="padding: 5px;">
+									<div class="mui-card">
+
+										<!--内容区-->
+										<a href="#">
+										<div class="mui-card-contentmui-card-media" style="width: 150px; height: 200px;background-image:url(../images/1.jpg)">
+ 
+										</div>
+										</a>
+										<!--页脚，放置补充信息或支持的操作-->
+									
+									</div>
+								</div>
+								<div class="mui-col-sm-6" style="padding: 5px;">
+									<div class="mui-card">
+										<a href="#">
+										<!--内容区-->
+										<div class="mui-card-contentmui-card-media" style="width: 150px; height: 200px;background-image:url(../images/1.jpg)">
+
+										</div>
+										</a> 
+										<!--页脚，放置补充信息或支持的操作-->
+									
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+	</body>
+
+</html>
+<script type="text/javascript" charset="utf-8">
+	//mui的初始化，做mui的配置项，每个窗口必须存在
+	mui.init();
+	mui(".mui-scroll-wrapper").scroll({
+		deceleration: 0.0005
+	});
+
+
+		mui(".me").on("tap", "span", function() {
+			//		打开新窗口
+
+			mui.openWindow({
+				url: "info.html",
+				id: "info",
+				styles: {
+					top: "0px", //新页面顶部位置
+					bottom: "0px" //新页面底部位置
+				
+				},
+					extras:{
+				title:"今日新闻"
+					} 
+				// //自定义扩展参数，可以用来处理页面间传值
+
+			})
+		});
+
+	
+	document.getElementById("header_left").addEventListener("tap", function() {
+			mui.back();
+		});
+</script>

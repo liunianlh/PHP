@@ -3,30 +3,30 @@
 header('content-type:text/html;charset=utf-8');
 
 /**
- * ´¦ÀíÊý¾Ý¿âµÄÀà
+ * å¤„ç†æ•°æ®åº“çš„ç±»
  */
 class mysqlDB {
 
-    //³ÉÔ±ÊôÐÔ(±ØÐëÓÃµÄ£¬µ«ÊÇ»ù±¾²»±ä)
+    //æˆå‘˜å±žæ€§(å¿…é¡»ç”¨çš„ï¼Œä½†æ˜¯åŸºæœ¬ä¸å˜)
     private $localhost = "localhost";
     private $user = "root";
     private $pwd = "root";
     public $db;
     public $charset = "utf8";
-    //½ÓÁ¬µÄ½á¹û
+    //æŽ¥è¿žçš„ç»“æžœ
     public static $con;
-    //´íÎóÐÅÏ¢
+    //é”™è¯¯ä¿¡æ¯
     private $error;
-//    ÉùÃ÷¶ÔÏó
+//    å£°æ˜Žå¯¹è±¡
     public static $link;
 
-//    ÉùÃ÷Ò»¸öµ¥Àý·½·¨
+//    å£°æ˜Žä¸€ä¸ªå•ä¾‹æ–¹æ³•
     public static function getInstance($db, $localhost = "localhost", $user = "root", $pwd = "root", $charset = "utf8") {
         if (empty(self::$link)) {
             self::$link = new self($db, $localhost, $user, $pwd, $charset);
         }
 
-//       Èç¹ûÏàÍ¬µÄ¿âÔò²»ÓÃ¼Óelse£¬²»ÏàÍ¬Ôò¼Ó
+//       å¦‚æžœç›¸åŒçš„åº“åˆ™ä¸ç”¨åŠ elseï¼Œä¸ç›¸åŒåˆ™åŠ 
 //        else {
 //            $this->db=$db;
 //            $this->setDB();
@@ -34,7 +34,7 @@ class mysqlDB {
         return self::$link;
     }
 
-    //³ÉÔ±·½·¨(¾¡¿ÉÐ¡µÄµ¥Ôª£¬Ò»¸ö·½·¨£¬¸ÉÒ»¼þÊÂ)
+    //æˆå‘˜æ–¹æ³•(å°½å¯å°çš„å•å…ƒï¼Œä¸€ä¸ªæ–¹æ³•ï¼Œå¹²ä¸€ä»¶äº‹)
 
     public function __construct($db, $localhost = "localhost", $user = "root", $pwd = "root", $charset = "utf8") {
         $this->db = $db;
@@ -47,17 +47,17 @@ class mysqlDB {
     }
 
     /**
-     * Á¬½ÓÊý¾Ý¿â
+     * è¿žæŽ¥æ•°æ®åº“
      */
     public function connect() {
         self::$con = mysqli_connect($this->localhost, $this->user, $this->pwd, $this->db);
         if (!self::$con) {
-            $this->error = "Êý¾Ý¿âÁ¬½ÓÊ§°Ü" . mysqli_connect_error();
+            $this->error = "æ•°æ®åº“è¿žæŽ¥å¤±è´¥" . mysqli_connect_error();
         }
     }
 
     /**
-     * Ð£Ñé±àÂë
+     * æ ¡éªŒç¼–ç 
      */
     public function charset() {
         mysqli_set_charset(self::$con, $this->charset);
@@ -68,35 +68,35 @@ class mysqlDB {
     }
 
     /**
-     * Ö´ÐÐsqlÓï¾ä
+     * æ‰§è¡Œsqlè¯­å¥
      * @param string sql
      * @return boolean
      */
     public function querysql($sql) {
 
         if ($sql == "") {
-            $this->error = "sqlÓï¾äÎª¿Õ";
+            $this->error = "sqlè¯­å¥ä¸ºç©º";
             return false;
         }
         $result = mysqli_query(self::$con, $sql);
         if ($result == false) {
-            $this->error = "sqlÖ´ÐÐÊ§°Ü".mysqli_error(self::$con);
+            $this->error = "sqlæ‰§è¡Œå¤±è´¥".mysqli_error(self::$con);
         }
 
         return $result;
     }
 
     /**
-     * Ö´ÐÐ²éÑ¯µÄ·½·¨
+     * æ‰§è¡ŒæŸ¥è¯¢çš„æ–¹æ³•
      * @param type $sql
      */
     public function select($sql) {
-        //Ö´ÐÐsqlÓï¾ä
+        //æ‰§è¡Œsqlè¯­å¥
         $result = $this->querysql($sql);
         if ($result == false) {
             return array();
         }
-        //»ñÈ¡Óï¾ä
+        //èŽ·å–è¯­å¥
         $arr = array();
         while ($row = mysqli_fetch_assoc($result)) {
             $arr[] = $row;
@@ -106,7 +106,7 @@ class mysqlDB {
        
 
     
-////       »ñÈ¡È«²¿
+////       èŽ·å–å…¨éƒ¨
 //    public function selectBYAll($sql) {
 //            $result = $this->querysql($sql);
 //        if ($result == false) {
@@ -118,48 +118,48 @@ class mysqlDB {
 //        } 
 //    }
     
-////    Ôö¼ÓÊý¾Ý
+////    å¢žåŠ æ•°æ®
     public function add($sql) {
           $result = $this->querysql($sql);
         if ($result == false) {
-            $this->error="²åÈëÊ§°Ü";
+            $this->error="æ’å…¥å¤±è´¥";
         }
          else {
-             $this->error="²åÈë³É¹¦";
+             $this->error="æ’å…¥æˆåŠŸ";
              }
              return $result; 
              
     }
     
-////  É¾³ýÊý¾Ý
+////  åˆ é™¤æ•°æ®
     public function delete($sql) {
-                 //Ö´ÐÐsqlÓï¾ä
+                 //æ‰§è¡Œsqlè¯­å¥
         $result = $this->querysql($sql);
         if ($result == false) {
-             $this->error="É¾³ýÊ§°Ü";
+             $this->error="åˆ é™¤å¤±è´¥";
         }  else{
-            $this->error="É¾³ý³É¹¦";
+            $this->error="åˆ é™¤æˆåŠŸ";
         }       
           return $result; 
     }
     
-////    ¸üÐÂÊý¾Ý
+////    æ›´æ–°æ•°æ®
     public function update($sql) {
         $result = mysqli_query(self::$con, $sql);
         if ($result == false) {
-            $this->error = "ÐÞ¸ÄÊ§°Ü";
+            $this->error = "ä¿®æ”¹å¤±è´¥";
         } else {
-            $this->error = "ÐÞ¸Ä³É¹¦£¡";
+            $this->error = "ä¿®æ”¹æˆåŠŸï¼";
         }
         return $result;
     }
     
-    //²éÑ¯ÌõÊý
+    //æŸ¥è¯¢æ¡æ•°
     public function count($sql) {
-                 //Ö´ÐÐsqlÓï¾ä
+                 //æ‰§è¡Œsqlè¯­å¥
         $result = $this->querysql($sql);
         if ($result == false) {
-           $this->error="²éÑ¯Ê§°Ü";
+           $this->error="æŸ¥è¯¢å¤±è´¥";
         } 
         else{
             return mysqli_num_rows($result);
@@ -170,7 +170,7 @@ class mysqlDB {
 //    
     
     /**
-     * »ñÈ¡´íÎóÐÅÏ¢µÄº¯Êý
+     * èŽ·å–é”™è¯¯ä¿¡æ¯çš„å‡½æ•°
      */
     public function getError() {
         return $this->error;
@@ -178,10 +178,8 @@ class mysqlDB {
 
 }
 
-echo "<br/>";
-
-////µ÷ÓÃµ¥Àý·½·¨
+////è°ƒç”¨å•ä¾‹æ–¹æ³•
 //$link = mysqlDB::getInstance("test");
-//$sql="updata ceshi set pwd='123456' where name='ÁõºÕ'";
+//$sql="updata ceshi set pwd='123456' where name='åˆ˜èµ«'";
 //$list = $link->updata($sql);
 ////var_dump($list);

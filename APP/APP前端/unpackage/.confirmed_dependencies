@@ -1,0 +1,78 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"images/11.jpg",
+			"images/33.jpg",
+			"images/22.jpg",
+			"js/jquery-3.2.1.min.js",
+			"fonts/mui.ttf",
+			"template/index.html"
+		],
+		"refer": [
+			"template/index.html",
+			"template/find.html",
+			"template/follow.html",
+			"template/me.html"
+		]
+	},
+	"template/index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/jquery-3.2.1.min.js",
+			"images/33.jpg",
+			"images/44.jpg",
+			"images/11.jpg",
+			"images/22.jpg",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"template/info.html",
+			"template/me_video.html"
+		]
+	},
+	"template/follow.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/jquery-3.2.1.min.js"
+		]
+	},
+	"template/info.html": {
+		"resources": [
+			"template/info_info.html"
+		],
+		"refer": [
+			"template/info_info.html"
+		]
+	},
+	"template/find.html": {
+		"refer": [
+			"template/info.html"
+		]
+	},
+	"template/me.html": {
+		"refer": [
+			"template/info.html",
+			"template/login.html",
+			"template/register.html",
+			"template/Release.html",
+			"template/fabu.html"
+		]
+	},
+	"template/register.html": {
+		"refer": [
+			"template/login.html"
+		]
+	},
+	"template/login.html": {
+		"refer": [
+			"template/register.html",
+			"template/index.html",
+			"index.html",
+			"template/me.html"
+		]
+	}
+}

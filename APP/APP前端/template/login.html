@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../js/mui.min.js"></script>
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+	</head>
+
+	<body>
+
+		<header class="mui-bar mui-bar-nav ">
+
+			<!--左边的 图标-->
+			<span class="mui-icon mui-icon-bars mui-icon-arrowleft mui-action-back" id="header_left"></span>
+			<a class="mui-title">登录页面</a>
+			<!-- 侧滑导航根容器 -->
+
+			<!--右边的图标-->
+			<span class="mui-icon mui-icon-more mui-pull-right" id="header_right"></span>
+		</header>
+
+		<div class="mui-content">
+			<form class="mui-input-group list">
+				<div class="mui-input-row">
+					<label>用户名</label>
+					<input id="username" type="text" class="mui-input-clear" placeholder="请输入用户名">
+				</div>
+				<div class="mui-input-row">
+					<label>密码</label>
+					<input id="userpwd" type="password" class="mui-input-password" placeholder="请输入密码">
+				</div>
+				<!--<div class="mui-input-row">
+					<label>昵称</label>
+					<input id="nickname" type="text" class="mui-input-clear" placeholder="请输入昵称">
+				</div>-->
+				<div class="mui-button-row">
+					<button type="button" class="mui-btn mui-btn-primary" id="login">登录</button>
+					<!--	<button type="button" class="mui-btn mui-btn-primary zhuce"></button>-->
+					<div class="zhuce" style="margin-left: 260px; margin-top: 18px;">
+						<a href="#">注册</a>
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</body>
+
+</html>
+<script type="text/javascript" charset="utf-8">
+	//mui的初始化，做mui的配置项，每个窗口必须存在
+	mui.init();
+
+	mui.plusReady(function() {
+
+		mui(".zhuce").on("tap", "a", function() {
+			//		打开新窗口
+
+			mui.openWindow({
+				url: "register.html",
+				id: "register",
+				styles: {
+					top: "0px", //新页面顶部位置
+					bottom: "0px" //新页面底部位置
+
+				},
+				extras: {
+					title: "注册"
+				}
+				// //自定义扩展参数，可以用来处理页面间传值
+
+			})
+		});/**/
+
+		//接收传参
+		var info = plus.webview.currentWebview();
+		//			当前窗口变量名
+		//		console.log(info.title);
+
+		//返回上一个页面，
+		document.getElementById("header_left").addEventListener("tap", function() {
+			mui.back();
+		});
+		document.getElementById("header_right").addEventListener("tap", function() {
+			//					先选择要操作的这个id的窗口对象
+			var info_info = plus.webview.getWebviewById("info_info");
+			info_info.evalJS("redFix()");
+		});
+		document.getElementById("login").addEventListener("tap", function() {
+			//			获取表单数据
+			var username = $("#username").val();
+			var userpwd = $("#userpwd").val();
+			//			var nickname=$("#nickname").val();
+			mui.ajax({
+				type: "POST",
+				url: "http://localhost/app/home/class/index.php?class=user&method=login",
+
+				data: {
+					name: username,
+					pwd: userpwd
+				},
+				success: function(data) {
+					data = $.parseJSON(data);
+					if(data.code == 200) {
+						    mui.toast("登陆成功");	 					 
+						 	mui.back();		
+//						 	  
+						 	var userdata=data.data;
+						 	var userId=userdata[0].id;
+//						 	mui.toast(userId);  
+						 	plus.storage.setItem("user_id",userid);						 	
+						 	 
+					} else { 
+						mui.toast(data.message);
+					}
+
+				}
+			})
+		});
+
+	});
+</script>

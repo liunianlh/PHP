@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../js/mui.min.js"></script>
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+	</head>
+<style>
+	.mui-backdrop{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 998;
+    background-color: rgba(0,0,0,.3);
+}
+		
+</style>
+	<body>
+		
+		<div id="redbox" style="width: 100px; height: 100px;background:seashell; position:fixed;top:0px; right:0px;z-index:999; display: none;">
+			<span class="mui-icon mui-icon-paperplane" style="margin:13px 10px; color: skyblue;">分享</span>
+			<span class="mui-icon mui-icon-search" style="margin:13px 10px; color: skyblue;">搜索</span>		
+		</div>
+		<div class="mui-content " id="content"> 
+			
+			<video width="100%" controls="controls" preload="" height="220px" poster="../images/10.png" style="display:fixed;">  
+				<source src="../images/juxing.mp4"></source>
+			</video>
+			
+			
+		<ul class="mui-table-view" id="list"style="margin-top: -3px; margin-bottom: 45px;"> 
+			 
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left" src="../images/1.jpg" >
+					<div class="mui-media-body" >
+						<p class="mui-ellipsis" style="margin-top:8px ;"></p>
+					</div> 
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left" src="../images/top1.jpg" >
+					<div class="mui-media-body" >
+						<p class="mui-ellipsis" style="margin-top:8px ;">我可以接受失败，但无法接受放弃。——乔丹</p>
+					</div> 
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left" src="../images/13.png" >
+					<div class="mui-media-body" >
+						<p class="mui-ellipsis" style="margin-top:8px ;">我科比·布莱恩特有我自己的打球方式，我不要做乔丹二世，我要创造属于我自己的神话。</p>
+					</div> 
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left" src="../images/1.jpg" >
+					<div class="mui-media-body" >
+						<p class="mui-ellipsis" style="margin-top:8px ;">我们这支球队就是为了要夺取总冠军而存在的。——韦德</p>
+					</div> 
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left" src="../images/111.jpg" >
+					<div class="mui-media-body" >
+						<p class="mui-ellipsis" style="margin-top:8px ;">我失败过，沮丧过。但从没放弃过，因为我坚信I'm the best！——艾弗森</p>
+					</div> 
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left" src="../images/13.png" >
+					<div class="mui-media-body" >
+						<p class="mui-ellipsis" style="margin-top:8px ;">世界抛弃了我，可还有篮球陪着我。——科比</p>
+					</div> 
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left" src="../images/9.png" >
+					<div class="mui-media-body" >
+						<p class="mui-ellipsis" style="margin-top:8px ;">一周有七天，一天有二十四个小时，我随时可以搞定卡尔。——罗德曼</p>
+					</div> 
+				</a>
+			</li>
+				
+		</ul>
+			
+
+
+		<footer class="mui-bar mui-bar-footer" >
+			<!--<div class="input_text" id="click_before">
+				<input type="text" value="" placeholder="请评论" style="margin-top: 2px;" />
+			</div>-->
+			<div class="input_text" id="click_after">
+				<input class="pinglun"  type="text" value="" placeholder="请评论" style="width: 80%;border: 1px solid silver; margin-top: 2px;"/>
+				
+				<input  id="dianji" type="button" value="评论" style="margin-top: 5px;" />
+			</div>
+		</footer> 
+	</body>
+ 
+</html>
+<script type="text/javascript" charset="utf-8">
+	//mui的初始化，做mui的配置项，每个窗口必须存在 
+	mui.init();
+		mui.plusReady(
+			function(){
+				document.getElementById("click_before").addEventListener("tap",function(){
+					$('#click_before').css("display","none");
+					$('#click_after').css("displ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ay","block");
+				});			
+				
+				document.getElementById("content").addEventListener("tap",function(){
+					$('#click_before').css("display","block");
+					$('#click_after').css("display","none");
+//					键盘收起的操作
+					document.activeElement.blur();
+
+				});
+				
+//				$("#list").append("")
+				$("#dianji").on("click", function(){
+					var pinglun=$(".pinglun").val();
+					console.log(pinglun);
+				});
+		})
+		 
+		function redFix(){
+			$("#redbox").toggle();
+		}
+</script>
