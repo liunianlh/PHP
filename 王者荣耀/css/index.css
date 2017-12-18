@@ -1,0 +1,509 @@
+/*头部*/
+*{
+	margin: 0 auto;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style-type: none;
+}
+.header{
+	width: 100%;
+	height: 42px;
+
+}
+.count_ul{
+	width: 980px;
+	height: 40px;
+	/*background: red;*/
+	list-style: none;
+	text-autospace: none;
+	
+}
+.float{
+	float: left;
+}
+.count_ul_one{
+	width: 210px;
+	height: 40px;
+	background: url(../img/ost-bg.png) no-repeat;
+	background-position:0 -40px;
+	padding-right: 10px;
+}
+.count_ul_two{
+	width: 210px;
+	height: 40px;
+	background-image: url(../img/2101684777963859490151324438323040.1513244384.3a4c77c395e840c231b6363dc6353374.230x40_7497.jpg);
+}
+.count_ul_three{
+	width: 200px;
+	margin-top: 15px;
+/*	background-position: -143px -120px;*/
+	float: right;
+}
+.count_ul_three_h3{
+	float: left;
+	height: 20px;
+	width: 110px;
+	font-size: 12px;
+	background: url(../img/logo.png) no-repeat;
+ text-indent: 20px;
+}
+.count_ul_three a{
+	text-decoration: none;
+	color:black;
+}
+.count_ul_three_h3_xia{
+	float: right;
+	font-size: 12px;
+}
+
+#header{
+	    padding-top: 620px;
+    background: url(../img/bg_wrapper2.jpg) no-repeat center top;
+  
+}
+.header_jia{
+	width: 100%;
+	min-width: 1280px;
+	position: absolute;
+	left: 0;
+	top: 42px;
+    z-index: 99;
+}
+
+.header_neirong{
+	
+   width: 100%;
+	    background: #000;
+    background: rgba(0,0,0,0.8);
+}
+.daohang{
+	
+	width: 1200px;
+	 height: 84px;
+	   margin: 0 auto;
+    position: relative; 
+}
+.tou_logo{
+	position: absolute;
+	width: 218px;
+	height: 152px;
+    background: url(../img/logo1.png) no-repeat  center center;
+    left: 0;
+    top: 0;
+     text-indent: -999px;
+    overflow: hidden;
+    
+}
+
+
+/*二级导航*/
+.header_neirong_ul{
+	margin-left: 240px;
+}
+.header_neirong_ul li{
+	 list-style-type: none;
+	 float: left;
+    width: 110px;
+    height: 84px;
+    text-align: center;
+}
+.header_neirong_ul a{
+	    display: block;
+    width: 110px;
+    height: 64px;
+    padding: 20px 0 0;
+    color: #c9c9dd;
+    font-size: 18px;
+    line-height: 30px;
+}
+.header_neirong_ul em{
+	 display: block;
+    padding-top: 5px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #858792;
+}
+
+
+/*二级导航*/
+.header_neirong_erji{
+	position: absolute;
+    visibility: hidden;
+  /*  display: none;*/
+    top: 83px;
+    left: 0;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    background: #000;
+    background: rgba(0,0,0,0.7);
+    /*z-index: 3;*/
+}
+.header_neirong_erji_ul{
+	    width: 970px;
+    height: 240px;
+    padding-left: 230px;
+    margin: 0 auto;
+    overflow: hidden;
+    zoom: 1;
+}
+.down-li{
+	    float: left;
+    display: inline;
+    width: 100px;
+    padding: 2px 5px 0;
+    text-align: center;
+    white-space: nowrap;
+}
+.down-li a{
+	    height: 30px;
+    line-height: 30px;
+    display: block;
+    padding: 0;
+    font-size: 14px;
+    color: #c9c9dd;
+}
+
+
+.header_neirong_bj{
+	position: relative;
+    margin: 419px auto 0;
+    width: 1200px;
+    height: 115px;
+    background: url(../img/bg_header.png) no-repeat;
+}
+
+
+/*周免英雄*/
+.zhoumian{
+	padding: 10px;
+	color: white;
+	    
+}
+
+
+
+   
+    .header_neirong_bj li{
+   	float: left;
+    display: inline;
+    position: relative;
+    margin-right: 10px;
+    width: 69px;
+    }
+    .header_neirong_bj img{
+    border-radius: 5px;
+    width: 69px;
+    height: 69px;
+   
+    }
+    .active img{
+	width: 224px;
+}
+.yi{
+	  margin-left: 20px;
+	  padding-right: 155px;
+	  /*JS应用可删除padding-right*/
+}
+.aa{
+	width: 4px;
+	position: absolute;
+	top: 10px;
+	left: 285px;
+    right: 15px;
+    line-height: 15px;
+    padding: 30px 10px 10px;
+    color: #626a7a;
+}
+.header_neirong_bj_right_a{
+	background-image: url(../img/spr.png);
+	position: absolute;
+	top: -5px;
+    left: 785px;
+    width: 106px;
+    height: 120px;
+    display: block;
+    background-position: -110px -174px;
+}
+
+.header_neirong_bj_right_a>img{
+	margin-top: 21px;
+	margin-left: 12px;
+	width: 78px;
+	height: 78px;
+}
+.main_count{
+	width: 100%;
+    min-width: 1200px;
+    min-height: 620px;
+    height: auto;
+    margin: 0 auto;
+    background: url(../img/ny_con_bg.jpg) no-repeat center top;
+}
+.main_count_top{
+	width: 1200px;
+	padding-top: 30px;
+	position: relative;
+}
+.main_count_top_i{
+	background-position: 0 -4px;
+    width: 18px;
+    height: 18px;
+   /* margin-left: 5px;*/
+    background: url(../img/sprite.png) no-repeat;
+    text-indent: -9999px;
+    display: block;
+    position: absolute;
+    
+}
+.title{
+	    margin-top: 50px;
+    padding-left: 25px;
+ 
+    background: url(../img/icon_hero.png) no-repeat;
+}
+.main_count_top_ul{
+	margin-top: 20px;
+    height: 32px;
+    font-size: 16px;
+    border-bottom: 3px solid #D4D4D4;
+    border-radius: 0 0 3px 3px;
+}
+.main_count_top_ul>li{
+	    float: left;
+    width: 33%;
+    margin-bottom: -3px;
+    position: relative;
+}
+.main_count_top_ul a{
+	    display: block;
+    width: 100%;
+    line-height: 32px;
+    text-align: center;
+    color: #4B4B4B;
+}
+.main_count_top_ul_li a{
+	 color: #3589DD;
+    font-weight: bold;
+    
+}
+
+
+/*英雄介绍内容*/
+.main_count_two{
+	width: 1200px;
+    margin-bottom: 50px;
+    padding: 35px 28px;
+    border: 2px solid #E8E8E8;
+    border-top: 0;
+    position: relative;
+}
+.main_count_two_count_ul{
+	float: left;
+    width: 80px;
+    height: 106px;
+    text-align: center;
+    background-color: #2C88E2;
+    color: #fff;
+    border-radius: 5px 0 0 5px;
+}
+  
+    .main_count_two_count_ul li{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    }
+   
+    .main_count_two_count_ul2{
+   float: left;
+    width: 900px;
+    padding: 16px 0;
+    height: 20px;
+	line-height: 20px;
+    }
+.quan{
+	 display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-left: 7px;
+    border: 1px solid #B3B3B3;
+    border-radius: 9px;
+    position: relative;
+}
+.main_count_two_count_ul2 li{
+	    float: left;
+    padding-left: 20px;
+    min-width: 90px;
+    font-size: 14px;
+    cursor: pointer;
+}
+/*.main_count_two_count_ul2 label{
+	padding-top: 10px;
+}*/
+.main_count_two_count_ul2_text{
+	position: absolute;
+	padding-top: -5px;
+	margin-left: 7px;
+}
+.main_count_two_count_serch{
+	    position: absolute;
+    top: 86px;
+    right: 60px;
+    border: 1px solid #D2D2D2;
+    padding: 10px;
+    height: 22px;
+    width: 220px;
+}
+.main_count_two_count-input{
+	    float: left;
+    border: none;
+    width: 80%;
+    height: 22px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #747475;
+    background: none;
+}
+.main_count_two_count_serch_serch{
+	    float: right;
+    padding-left: 10px;
+    width: 22px;
+    height: 22px;
+    border-left: 1px solid #D5D5D5;
+    background: url(../img/vl_search_icon.png) no-repeat 12px center;
+}
+
+
+/*英雄头像列表*/
+
+.main_count_three{
+	width: 1200px;
+}
+.main_count_three_ul{
+	margin-left: 15px;
+	width: 1200px;
+	margin-top: 60px;
+	margin-right: -50px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.main_count_three_ul li{
+	 float: left;
+    width: 87px;
+    margin-bottom: 34px;
+    margin-right: 30px;
+}
+.main_count_three_ul img{
+	    width: 83px;
+    height: 83px;
+    border: 2px solid #258DF2;
+    border-radius: 10px 0 10px 0;
+}
+
+
+/*底部*/
+
+.index_floot{
+	margin-top: 400px;
+	margin-bottom: 0px;
+	position: relative;
+    z-index: 2;
+    height: 362px;
+    background: url(../img/bg_footer.jpg) no-repeat center 0;
+    /*background: red;*/
+}
+.footer{
+	width: 1200px;
+    padding-top: 80px;
+    margin: 0 auto;
+}
+.footer_one{
+	    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #d4d4d4;
+}
+.footer_two_a1{
+	display: block;
+	margin-top: -65px;
+	float: left;
+	 width: 285px;
+    height: 64px;
+	background: url(../img/spr.png) no-repeat;
+}
+.footer_two_a2{
+	display: block;
+	background: url(../img/spr.png) no-repeat;
+	float: left;
+	margin-top: -65px;
+	margin-left: 300px;
+	 width: 70px;
+    height: 64px; 
+    background-position: -285px 0;
+}
+.footer_right{
+	    margin-top: 17px;
+    margin-left: 36px;
+    letter-spacing: -0.35em;
+    width: 480px;
+    text-align: right;
+}
+/*.footer_right a{
+
+	
+   
+    height: 36px;
+   
+}*/
+
+.footer_right_span1
+{
+	display: inline-block;
+	width: 108px;
+	height: 30px;
+	background: url(../img/cooperative-bg.png) no-repeat;
+	background-position: 0 0px;
+	position: absolute;
+	margin-left: 200px;
+	margin-top: -40px;
+}
+
+.footer_right_span2
+{
+	display: inline-block;
+	width: 78px;
+	height: 30px;
+	background: url(../img/cooperative-bg.png) no-repeat;
+	  background-position: 0 -180px;
+	position: absolute;
+	margin-left: 300px;
+	margin-top: -40px;
+}
+.footer_right_input{
+	width: 250px;
+	border: 4px silver solid;
+	height: 32px;
+	position: absolute;
+	margin-left: 385px;
+	margin-top: -40px;
+}
+.footer_footer{
+	width: 1200px;
+}
+.footer_footer_left{
+	float: left;
+	width: 508px;
+}
+.footer_footer_right{
+	float: right;
+	width: 632px;
+	 text-align: left;
+    padding-top: 20px;
+    font-size: 12px;
+}
+
