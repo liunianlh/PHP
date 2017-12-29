@@ -1,0 +1,827 @@
+/*头部*/
+
+* {
+    margin: 0 auto;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.header-top {
+    margin-top: 0px;
+}
+
+.header {
+    width: 100%;
+    height: 42px;
+}
+
+.count_ul {
+    width: 980px;
+    height: 40px;
+    list-style: none;
+    text-autospace: none;
+}
+
+.float {
+    float: left;
+}
+
+.count_ul_one {
+    width: 210px;
+    height: 40px;
+    padding-right: 10px;
+}
+
+.count_ul_two {
+    width: 210px;
+    height: 40px;
+}
+
+.count_ul_three {
+    width: 200px;
+    margin-top: 15px;
+    float: right;
+}
+
+.count_ul_three_h3 {
+    float: left;
+    height: 20px;
+    width: 110px;
+    font-size: 12px;
+    background: url() no-repeat;
+    text-indent: 20px;
+}
+
+.count_ul_three a {
+    text-decoration: none;
+    color: black;
+}
+
+.count_ul_three_h3_xia {
+    float: right;
+    font-size: 12px;
+}
+
+#header {
+    padding-top: 900px;
+    background: url(../images/xiangqing/东皇太一/187-bigskin-1.jpg) no-repeat center top;
+    background-size: cover;
+}
+
+.header_jia {
+    width: 100%;
+    min-width: 1280px;
+    position: absolute;
+    left: 0;
+    top: 42px;
+    z-index: 99;
+}
+
+.header_neirong {
+    margin-top: 0px;
+    width: 100%;
+    background: #000;
+    background: rgba(0, 0, 0, 0.8);
+    padding-bottom: 4px;
+}
+
+.daohang {
+    width: 1200px;
+    height: 84px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.tou_logo {
+    position: absolute;
+    width: 218px;
+    height: 152px;
+    background: url(../images/qita/logo.png) no-repeat center center;
+    background-size: cover;
+    left: 0;
+    top: 0;
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+
+/*二级导航*/
+
+.header_neirong_ul {
+    margin-left: 240px;
+}
+
+.header_neirong_ul li {
+    list-style-type: none;
+    float: left;
+    width: 110px;
+    height: 84px;
+    text-align: center;
+}
+
+.header_neirong_ul>li>a:hover {
+    border-bottom: 2.5px solid #f3c258;
+    background: -webkit-linear-gradient(transparent, #43361d);
+    color: #f3c258;
+}
+
+.header_neirong_ul a {
+    display: block;
+    width: 110px;
+    height: 64px;
+    padding: 20px 0 0;
+    color: #c9c9dd;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.header_neirong_ul em {
+    display: block;
+    padding-top: 5px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #858792;
+}
+
+
+/*二级导航*/
+
+.header_neirong_erji {
+    position: absolute;
+    visibility: hidden;
+    top: 83px;
+    left: 0;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    background: #000;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.header_neirong_erji_ul {
+    width: 970px;
+    height: 240px;
+    padding-left: 230px;
+    margin: 0 auto;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.down-li {
+    float: left;
+    display: inline;
+    width: 100px;
+    padding: 2px 5px 0;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.down-li a {
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    padding: 0;
+    font-size: 14px;
+    color: #c9c9dd;
+}
+
+.header_neirong_bj {
+    position: relative;
+    margin: 419px auto 0;
+    width: 1200px;
+    height: 115px;
+    background: url(../images/qita/bg_header.png) no-repeat;
+}
+
+.demglu {
+    margin-left: 50px;
+    margin-top: -54px;
+}
+
+.demglu p:nth-of-type(1) {
+    width: 200px;
+    color: white;
+    text-align: left;
+    color: #c9c9dd;
+    font-size: 18px;
+}
+
+.demglu p:nth-of-type(2) {
+    width: 200px;
+    color: white;
+    text-align: left;
+    color: #858792;
+    font-size: 16px;
+}
+
+
+/*英雄介绍*/
+
+.header_count {
+    width: 1200px;
+    position: relative;
+}
+
+.header_left {
+    width: 380px;
+    height: 585px;
+    margin-top: 120px;
+    background: #000;
+    background: rgba(0, 0, 0, 0.8);
+    float: left;
+}
+
+.header_right {
+    width: 500px;
+}
+
+.header_left_h3 {
+    font-size: 24px;
+    color: #f3c258;
+    line-height: 30px;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.header_left_h4 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #FFF;
+    line-height: 74px;
+    padding-left: 30px;
+}
+
+.header_left_span {
+    width: 290px;
+    height: 70px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: block;
+    margin-left: 30px;
+}
+
+.header_left_span i {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-indent: -9999em;
+}
+
+.header_left_div {
+    width: 290px;
+    height: 100px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    position: relative;
+}
+
+.header_left_div>img{
+    width: 140px;
+    height: 80px;
+}
+
+.header_left_div>span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 80px;
+    background: #000;
+    opacity: .4;
+    z-index: 2;
+}
+
+.header_left_ul {
+    height: 136px;
+}
+
+.header_left_ul_p {
+    font-size: 16px;
+    color: #fff;
+    padding-left: 35px;
+}
+
+.header_left_ul_span_b {
+    display: block;
+    width: 30px;
+    height: 26px;
+    background: url(//game.gtimg.cn/images/yxzj/web201706/images/herodetail/item.png) no-repeat;
+    background-position: 0 -170px;
+    margin-left: -29px;
+    margin-top: -10px;
+    position: absolute;
+}
+
+.header_left_ul_span {
+    position: relative;
+    width: 205px;
+    height: 8px;
+    margin: 8px 0 0 45px;
+    background: #000;
+    border-radius: 0 4px 4px 0;
+    float: left;
+    margin-left: 142px;
+    margin-top: -12px;
+}
+
+.header_left_ul_span_i {
+    height: 8px;
+    float: left;
+    width: 50%;
+    border-radius: 0 4px 4px 0;
+    background: #1c8fea;
+}
+
+.header_left_ul_li1 {
+    margin-bottom: 20px;
+}
+
+.img {
+    background-position: -28px -170px;
+}
+
+.img1 {
+    background-position: -58px -170px;
+}
+
+.img2 {
+    background-position: -88px -170px;
+}
+
+.header_left_botton a {
+    width: 150px;
+    height: 40px;
+    border: solid 2px #fff;
+    border-radius: 4px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 40px;
+    margin-left: 40px;
+    display: block;
+}
+
+.header_xia {
+    width: 300px;
+    height: 80px;
+    padding-top: 658px;
+    padding-left: 900px;
+}
+
+.header_xia_one img {
+    width: 100%;
+    height: 100%;
+}
+
+.header_xia_one {
+    float: left;
+    width: 67px;
+    height: 69px;
+    overflow: hidden;
+    border: 4px solid #f3c258;
+    border-radius: 0px 15px 0px 15px;
+    margin-right: 20px;
+}
+
+.header_xia_two {
+    float: left;
+    width: 67px;
+    height: 69px;
+    overflow: hidden;
+    border: 4px solid gray;
+    border-radius: 0px 15px 0px 15px;
+    margin-right: 20px;
+}
+
+.header_xia_text {
+    float: left;
+    width: 30px;
+    height: 65px;
+    background: #f3c258;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+
+/*中间区域*/
+
+main {
+    padding-bottom: 90px;
+    background: -webkit-linear-gradient(#fff, #fafafa);
+    margin-top: -39px;
+    padding-top: 10px;
+}
+
+.main_count {
+    width: 1200px;
+}
+
+.main_count_top {
+    width: 1200px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.main_count_top_i {
+    background-position: 0 -4px;
+    width: 18px;
+    height: 18px;
+    /* margin-left: 5px;*/
+    background: url(../images/qita/sprite.png) no-repeat;
+    text-indent: -9999px;
+    display: block;
+    position: absolute;
+}
+
+.main_count_two_h3 {
+    margin-top: 45px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 24px;
+    height: 24px
+}
+
+.main_count_two_h3>i {
+    width: 30px;
+    height: 30px;
+    background: url(../images/qita/item.png) no-repeat;
+    display: block;
+    background-position: -30px 0;
+    margin: -4px 5px 0 0;
+    float: left;
+}
+
+.main_count_two {
+    width: 800px;
+    float: left;
+}
+
+.main_count_threer {
+    width: 400px;
+    float: right;
+}
+
+.main_count_two_bottom {
+    min-height: 280px;
+    background: #fff;
+    border: solid 1px #e5e5e5;
+    margin-bottom: 50px;
+    /*    background: red;*/
+}
+
+.mian_count_right {
+    height: 290px;
+    margin-left: 20px;
+    border: solid 1px #e5e5e5;
+    margin-bottom: 50px;
+    background: #fff;
+}
+
+
+/*清除浮动*/
+
+.clearbox:after {
+    content: "";
+    height: 0px;
+    line-height: 0px;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.erh3>i {
+    background-position: -60px 0;
+    margin: -2px 8px 0 0;
+}
+
+.main_count_two_h3_i {
+    width: 30px;
+    height: 30px;
+    background: url(../images/qita/item.png) no-repeat;
+    display: block;
+    float: left;
+    background-position: -60px 0;
+    margin: -2px 8px 0 0;
+}
+
+.main_count_two_h3_2 {
+    margin-top: 45px;
+    margin-left: 30px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 24px;
+    height: 24px
+}
+
+.main_count_two_ul {
+    height: 100px;
+    padding: 20px 0 0 20px;
+}
+
+.main_count_two_ul li {
+    width: 92px;
+    height: 88px;
+    float: left;
+    display: inline;
+    margin-right: 29px;
+    cursor: pointer;
+    /*    background-position: -100px -70px;*/
+}
+
+.li1 {
+    background: url(../images/qita/item.png);
+    background-position: 0 -70px;
+}
+
+.li2 {
+    background: url(../images/qita/item.png);
+    background-position: -100px -70px;
+}
+
+.li3 {
+    background: url(../images/qita/item.png);
+    background-position: -100px -70px;
+}
+
+.li4 {
+    background: url(../images/qita/item.png);
+    background-position: -100px -70px;
+}
+
+.main_count_two_ul img {
+    width: 71px;
+    height: 71px;
+    background: #000;
+    margin: 8px 0 0 11px;
+    border-radius: 50%;
+}
+
+.main_count_two_p-xia {
+    padding: 2px 10px;
+    line-height: 24px;
+    width: 710px;
+    background: #f5f5f5;
+    color: #646464;
+    margin-bottom: 10px;
+}
+
+
+/*右边*/
+
+.mian_count_right_ul {
+    padding-top: 20px;
+    height: 187px;
+}
+
+.mian_count_right_ul li {
+    width: 33.3%;
+    height: 75px;
+    border-radius: 5px;
+    float: left;
+    display: inline;
+    position: relative;
+    text-align: center;
+}
+
+.mian_count_right_div {
+    text-align: center;
+    color: #484848;
+    line-height: 20px;
+    background: #f5f5f5;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 13px;
+}
+
+.main_count_si {
+    width: 1200px;
+}
+
+.main_count_si_left {
+    width: 800px;
+    float: left;
+    /*background: red;*/
+}
+
+.main_count_si_right {
+    width: 380px;
+    float: right;
+    /*margin-left: 20px;*/
+    /*	background: saddlebrown;*/
+}
+
+.main_count_si_left_top_h3 i {
+    background: url(../images/qita/item.png);
+    display: block;
+    width: 30px;
+    height: 30px;
+    float: left;
+    background-position: -90px 0;
+    margin: -1px 8px 0 0;
+}
+
+.main_count_si_left_top_1 {
+    margin-bottom: 20px;
+}
+
+.main_count_si_left_top_h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 24px;
+    height: 24px;
+}
+
+.main_count_si_left_top_bottom {
+    height: 84px;
+    background: #fff;
+    border: solid 1px #e5e5e5;
+    padding-left: 30px;
+    padding-top: 36px;
+    margin-bottom: 36px;
+    position: relative;
+}
+
+.bottom_p {
+    width: 92px;
+    height: 88px;
+    float: left;
+    margin-right: 22px;
+    display: inline;
+    cursor: pointer;
+    background: url(../images/qita/item.png);
+    background-position: 0 -70px;
+    position: absolute;
+    margin-top: -60px;
+    margin-left: 80px;
+}
+
+.bottom_p img {
+    width: 71px;
+    height: 71px;
+    background: #000;
+    margin: 8px 0 0 11px;
+    border-radius: 50%;
+}
+
+.fusheng {
+    position: absolute;
+    margin-left: 200px;
+    margin-top: -40px;
+}
+
+.jineng {
+    position: absolute;
+    margin-left: 420px;
+    margin-top: -40px;
+}
+
+.shanxian {
+    margin-right: 50px;
+}
+
+.main_count_si_left_bottom_guanxi_ul {
+    width: 100%;
+    height: 32px;
+    line-height: 30px;
+    text-align: center;
+    background: #f1f1f1;
+}
+
+.main_count_si_left_bottom_guanxi_ul li {
+    position: relative;
+    float: left;
+    width: 257px;
+    height: 29px;
+    border-bottom: solid 3px transparent;
+    cursor: pointer;
+}
+
+.main_si_da_one i {
+    float: left;
+    background: url(../images/qita/sprite.png) no-repeat;
+    text-indent: -9999px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: -3px 12px 0 0;
+}
+
+.main_count_si_left_bottom_guanxi {
+    border: solid 1px #e1e1e1;
+    height: 128px;
+}
+
+.main_si_da_one {
+    padding: 36px 0 0 22px;
+}
+
+.main_si_da_two img {
+    width: 67px;
+    height: 69px;
+    border-radius: 0 15px;
+    margin-left: -1px;
+    margin-top: -1px;
+    overflow: hidden;
+}
+
+.main_si_da_two {
+    float: left;
+}
+
+.main_si_da_two li {
+    float: left;
+    border: 1px solid yellow;
+    margin-left: 20px;
+}
+
+.main_si_da_two ul {
+    margin-left: 100px;
+    margin-top: -45px;
+}
+
+.main_si_da_three {
+    width: 400px;
+    position: absolute;
+    margin-left: 350px;
+    margin-top: -10px;
+}
+
+.main_si_da_three p {
+    margin-top: -20px;
+    padding-left: 20px;
+}
+
+.ulul {
+    width: 100%;
+    height: 32px;
+    line-height: 30px;
+    text-align: center;
+    background: #f1f1f1;
+}
+
+.ulul li {
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 29px;
+    border-bottom: solid 3px transparent;
+    cursor: pointer;
+}
+
+.main_count_si_right_chuzhong ul {
+    width: 120%;
+    padding: 27px 0 0 20px;
+}
+
+.main_count_si_right_chuzhong li {
+    width: 92px;
+    height: 88px;
+    float: left;
+    margin: 0 30px 14px 0;
+    display: inline;
+    cursor: pointer;
+    background-position: 0 -70px;
+    position: relative;
+}
+
+.main_count_si_right_chuzhong img {
+    width: 71px;
+    height: 71px;
+    background: #000;
+    margin: 8px 0 0 11px;
+    border-radius: 50%;
+}
+
+.li11 {
+    background: url(../images/qita/item.png);
+    background-position: 0 -70px;
+}
+
+.icon{
+    background: url(//game.gtimg.cn/images/yxzj/web201706/images/herodetail/item.png) no-repeat;
+    text-indent: -9999px;
+    display: block;
+}
+.ico-play {
+    position: absolute;
+    top: 41%;
+    left: 25%;
+    width: 36px;
+    height: 36px;
+    margin-left: -18px;
+    margin-top: -18px;
+    background-position: -200px -70px;
+    z-index: 5;
+}

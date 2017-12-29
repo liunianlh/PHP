@@ -1,0 +1,333 @@
+.header-bottom {
+	width: 100%;
+	height:650px;
+	background-image: url(../images/qita/bg_wrapper2.jpg);
+	background-size: 100%;
+	position: relative;
+}
+
+.header-bottom-content-bottom {
+	width: 1200px;
+	height: 115px;
+       margin: 0 auto;
+	background-color: red;
+	
+/*	bottom: 0px;*/
+	background: url(../images/qita/bg_header.png) no-repeat;
+	margin: 0 auto;
+        top: 535px;
+        left: 18%;
+            bottom:0px;
+position: absolute;
+
+
+}
+
+.header-bottom-left {
+	display: inline-block;
+	width: 765;
+	margin-left: 0px;
+}
+
+.header-bottom-left>p {
+	color: #a6afbc;
+	padding: 8px 20px;
+	font-weight: bold;
+}
+
+.header-bottom-left>ul {
+	padding: 0px 20px;
+}
+
+.header-bottom-left>ul>li {
+	float: left;
+	list-style-type: none;
+	margin-right: 10px;
+}
+
+.header-bottom-left>ul>li>a>img {
+	width: 69px;
+	height: 69px;
+}
+
+.header-bottom-left>ul>li:nth-of-type(1)>a>img {
+	width: 224px;
+	height: 71px;
+}
+
+.header-bottom-left>a {
+	width: 20px;
+	padding: 0px 10px;
+	display: inline-block;
+	text-decoration: none;
+	color: #626a7a;
+	line-height: 17px;
+	box-sizing: border-box;
+}
+
+.header-bottom-left>a:hover {
+	color: #0072e3;
+}
+
+.header-bottom-right {
+	display: inline-block;
+	width: 435px;
+	float: right;
+	position: relative;
+}
+
+.header-bottom-right>a {
+	width: 106px;
+	height: 120px;
+	display: inline-block;
+	background: url(../images/qita/spr.png) no-repeat;
+	background-position: -110px -174px;
+	margin-top: -5px;
+}
+
+.header-bottom-right>a>img {
+	width: 75px;
+	height: 75px;
+	margin: 24px 0 0 15px;
+	border-radius: 10px;
+}
+
+.header-bottom-right>div {
+	display: inline-block;
+	height: 75px;
+	position: absolute;
+	top: 50px;
+	left: 120px;
+	color: #b3bbc5;
+}
+
+.header-bottom-right>div>a {
+	color: #8ea0b0;
+	margin-left: 10px;
+	text-decoration: none;
+}
+
+.content {
+	padding: 40px 0px;
+	background: -webkit-linear-gradient(#d6dae5, #fafafa);
+}
+
+.content-div {
+	width: 1200px;
+}
+
+.content-one>i {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background: url(../images/qita/sprite.png) no-repeat;
+	background-position: 0 -4px;
+	margin-right: 9px;
+	vertical-align: middle;
+}
+
+.content-one>a {
+	color: #363636;
+}
+
+.content-two>h3 {
+	margin-top: 50px;
+	padding-left: 25px;
+	font: bold 20px/22px '\5FAE\8F6F\96C5\9ED1';
+	background: url(../images/qita/icon_hero.png) no-repeat;
+}
+
+.content-two>ul {
+	margin-top: 20px;
+	height: 32px;
+	font-size: 16px;
+	border-bottom: 3px solid #D4D4D4;
+	border-radius: 0 0 3px 3px;
+}
+
+.content-two>ul>li {
+	float: left;
+	width: 33%;
+	margin-bottom: -3px;
+	position: relative;
+	list-style-type: none;
+}
+
+.dangqian{
+	border-bottom: 3px solid #3589DD;
+	/*英雄下边框*/
+	border-radius: 0 0 3px 3px;
+}
+
+.dangqian>a {
+	color: #3589DD;
+	/*英雄字体*/
+	font-weight: bold;
+}
+
+.content-two>ul>li a {
+	display: block;
+	width: 100%;
+	line-height: 32px;
+	text-align: center;
+	color: #4B4B4B;
+	text-decoration: none;
+}
+
+.zhoumian{
+	display: inline-block;
+}
+
+.content-three {
+	margin-bottom: 50px;
+	padding: 35px 28px;
+	border: 2px solid #E8E8E8;
+	border-top: 0;
+	position: relative;
+}
+
+.herolist-types {
+	background-color: #EFEFEF;
+	border-radius: 5px;
+	color: #686869;
+	position: relative;
+}
+
+.types-left {
+	float: left;
+	width: 80px;
+	height: 106px;
+	text-align: center;
+	background-color: #2C88E2;
+	color: #fff;
+	border-radius: 5px 0 0 5px;
+}
+
+.types-ms {
+	float: left;
+	width: 900px;
+	padding: 16px 0;
+	height: 20px;
+	line-height: 21px;
+}
+
+.types-ms {
+	float: left;
+	width: 900px;
+	padding: 16px 0;
+	height: 20px;
+	line-height: 21px;
+}
+
+.herosearch {
+	position: absolute;
+	top: 55px;
+	right: 30px;
+	border: 1px solid #D2D2D2;
+	padding: 10px;
+	height: 22px;
+	width: 220px;
+}
+
+.types-left li {
+	display: block;
+	height: 52px;
+	line-height: 52px;
+	font-size: 16px;
+	list-style-type: none;
+}
+
+.types-ms li {
+	float: left;
+	padding-left: 15px;
+	min-width: 90px;
+	font-size: 14px;
+	cursor: pointer;
+	list-style-type: none;
+}
+
+.types-ms .ms-radio {
+	float: left;
+}
+
+.ms-radio {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin-right: 7px;
+	border: 1px solid #B3B3B3;
+	border-radius: 50px;
+	position: relative;
+}
+
+.types-ms .current .ms-radio .i {
+	background-color: #358ADD;
+}
+
+.ms-radio .i {
+	display: inline-block;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 12px;
+	height: 12px;
+	background-color: none;
+	border-radius: 50px;
+}
+
+.herosearch-input {
+	float: left;
+	border: none;
+	width: 80%;
+	height: 22px;
+	line-height: 20px;
+	font-size: 12px;
+	color: #747475;
+	background: none;
+	outline: none;
+}
+
+.herosearch-icon {
+	float: right;
+	padding-left: 10px;
+	width: 22px;
+	height: 22px;
+	border-left: 1px solid #D5D5D5;
+	background: url(../images/qita/vl_search_icon.png) no-repeat 12px center;
+}
+
+.herosearch>a {
+	text-decoration: none;
+	color: #363636;
+}
+
+.content-three-bottom {
+	margin-top: 40px;
+	width: 100%;
+}
+
+.content-three-bottom ul {
+	width: 1190px;
+}
+
+.content-three-bottom li {
+	width: 87px;
+	display: inline-block;
+	list-style-type: none;
+	margin-right: 25px;
+	margin-bottom: 34px;
+}
+
+.content-three-bottom li a {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	color: #363636;
+}
+
+.content-three-bottom li img {
+	width: 83px;
+	height: 83px;
+	border: 3px solid #258DF2;
+	border-radius: 10px 0 10px 0;
+}
