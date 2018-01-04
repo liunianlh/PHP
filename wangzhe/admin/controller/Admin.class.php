@@ -102,9 +102,7 @@ class Admin extends common{
       public function adminList(){
           
           $sql="select * from admin";
-       $list=$this->link->select($sql);
-          
-          
+         $list=$this->link->select($sql);          
          $this->template->template_assign("list",$list);
          $this->template->template_display("Admin/adminList.tpl");
     }

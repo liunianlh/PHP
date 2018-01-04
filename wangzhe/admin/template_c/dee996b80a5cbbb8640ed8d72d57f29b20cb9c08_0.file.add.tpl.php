@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-25 16:51:04
+/* Smarty version 3.1.30, created on 2017-12-28 19:50:02
   from "F:\phpStudy\WWW\wangzhe\admin\template\Vocation\add.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a40bbf8e297e2_80727532',
+  'unifunc' => 'content_5a44da6a065278_49635288',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dee996b80a5cbbb8640ed8d72d57f29b20cb9c08' => 
     array (
       0 => 'F:\\phpStudy\\WWW\\wangzhe\\admin\\template\\Vocation\\add.tpl',
-      1 => 1514191861,
+      1 => 1514431404,
       2 => 'file',
     ),
   ),
@@ -21,42 +21,42 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a40bbf8e297e2_80727532 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a44da6a065278_49635288 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_121065a40bbf8e0e5e1_29362987', 'title');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_316985a44da69f32a64_52689007', 'title');
 ?>
 
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_242515a40bbf8e1f699_16972182', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_257635a44da6a05b297_37806729', 'content');
 ?>
 
  
  
  <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_327285a40bbf8e27356_28047388', 'js');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_132165a44da6a062e38_91255374', 'js');
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'title'} */
-class Block_121065a40bbf8e0e5e1_29362987 extends Smarty_Internal_Block
+class Block_316985a44da69f32a64_52689007 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
-职业员管理-添加<?php
+职业管理-添加<?php
 }
 }
 /* {/block 'title'} */
 /* {block 'content'} */
-class Block_242515a40bbf8e1f699_16972182 extends Smarty_Internal_Block
+class Block_257635a44da6a05b297_37806729 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -204,11 +204,11 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
 							<li>
 
-								<a href="#">技能管理</a>
+								<a href="#">职业管理</a>
 
 								<span class="icon-angle-right"></span>
                                                         </li>
-                                                        <li><a href="#">英雄技能管理列表</a>
+                                                        <li><a href="#">职业管理添加</a>
                                                         </li>
 
 						</ul>
@@ -316,7 +316,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'content'} */
 /* {block 'js'} */
-class Block_327285a40bbf8e27356_28047388 extends Smarty_Internal_Block
+class Block_132165a44da6a062e38_91255374 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>

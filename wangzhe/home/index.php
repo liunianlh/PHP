@@ -8,6 +8,10 @@
 //        $this->smarty->template_dir=DOCUMENT_ROOT."/template";
 //        $this->smarty->compile_dir=DOCUMENT_ROOT."/template_c";
 
+//加载常用函数
+require './function/function.php';
+
+
 //定义基本的常量
 
 define("DOUCMENT_ROOT", dirname(__FILE__));

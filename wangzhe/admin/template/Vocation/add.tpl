@@ -1,5 +1,5 @@
 
-{block name=title}职业员管理-添加{/block}
+{block name=title}职业管理-添加{/block}
 
 {extends file="../layout.tpl"}
 
@@ -147,11 +147,11 @@
 
 							<li>
 
-								<a href="#">技能管理</a>
+								<a href="#">职业管理</a>
 
 								<span class="icon-angle-right"></span>
                                                         </li>
-                                                        <li><a href="#">英雄技能管理列表</a>
+                                                        <li><a href="#">职业管理添加</a>
                                                         </li>
 
 						</ul>

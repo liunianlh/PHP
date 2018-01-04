@@ -1,5 +1,5 @@
 
-{block name=title}职业员管理-修改{/block}
+{block name=title}职业管理-修改{/block}
 
 {extends file="../layout.tpl"}
 
@@ -129,8 +129,8 @@
 						<!-- END BEGIN STYLE CUSTOMIZER -->  
 
 						<h3 class="page-title">
-							英雄
-							 <small>英雄职业添加</small>
+							职业    
+							 <small>职业修改</small>
 
 						</h3>
 
@@ -147,11 +147,11 @@
 
 							<li>
 
-								<a href="#">技能管理</a>
+								<a href="#">职业管理</a>
 
 								<span class="icon-angle-right"></span>
                                                         </li>
-                                                        <li><a href="#">英雄技能管理列表</a>
+                                                        <li><a href="#">职业管理列表</a>
                                                         </li>
 
 						</ul>

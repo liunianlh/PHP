@@ -543,7 +543,7 @@
                                 {else}
                                          <li class="start">  
                                 {/if}                                
-					<a href="index.html">
+					<a href="index.php?class=Index&action=shoye">
 
 					<i class="icon-home"></i> 
                              
@@ -575,7 +575,7 @@
                                         </li>
                       		<li class="start ">
 
-					<a href="index.html">
+					<a href="index.php?class=Hero&action=HeroList">
 
 					<i class="icon-home"></i> 
 
@@ -599,7 +599,48 @@
 					</a>
 
 				</li>
+                                <li class="start ">
+
+					<a href="index.php?class=Prop&action=propList">
+
+					<i class="icon-home"></i> 
+
+					<span class="title">道具管理</span>
+
+					<span class="selected"></span>
+
+					</a>
+
+				</li>
+                                <li class="start ">
+
+					<a href="index.php?class=Skill&action=SkillList">
+
+					<i class="icon-home"></i> 
+
+					<span class="title">技能管理</span>
+
+					<span class="selected"></span>
+
+					</a>
+
+				</li>
 				
+                                <li class="start ">
+                                    <a href="index.php?class=Posy&action=PosyList">
+					<i class="icon-home"></i>                                           
+					<span class="title">铭文管理</span>
+					<span class="selected"></span>
+					</a>
+				</li>
+                                
+                                 <li class="start ">
+                                    <a href="index.php?class=yx_Skill&action=yx_Skill_List">
+					<i class="icon-home"></i>                                           
+					<span class="title">英雄技能管理</span>
+					<span class="selected"></span>
+					</a>
+				</li>
 
 			</ul>
 
