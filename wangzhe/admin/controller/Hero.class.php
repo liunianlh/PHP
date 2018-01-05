@@ -15,7 +15,7 @@ class Hero extends common{
         }
 //        var_dump($newArr);
 //        exit();
-        
+//        
         $list= $this->link->select("select * from hero");
         
         $newHero=array();
@@ -89,6 +89,12 @@ class Hero extends common{
         }
         
         
+//        获取所有出装
+        $sql="select * from prop";
+        $toolsList= $this->link->select($sql);
+          $this->template->template_assign("toolsList",$toolsList);
+//          var_dump($toolsList);
+//          exit();
         $this->template->template_assign("list",$list);
         $this->template->template_assign("vocationList",$newArr);
         $this->template->template_display("Hero/heroList.tpl"); 
@@ -143,15 +149,25 @@ class Hero extends common{
 ////////       修改
 ////    
     public function edit(){
-//        传参
+//     
+         $vocationList= $this->link->select("select * from vocation");
+        
+        $newArr=array();
+        foreach ($vocationList as $vk=>$vv){
+            $newArr[$vv["id"]]=$vv["name"];
+        }
+     
+//           
+//                 传参
         $id= $this->get("id",0);
         $sql="select * from hero where id={$id}";
      
         
         $return=$this->link->select($sql);
 //        var_dump($return);
-        $this->template->template_assign("info",$return);
         
+        $this->template->template_assign("info",$return);
+         $this->template->template_assign("vocationList",$newArr);
          $this->template->template_display("Hero/edit.tpl"); 
     }
 //////    
@@ -297,7 +313,7 @@ class Hero extends common{
          $sql="insert into hero_guanxi(zhu_hero_id,guanxi_hero_id,guanxi,miaosu) values('{$id}','{$hero2}','{$type}','{$remark2}')";
         $this->link->add($sql);
         
-        $this->show(200,"操作成功-",'');
+        $this->show(200,"操作成功",'');
         
         
            
@@ -310,5 +326,25 @@ class Hero extends common{
         $list= $this->link->select($sql);
         $this->show(200,"$sql",$list);
     }
+   
+    
+       public function selectTools(){
+       
+        $id=$this->post("id",0);
+        $Tools1=$this->post("Tools1","");
+        $Tools2=$this->post("Tools2","");
+        $miaosu1=$this->post("miaosu1","");
+        $miaosu2=$this->post("miaosu2","");
+      
+//        var_dump($Tools1);
+//        exit();
+        
+        
+        $sql="insert into chuzhuang(hero_id,daoju_one,daoju_two,daoju_three,daoju_four,daoju_five,daoju_six,miaosu) values({$id},'{$Tools1["0"]}','{$Tools1["1"]}','{$Tools1["2"]}','{$Tools1["3"]}','{$Tools1["4"]}','{$Tools1["5"]}','{$miaosu1}')";
+        $this->link->add($sql);
+         $sql="insert into chuzhuang(hero_id,daoju_one,daoju_two,daoju_three,daoju_four,daoju_five,daoju_six,miaosu) values({$id},'{$Tools2["0"]}','{$Tools2["1"]}','{$Tools2["2"]}','{$Tools2["3"]}','{$Tools2["4"]}','{$Tools2["5"]}','{$miaosu2}')";
+        $this->link->add($sql);
+        $this->show(200,"操作成功",'');
+       }    
     
 }

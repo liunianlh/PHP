@@ -1,66 +1,9 @@
-<?php
-/* Smarty version 3.1.30, created on 2017-12-28 11:29:16
-  from "F:\phpStudy\WWW\wangzhe\admin\template\Posy\edit.tpl" */
 
-/* @var Smarty_Internal_Template $_smarty_tpl */
-if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.30',
-  'unifunc' => 'content_5a44650c0cf754_31330432',
-  'has_nocache_code' => false,
-  'file_dependency' => 
-  array (
-    'e772f172c24447172272506b167bbb8dc18bc417' => 
-    array (
-      0 => 'F:\\phpStudy\\WWW\\wangzhe\\admin\\template\\Posy\\edit.tpl',
-      1 => 1514431752,
-      2 => 'file',
-    ),
-  ),
-  'includes' => 
-  array (
-    'file:../layout.tpl' => 1,
-  ),
-),false)) {
-function content_5a44650c0cf754_31330432 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_loadInheritance();
-$_smarty_tpl->inheritance->init($_smarty_tpl, true);
-?>
+{block name=title}铭文管理-添加{/block}
 
-<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_96295a44650c0a6cf7_66274184', 'title');
-?>
+{extends file="../layout.tpl"}
 
-
-
-
-<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_25785a44650c0c34d7_84237524', 'content');
-?>
-
- 
- 
- <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_301795a44650c0cc8c8_27165860', 'js');
-?>
-
-<?php $_smarty_tpl->inheritance->endChild();
-$_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
-}
-/* {block 'title'} */
-class Block_96295a44650c0a6cf7_66274184 extends Smarty_Internal_Block
-{
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-?>
-铭文管理-添加<?php
-}
-}
-/* {/block 'title'} */
-/* {block 'content'} */
-class Block_25785a44650c0c34d7_84237524 extends Smarty_Internal_Block
-{
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-?>
-
+{block name=content}
 
     <div class="page-content">
     <div class="container-fluid">
@@ -257,34 +200,39 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 										<div class="tab-pane active" id="portlet_tab1">
 											<!-- BEGIN FORM-->
 											<form action="#" class="form-horizontal">
-                                                                                             <input type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['info']->value[0]['id'];?>
-" name="id">
+                                                                                             <input type="hidden" value="{$info[0].id}" name="id">
 												<div class="control-group">
-													<label class="control-label">铭文名称：</label>
+													<label class="control-label">皮肤名称：</label>
 													<div class="controls">
-                                                                                                            <input type="text" placeholder="请输入名称" class="m-wrap small"  name="name" value="<?php echo $_smarty_tpl->tpl_vars['info']->value[0]['name'];?>
-"/>
+                                                                                                            <input type="text" placeholder="请输入名称" class="m-wrap small"  name="name" value="{$info[0].name}"/>
 													</div>
 												</div>
                                                                                                 
                                                                                                  <div class="control-group">
 													<label class="control-label">上传图片：</label>
 													<div class="controls" >
-                                                                                                            <img src="<?php echo $_smarty_tpl->tpl_vars['info']->value[0]['image'];?>
-" width="100" id="upload_img"/>
+                                                                                                            <img src="{$info[0].image}" width="100" id="upload_img"/>
                                        
 												            <input type="file" value="" name="myfile" class="m-wrap small" style="display:none;"/>
-                                                                                                            <input type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['info']->value[0]['image'];?>
-" id="upload_url" name="url"/>
+                                                                                                            <input type="hidden" value="{$info[0].image}" id="upload_url" name="url"/>
 													</div>
 												</div>
                                                                                             <div class="control-group">
-													<label class="control-label">描述：</label>
+													<label class="control-label">英雄列表：</label>
 													<div class="controls">
-                                                                                                            <input type="text" placeholder="请输入铭文描述" class="m-wrap small" name="miaoshu" value="<?php echo $_smarty_tpl->tpl_vars['info']->value[0]['miaosu'];?>
-"/>
+													<select name="hero_id">
+                                                                                                           
+                                                                                                          {foreach from=$vocationList key=k item=v}
+                                                                                                                <option value="{$v.id}">{$v}</option>
+                                                                                                             {/foreach}
+                                                                                                         
+                                                                                                   {*         {foreach from=$info key=k item=v}
+                                                                                                                <option value="{$info.hero_id}"></option>
+                                                                                                             {/foreach}*}
+                                                                                                        </select>
+                                                                                                        </select>
 													</div>
-												</div>
+                                                                                        </div>
                                                                                       
 												<div class="form-actions">
 													<button type="button" class="btn blue" id="form_submit"><i class="icon-ok"></i> 添加</button>
@@ -319,20 +267,13 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 			<!-- END PAGE CONTAINER-->
    </div>
 </div>
-    <?php
-}
-}
-/* {/block 'content'} */
-/* {block 'js'} */
-class Block_301795a44650c0cc8c8_27165860 extends Smarty_Internal_Block
-{
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-?>
-
+    {/block}
+ 
+ 
+ {block name=js}
      
-     <?php echo '<script'; ?>
->
-        
+     <script>
+        {literal}
         $("#upload").click(function(){
             $("input[type='file']").click();
         })
@@ -350,7 +291,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 processData:false,
                 contentType:false,
                 success:function(e){
-                    console.log(e);
+                  {*  console.log(e);*}
                   var e=$.parseJSON(e);
                     if(e.code ==100){
                         alert("上传失败");
@@ -365,19 +306,20 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         });
         
         $("#form_submit").click(function(){
-            var id = $("input[name='id']").val();
+ 
             var name = $("input[name='name']").val();
+
             var url = $("input[name='url']").val();
-            var miaoshu = $("input[name='miaoshu']").val();
+            var hero_id = $("select[name='hero_id']").val();
             console.log(url);
             $.ajax({
                 type:"post",
-                url:"index.php?class=Posy&action=update",
-                data:{id:id,name:name,url:url,miaoshu:miaoshu},
+                url:"index.php?class=Skin&action=update",
+                data:{name:name,url:url,hero_id:hero_id},
                 success:function(data){
                    data=$.parseJSON(data);
                    if(data.code==200){
-                       window.location.href="index.php?class=Posy&action=posyList"
+                       window.location.href="index.php?class=Skin&action=skinList"
                    }else{
                        alert(data.message);
                    }
@@ -386,12 +328,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         });
         
          
-        
-     <?php echo '</script'; ?>
->
+        {/literal}
+     </script>
  
- <?php
-}
-}
-/* {/block 'js'} */
-}
+ {/block}

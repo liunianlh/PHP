@@ -1,66 +1,9 @@
-<?php
-/* Smarty version 3.1.30, created on 2017-12-28 19:58:20
-  from "F:\phpStudy\WWW\wangzhe\admin\template\Skill\add.tpl" */
 
-/* @var Smarty_Internal_Template $_smarty_tpl */
-if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.30',
-  'unifunc' => 'content_5a44dc5cb6a4c5_92847795',
-  'has_nocache_code' => false,
-  'file_dependency' => 
-  array (
-    '4f6e5190988f95d05ff87e044e3799d48d6752f5' => 
-    array (
-      0 => 'F:\\phpStudy\\WWW\\wangzhe\\admin\\template\\Skill\\add.tpl',
-      1 => 1514462297,
-      2 => 'file',
-    ),
-  ),
-  'includes' => 
-  array (
-    'file:../layout.tpl' => 1,
-  ),
-),false)) {
-function content_5a44dc5cb6a4c5_92847795 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_loadInheritance();
-$_smarty_tpl->inheritance->init($_smarty_tpl, true);
-?>
+{block name=title}皮肤管理-添加{/block}
 
-<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_259115a44dc5cb4d671_36468042', 'title');
-?>
+{extends file="../layout.tpl"}
 
-
-
-
-<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_27245a44dc5cb5f7b7_25249327', 'content');
-?>
-
- 
- 
- <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_123015a44dc5cb67e82_83797981', 'js');
-?>
-
-<?php $_smarty_tpl->inheritance->endChild();
-$_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
-}
-/* {block 'title'} */
-class Block_259115a44dc5cb4d671_36468042 extends Smarty_Internal_Block
-{
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-?>
-技能管理-添加<?php
-}
-}
-/* {/block 'title'} */
-/* {block 'content'} */
-class Block_27245a44dc5cb5f7b7_25249327 extends Smarty_Internal_Block
-{
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-?>
-
+{block name=content}
 
     <div class="page-content">
     <div class="container-fluid">
@@ -186,8 +129,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 						<!-- END BEGIN STYLE CUSTOMIZER -->  
 
 						<h3 class="page-title">
-							技能
-							 <small>技能添加</small>
+							铭文
+							 <small>铭文添加</small>
 
 						</h3>
 
@@ -204,11 +147,11 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
 							<li>
 
-								<a href="#">技能管理</a>
+								<a href="#">铭文管理</a>
 
 								<span class="icon-angle-right"></span>
                                                         </li>
-                                                        <li><a href="#">英雄技能管理列表</a>
+                                                        <li><a href="#">铭文添加</a>
                                                         </li>
 
 						</ul>
@@ -258,32 +201,45 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 											<!-- BEGIN FORM-->
 											<form action="#" class="form-horizontal">
 												<div class="control-group">
-													<label class="control-label">技能名称：</label>
+													<label class="control-label">皮肤名称：</label>
 													<div class="controls">
-														<input type="text" placeholder="请输入技能" class="m-wrap small"  name="name"/>
+														<input type="text" placeholder="请输入皮肤" class="m-wrap small"  name="name"/>
 													</div>
 												</div>
+                                                                                                
                                                                                                 <div class="control-group">
-													<label class="control-label">上传技能图片：</label>
+													<label class="control-label">上传头像：</label>
 													<div class="controls" >
                                                                                                             <img src="" width="100" style="display:none" id="upload_img"/>
-                                                                                                            <button type="button" id="upload">上传</button>
+                                                                                                            <button type="button" id="upload">上传头像</button>
 												            <input type="file" value="" name="myfile" class="m-wrap small" style="display:none;"/>
                                                                                                             <input type="hidden" value="" id="upload_url" name="url"/>
 													</div>
 												</div>
-                                                                                           <div class="control-group">
-													<label class="control-label">技能介绍：</label>
-													<div class="controls">
-														<input type="text" placeholder="请输入技能介绍" class="m-wrap small"  name="jieshao"/>
+                                                                                            
+                                                                                             {*   <div class="control-group">
+													<label class="control-label">上传头像：</label>
+													<div class="controls" >
+                                                                                                            <img src="" width="100" style="display:none" id="upload_img"/>
+                                                                                                            <button type="button" id="upload">上传头像</button>
+												            <input type="file" value="" name="myfile" class="m-wrap small" style="display:none;"/>
+                                                                                                            <input type="hidden" value="" id="upload_url" name="url"/>
 													</div>
-												</div>
+												</div>*}
+                                                                                            
+                                                                                            
+                                                                                            
                                                                                             <div class="control-group">
-													<label class="control-label">解锁等级：</label>
+													<label class="control-label">英雄列表：</label>
 													<div class="controls">
-														<input type="text" placeholder="请输入等级" class="m-wrap small"  name="shiyong"/>
+													<select name="hero_id">
+                                                                                                            {foreach from=$list key=k item=v}
+                                                                                                                <option value="{$v.id}">{$v.name}</option>
+                                                                                                             {/foreach}
+                                                                                                        </select>
 													</div>
-												</div>
+                                                                                        </div>
+                                                                                      
 												<div class="form-actions">
 													<button type="button" class="btn blue" id="form_submit"><i class="icon-ok"></i> 添加</button>
 													
@@ -317,20 +273,13 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 			<!-- END PAGE CONTAINER-->
    </div>
 </div>
-    <?php
-}
-}
-/* {/block 'content'} */
-/* {block 'js'} */
-class Block_123015a44dc5cb67e82_83797981 extends Smarty_Internal_Block
-{
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-?>
-
+    {/block}
+ 
+ 
+ {block name=js}
      
-     <?php echo '<script'; ?>
->
-        
+     <script>
+        {literal}
         $("#upload").click(function(){
             $("input[type='file']").click();
         })
@@ -362,24 +311,19 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             })
         });
         
-        
-       
-        
-        
         $("#form_submit").click(function(){
             var name = $("input[name='name']").val();
             var url = $("input[name='url']").val();
-            var jieshao = $("input[name='jieshao']").val();
-             var shiyong = $("input[name='shiyong']").val();
+            var hero_id = $("select[name='hero_id']").val();
             console.log(url);
             $.ajax({
                 type:"post",
-                url:"index.php?class=Skill&action=insert",
-                data:{name:name,url:url,jieshao:jieshao,shiyong:shiyong},
+                url:"index.php?class=Skin&action=insert",
+                data:{name:name,url:url,hero_id:hero_id},
                 success:function(data){
                    data=$.parseJSON(data);
                    if(data.code==200){
-                       window.location.href="index.php?class=Skill&action=SkillList"
+                       window.location.href="index.php?class=Skin&action=skinList"
                    }else{
                        alert(data.message);
                    }
@@ -388,12 +332,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         });
         
          
-        
-     <?php echo '</script'; ?>
->
+        {/literal}
+     </script>
  
- <?php
-}
-}
-/* {/block 'js'} */
-}
+ {/block}

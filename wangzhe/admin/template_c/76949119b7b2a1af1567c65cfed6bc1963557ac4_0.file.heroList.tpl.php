@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-04 18:20:00
+/* Smarty version 3.1.30, created on 2018-01-05 20:26:41
   from "F:\phpStudy\WWW\wangzhe\admin\template\Hero\heroList.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a4dffd09f2a61_96206013',
+  'unifunc' => 'content_5a4f6f01816c62_14945213',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '76949119b7b2a1af1567c65cfed6bc1963557ac4' => 
     array (
       0 => 'F:\\phpStudy\\WWW\\wangzhe\\admin\\template\\Hero\\heroList.tpl',
-      1 => 1515061198,
+      1 => 1515155187,
       2 => 'file',
     ),
   ),
@@ -21,28 +21,28 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a4dffd09f2a61_96206013 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a4f6f01816c62_14945213 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_197795a4dffd0972531_63381879', 'title');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_288555a4f6f01755a92_08165277', 'title');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_327045a4dffd09c84c8_14889890', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_287085a4f6f017d7e04_95472672', 'content');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_53695a4dffd09ec727_32324790', 'js');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_265095a4f6f0180d9f2_88025653', 'js');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'title'} */
-class Block_197795a4dffd0972531_63381879 extends Smarty_Internal_Block
+class Block_288555a4f6f01755a92_08165277 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -51,7 +51,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'title'} */
 /* {block 'content'} */
-class Block_327045a4dffd09c84c8_14889890 extends Smarty_Internal_Block
+class Block_287085a4f6f017d7e04_95472672 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -300,6 +300,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                                                                                          <th  style="text-align:center;">最佳搭档</th>                                                                                     
                                                                                         <th  style="text-align:center;">压制英雄</th>
                                                                                          <th  style="text-align:center;">被压制英雄</th>
+                                                                                          <th  style="text-align:center;">出装推荐</th>
                                                                                         <th  style="text-align:center;">操作</th>
 										</tr>
 
@@ -404,7 +405,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
 </td>
                                                                                         
                                                                                         
-                                                                       
+                                                                                        <td class="tools" data-id="<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
+" style="text-align:center;padding-top: 40px;">出装推荐</td>
                                                                                         <td style="text-align:center;padding-top: 40px;">                                                                                       
                                                                                             <a href="index.php?class=Hero&action=edit&id=<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
 ">修改</a>
@@ -634,14 +636,147 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
     
                 </div>
 
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
             
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                  
+               
+        <div  id="selectTools" style="width: 100%;height: 100%; display: none;background: rgba(0,0,0,0.5);position:absolute;top: 0px;left: 0px;z-index: 999;">
+                        <div class="modal">
+
+				<div class="modal-header">
+
+                                    <button class="close" type="button" onclick="$('#selectTools').hide();"></button>
+
+					<h3>出装推荐</h3>
+
+				</div>
+
+				<div class="modal-body">
+
+					<!-- BEGIN FORM-->
+
+                                        <form action="#" class="form-horizontal" id="skillForm">
+                                            <p style="color:red; margin-left:200px;" >提示:必须选择6个装备</p>
+                                                                                            <input type="hidden" value="" name="id">
+                                                                                         
+                                                                                            <div class="control-group" id="tools1">
+
+													<label class="control-label" style="font-size: 20px;">出装选择1:</label>
+
+													<div class="controls">
+                                                                                                            <select name="tools1" multiple="multiple" style="width:100px;">
+                                                                                                                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['toolsList']->value, 'v', false, 'k');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars['v']->value) {
+?>
+                                                                                                                    <option value="<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['v']->value['name'];?>
+</option>
+                                                                                                                <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+                                                                                                            </select>
+                                                                                                            <div style="display:inline-block;">
+                                                                                                                <a class="add">=></a>
+                                                                                                                <br/>
+                                                                                                                 <a class="delete"><=</a>
+                                                                                                            </div>
+                                                                                                            <select name="selectTools1" multiple="multiple" style="width:100px;">
+
+                                                                                                            </select>
+													</div>
+
+												</div>
+                                                                                               <div class="control-group">
+													<label class="control-label" style="font-size: 20px;">推荐理由</label>
+													<div class="controls">
+                                                                                                            <textarea name="miaosu1" class="m-wrap"></textarea>                                                                
+													</div>
+
+												</div>
+												<div class="control-group" id="tools2">
+
+													<label class="control-label" style="font-size: 20px;">出装选择2:</label>
+
+													<div class="controls">
+                                                                                                           <select name="tools2" multiple="multiple" style="width:100px;">
+                                                                                                                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['toolsList']->value, 'v', false, 'k');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars['v']->value) {
+?>
+                                                                                                                    <option value="<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['v']->value['name'];?>
+</option>
+                                                                                                                <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+                                                                                                            </select>
+                                                                                                            <div style="display:inline-block;">
+                                                                                                                <a class="add">=></a>
+                                                                                                                <br/>
+                                                                                                                 <a class="delete"><=</a>
+                                                                                                            </div>
+                                                                                                            <select name="selectTools2" multiple="multiple" style="width:100px;">
+
+                                                                                                            </select>
+                                                                                                          
+													</div>
+
+												</div>
+                                                                                                            
+												<div class="control-group">
+													<label class="control-label" style="font-size: 20px;">推荐理由</label>
+													<div class="controls">
+                                                                                                            <textarea name="miaosu2" class=" m-wrap"></textarea>                                                                
+													</div>
+
+												</div>
+                                                                                                            <div class="control-group" style="text-align: center;" id="queren">
+                                                                                                <button type="button" class="btn blue" id="queren">确认</button>
+                                                                                               </div>
+											</form>
+
+											<!-- END FORM-->  
+
+				</div>
+
+			</div>
+    
+                </div>
+                                                                                          
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
                 
 <?php
 }
 }
 /* {/block 'content'} */
 /* {block 'js'} */
-class Block_53695a4dffd09ec727_32324790 extends Smarty_Internal_Block
+class Block_265095a4f6f0180d9f2_88025653 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -649,6 +784,115 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     
     <?php echo '<script'; ?>
 >
+
+    
+    
+    $(".tools").click(function(){
+
+        $("#selectTools").show();
+           var id=$(this).attr("data-id");
+         $("#selectTools input[name='id']").val(id);
+    });
+   
+       
+    var arr1=new Array();
+      var arr2=new Array();
+    $("#tools1 .add").click(function(){       
+            $("select[name='tools1'] option").each(function(){          
+            if($(this).attr("selected")=="selected"){           
+            var val=$(this).val();
+            var text=$(this).html();
+            $("select[name='selectTools1']").append("<option value='"+val+"'>"+text+"</option>");
+           $(this).remove();
+            arr1.unshift(text);
+            console.log(arr1);
+                }               
+            })
+            });
+
+    
+     $("#tools1 .delete").click(function(){       
+            $("select[name='selectTools1'] option").each(function(){           
+            if($(this).attr("selected")=="selected"){
+            var val=$(this).val();
+            var text=$(this).html();
+            $("select[name='tools1']").append("<option value='"+val+"'>"+text+"</option>");
+           $(this).remove();
+        }   
+           
+        
+            })  
+            });
+    
+    
+    
+    
+    
+       $("#tools2 .add").click(function(){       
+            $("select[name='tools2'] option").each(function(){          
+            if($(this).attr("selected")=="selected"){           
+            var val=$(this).val();
+            var text=$(this).html();
+            $("select[name='selectTools2']").append("<option value='"+val+"'>"+text+"</option>");
+           $(this).remove();
+             arr2.unshift(text);
+   
+                }
+                  
+            })
+            });
+
+    
+     $("#tools2 .delete").click(function(){       
+            $("select[name='selectTools2'] option").each(function(){           
+            if($(this).attr("selected")=="selected"){
+            var val=$(this).val();
+            var text=$(this).html();
+            $("select[name='tools2']").append("<option value='"+val+"'>"+text+"</option>");
+           $(this).remove();
+        }   
+            })  
+            });
+    
+    
+    
+         $("#queren").click(function(){
+         var id=$("#selectTools input[name='id']").val();
+    
+         var Tools1=arr1;
+         var Tools2=arr2;
+         var miaosu1=$("textarea[name='miaosu1']").val();
+         var miaosu2=$("textarea[name='miaosu2']").val();
+                     $.ajax({
+                         type:"post",
+                         url:"index.php?class=Hero&action=selectTools",
+                         data:{id:id,Tools1:Tools1,Tools2:Tools2,miaosu1:miaosu1,miaosu2:miaosu2},
+                         success:function(data){
+                          if(data.code==100)
+                            { 
+                            alert(data.message);   
+                                 } else{
+                                 
+                     history.go(0); 
+                                    }
+                                 }
+                            });  
+         
+         
+                });
+           
+    
+            
+
+ 
+    
+    
+    
+    
+       
+        
+        
+        
 
     $(".heroTouch").click(function(){
        

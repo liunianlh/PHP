@@ -5,6 +5,10 @@ class Index extends common{
     public function shouye(){
         $this->template->template_display("Index/index.tpl");
     }
+    
+    
+    
+    
     public function upload(){
 //        获取相关的值
         if(!isset($_FILES["myfile"])){
@@ -29,6 +33,7 @@ class Index extends common{
             $this->show(100,"上传失败","");
         }
         }
+        
     }
 
 

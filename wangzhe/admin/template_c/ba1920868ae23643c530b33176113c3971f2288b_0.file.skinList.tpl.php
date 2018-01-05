@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-28 11:19:53
-  from "F:\phpStudy\WWW\wangzhe\admin\template\Vocation\vocationList.tpl" */
+/* Smarty version 3.1.30, created on 2018-01-05 12:04:45
+  from "F:\phpStudy\WWW\wangzhe\admin\template\Skin\skinList.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a4462d915a149_41443132',
+  'unifunc' => 'content_5a4ef95d837f75_31127477',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '7cc94179b256d342a4f3ca3d346e1fefd2bceff0' => 
+    'ba1920868ae23643c530b33176113c3971f2288b' => 
     array (
-      0 => 'F:\\phpStudy\\WWW\\wangzhe\\admin\\template\\Vocation\\vocationList.tpl',
-      1 => 1514340378,
+      0 => 'F:\\phpStudy\\WWW\\wangzhe\\admin\\template\\Skin\\skinList.tpl',
+      1 => 1515117132,
       2 => 'file',
     ),
   ),
@@ -21,37 +21,37 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a4462d915a149_41443132 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a4ef95d837f75_31127477 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_318485a4462d912cc52_49293743', 'title');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_110125a4ef95d80e908_16875595', 'title');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_226575a4462d9149b82_86280139', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_145735a4ef95d82c848_72767131', 'content');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_115585a4462d91581e1_28364844', 'js');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_89945a4ef95d8371d9_06995854', 'js');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'title'} */
-class Block_318485a4462d912cc52_49293743 extends Smarty_Internal_Block
+class Block_110125a4ef95d80e908_16875595 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
-职业员管理-列表<?php
+道具管理-列表<?php
 }
 }
 /* {/block 'title'} */
 /* {block 'content'} */
-class Block_226575a4462d9149b82_86280139 extends Smarty_Internal_Block
+class Block_145735a4ef95d82c848_72767131 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -101,7 +101,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 												</div>
                                                                                             <div class="control-group" style="text-align: center;">
                                                                                                 <button type="button" class="btn blue" id="saveAdmin">添加</button>
-                                                                                               </div>
+                                                                                             </div>
 											</form>
 
 											<!-- END FORM-->  
@@ -229,7 +229,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
 						<h3 class="page-title">
 
-							职业管理
+						皮肤管理
 
 						</h3>
 
@@ -257,7 +257,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 								<div class="clearfix">
 
 									<div class="btn-group">
-                                                                            <a href="index.php?class=Vocation&action=add">         
+                                                                            <a href="index.php?class=Skin&action=add">         
                                                                             <button id="sample_editable_1_new" class="btn green">
 
 										添加 <i class="icon-plus"></i>
@@ -275,14 +275,15 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 									<thead>
 
                                                                             <tr>
-                                                                                <th  style="text-align:center;">编号</th>
+                                                                                         <th  style="text-align:center;width:50px;">编号</th>
 
 											
 
-											<th  style="text-align:center;">职业名称</th>
+											<th  style="text-align:center;">皮肤名称</th>
                                                                                           
-                                                                                        <th  style="text-align:center;">职业英文名称</th>
-                                                                                        
+                                                                                        <th  style="text-align:center;">英雄头像</th>
+                                                                                        <th  style="text-align:center;">皮肤图片</th>
+                                                                                        <th  style="text-align:center;">英雄</th>
                                                                                         <th  style="text-align:center;">操作</th>
 										</tr>
 
@@ -302,21 +303,30 @@ foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
 											<td style="text-align:center;padding-top: 40px;"><?php echo $_smarty_tpl->tpl_vars['v']->value['name'];?>
 </td>
 
-											<td style="text-align:center;padding-top: 40px;"><?php echo $_smarty_tpl->tpl_vars['v']->value['eng_name'];?>
-</td>
-
-                                                                                        <td style="text-align:center;padding-top: 10px;">
+											
+                                                                                         <td style="text-align:center;padding-top: 10px;">
                                                                                             <img src="<?php echo $_smarty_tpl->tpl_vars['v']->value['image'];?>
 " style="width: 80px;height: 80px;border: 1px solid sienna">
                                                                                         </td>
+                                                                                        <td style="text-align:center;padding-top: 10px;">
+                                                                                            <img src="<?php echo $_smarty_tpl->tpl_vars['v']->value['big_image'];?>
+" style="width: 80px;height: 80px;border: 1px solid sienna">
+                                                                                        </td>
+                                                                                   
+											<td style="text-align:center;padding-top: 40px;"><?php echo $_smarty_tpl->tpl_vars['vocationList']->value[$_smarty_tpl->tpl_vars['v']->value['hero_id']];?>
+</td>
+
+                                                                                    
+                   
+
                                                                                             
                                                                                    
                                                                        
                                                                                         <td style="text-align:center;padding-top: 40px;">                                                                                       
-                                                                                            <a href="index.php?class=vocation&action=edit&id=<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
+                                                                                            <a href="index.php?class=Skin&action=edit&id=<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
 ">修改</a>
                                                                                        
-                                                                                             <a href="index.php?class=vocation&action=Delete&id=<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
+                                                                                             <a href="index.php?class=Skin&action=Delete&id=<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
 ">删除</a>
                                                                                                 
                                                                                                 
@@ -369,7 +379,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 }
 /* {/block 'content'} */
 /* {block 'js'} */
-class Block_115585a4462d91581e1_28364844 extends Smarty_Internal_Block
+class Block_89945a4ef95d8371d9_06995854 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>

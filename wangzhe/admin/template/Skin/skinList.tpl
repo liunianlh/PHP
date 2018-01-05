@@ -1,63 +1,9 @@
-<?php
-/* Smarty version 3.1.30, created on 2018-01-03 17:13:31
-  from "F:\phpStudy\WWW\wangzhe\admin\template\yx_Skill\yx_Skill.tpl" */
+{extends file="../layout.tpl"}
+{block name=title}道具管理-列表{/block}
 
-/* @var Smarty_Internal_Template $_smarty_tpl */
-if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.30',
-  'unifunc' => 'content_5a4c9ebb310299_62203070',
-  'has_nocache_code' => false,
-  'file_dependency' => 
-  array (
-    '5f0d325a414b419f7074030edcfbb51ebd9f62e9' => 
-    array (
-      0 => 'F:\\phpStudy\\WWW\\wangzhe\\admin\\template\\yx_Skill\\yx_Skill.tpl',
-      1 => 1514970162,
-      2 => 'file',
-    ),
-  ),
-  'includes' => 
-  array (
-    'file:../layout.tpl' => 1,
-  ),
-),false)) {
-function content_5a4c9ebb310299_62203070 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_loadInheritance();
-$_smarty_tpl->inheritance->init($_smarty_tpl, true);
-?>
+{block name=content}
 
-<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_249375a4c9ebb1414e0_56702953', 'title');
-?>
-
-
-<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_102225a4c9ebb305e17_66003579', 'content');
-?>
-
-
-<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_134555a4c9ebb30f672_49846760', 'js');
-$_smarty_tpl->inheritance->endChild();
-$_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
-}
-/* {block 'title'} */
-class Block_249375a4c9ebb1414e0_56702953 extends Smarty_Internal_Block
-{
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-?>
-英雄技能管理-列表<?php
-}
-}
-/* {/block 'title'} */
-/* {block 'content'} */
-class Block_102225a4c9ebb305e17_66003579 extends Smarty_Internal_Block
-{
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-?>
-
-
-
+{*添加的弹框*}
         <div  id="addAdmin" style="width: 100%;height: 100%; display: none;background: rgba(0,0,0,0.5);position:absolute;top: 0px;left: 0px;z-index: 999;">
                         <div class="modal">
 
@@ -229,7 +175,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
 						<h3 class="page-title">
 
-						技能管理
+						皮肤管理
 
 						</h3>
 
@@ -257,7 +203,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 								<div class="clearfix">
 
 									<div class="btn-group">
-                                                                            <a href="index.php?class=yx_Skill&action=add">         
+                                                                            <a href="index.php?class=Skin&action=add">         
                                                                             <button id="sample_editable_1_new" class="btn green">
 
 										添加 <i class="icon-plus"></i>
@@ -275,60 +221,48 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 									<thead>
 
                                                                             <tr>
-                                                                                        <th  style="text-align:center;width:50px;">编号</th>											
-											<th  style="text-align:center;">技能名称</th>                                                                                         
+                                                                                         <th  style="text-align:center;width:50px;">编号</th>
+
+											
+
+											<th  style="text-align:center;">皮肤名称</th>
+                                                                                          
                                                                                         <th  style="text-align:center;">英雄头像</th>
-                                                                                        <th  style="text-align:center;">技能冷却值</th>
-                                                                                        <th  style="text-align:center;">消耗</th>
-                                                                                        <th  style="text-align:center;">描述</th>
-                                                                                        <th  style="text-align:center;">备注</th>
-                                                                                        <th  style="text-align:center;">英雄id</th>
+                                                                                        <th  style="text-align:center;">皮肤图片</th>
+                                                                                        <th  style="text-align:center;">英雄</th>
                                                                                         <th  style="text-align:center;">操作</th>
 										</tr>
 
 									</thead>
 
 									<tbody>
-                                                                           <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['list']->value, 'v');
-if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
-?>
+                                                                           {foreach from=$list item=v}
 										<tr class="">
 
-                                                                                        <td style="text-align:center;padding-top: 30px;"><?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
-</td>
-											<td style="text-align:center;padding-top: 30px;"><?php echo $_smarty_tpl->tpl_vars['v']->value['name'];?>
-</td>
-                                                                                        <td style="text-align:center;padding-top: 30px;"><?php echo $_smarty_tpl->tpl_vars['v']->value['url'];?>
-</td>
-                                                                                        <td style="text-align:center;padding-top: 30px;"><?php echo $_smarty_tpl->tpl_vars['v']->value['cd'];?>
-</td>
-											<td style="text-align:center;padding-top: 30px;"><?php echo $_smarty_tpl->tpl_vars['v']->value['pm'];?>
-</td>
-                                                                                        <td style="text-align:center;padding-top: 30px;"><?php echo $_smarty_tpl->tpl_vars['v']->value['porperty'];?>
-</td>                                                                                    
-                                                                                        <td style="text-align:center;padding-top: 30px;"><?php echo $_smarty_tpl->tpl_vars['v']->value['num'];?>
-</td>
-                                                                                        <td style="text-align:center;padding-top: 30px;"><?php echo $_smarty_tpl->tpl_vars['v']->value['hero_id'];?>
-</td>
+                                                                                    <td style="text-align:center;padding-top: 40px;">{$v.id}</td>
+
+											<td style="text-align:center;padding-top: 40px;">{$v.name}</td>
 
 											
-											
-                                                                                         
-										
+                                                                                         <td style="text-align:center;padding-top: 10px;">
+                                                                                            <img src="{$v.image}" style="width: 80px;height: 80px;border: 1px solid sienna">
+                                                                                        </td>
+                                                                                        <td style="text-align:center;padding-top: 10px;">
+                                                                                            <img src="{$v.big_image}" style="width: 80px;height: 80px;border: 1px solid sienna">
+                                                                                        </td>
+                                                                                   
+											<td style="text-align:center;padding-top: 40px;">{$vocationList[$v.hero_id]}</td>
+
                                                                                     
                    
 
                                                                                             
                                                                                    
                                                                        
-                                                                                        <td style="text-align:center;padding-top: 30px;">                                                                                       
-                                                                                            <a href="index.php?class=yx_Skill&action=edit&id=<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
-">修改</a>
+                                                                                        <td style="text-align:center;padding-top: 40px;">                                                                                       
+                                                                                            <a href="index.php?class=Skin&action=edit&id={$v.id}">修改</a>
                                                                                        
-                                                                                             <a href="index.php?class=yx_Skill&action=Delete&id=<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
-">删除</a>
+                                                                                             <a href="index.php?class=Skin&action=Delete&id={$v.id}">删除</a>
                                                                                                 
                                                                                                 
                                                                                         </td>
@@ -338,19 +272,11 @@ foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
 
 									
                                                                                         </tr>
-                                                                                <?php
-}
-} else {
-?>
-
+                                                                                {foreachelse}
                                                                                     <tr>
                                                                                         暂无数据
                                                                                     </tr>
-                                                                                <?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
-?>
-								
+                                                                                {/foreach}								
 
 									</tbody>
 
@@ -375,21 +301,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 		</div>
 
 		<!-- END PAGE -->
-<?php
-}
-}
-/* {/block 'content'} */
-/* {block 'js'} */
-class Block_134555a4c9ebb30f672_49846760 extends Smarty_Internal_Block
-{
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-?>
+{/block}
 
+{block name=js}
     
 
     
-<?php
-}
-}
-/* {/block 'js'} */
-}
+{/block}

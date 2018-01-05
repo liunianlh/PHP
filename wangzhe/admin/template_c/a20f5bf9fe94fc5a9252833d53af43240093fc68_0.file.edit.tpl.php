@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-29 17:52:13
-  from "F:\phpStudy\WWW\wangzhe\admin\template\Hero\edit.tpl" */
+/* Smarty version 3.1.30, created on 2018-01-05 12:22:36
+  from "F:\phpStudy\WWW\wangzhe\admin\template\Skin\edit.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a46104d8aa590_23924578',
+  'unifunc' => 'content_5a4efd8ccd06d0_80320489',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '758ab1f71f113864b8bf0d7869b325045db04e3d' => 
+    'a20f5bf9fe94fc5a9252833d53af43240093fc68' => 
     array (
-      0 => 'F:\\phpStudy\\WWW\\wangzhe\\admin\\template\\Hero\\edit.tpl',
-      1 => 1514541125,
+      0 => 'F:\\phpStudy\\WWW\\wangzhe\\admin\\template\\Skin\\edit.tpl',
+      1 => 1515126140,
       2 => 'file',
     ),
   ),
@@ -21,42 +21,42 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a46104d8aa590_23924578 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a4efd8ccd06d0_80320489 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20845a46104d86ddf8_44759290', 'title');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_108715a4efd8cc99952_81235984', 'title');
 ?>
 
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_80775a46104d89cb30_87168483', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17645a4efd8ccbde75_99285358', 'content');
 ?>
 
  
  
  <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_54425a46104d8a7577_89177675', 'js');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_59655a4efd8ccce011_17331991', 'js');
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'title'} */
-class Block_20845a46104d86ddf8_44759290 extends Smarty_Internal_Block
+class Block_108715a4efd8cc99952_81235984 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
-英雄管理-修改<?php
+铭文管理-添加<?php
 }
 }
 /* {/block 'title'} */
 /* {block 'content'} */
-class Block_80775a46104d89cb30_87168483 extends Smarty_Internal_Block
+class Block_17645a4efd8ccbde75_99285358 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -186,8 +186,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 						<!-- END BEGIN STYLE CUSTOMIZER -->  
 
 						<h3 class="page-title">
-							英雄
-							 <small>英雄添加</small>
+							铭文    
+							 <small>铭文修改</small>
 
 						</h3>
 
@@ -204,11 +204,11 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
 							<li>
 
-								<a href="#">技能管理</a>
+								<a href="#">铭文管理</a>
 
 								<span class="icon-angle-right"></span>
                                                         </li>
-                                                        <li><a href="#">英雄技能管理列表</a>
+                                                        <li><a href="#">铭文修改</a>
                                                         </li>
 
 						</ul>
@@ -260,36 +260,36 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                                                                                              <input type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['info']->value[0]['id'];?>
 " name="id">
 												<div class="control-group">
-													<label class="control-label">英雄名称：</label>
+													<label class="control-label">皮肤名称：</label>
 													<div class="controls">
-														<input type="text" placeholder="请输入英雄名称" class="m-wrap small"  name="name" value="<?php echo $_smarty_tpl->tpl_vars['info']->value[0]['name'];?>
+                                                                                                            <input type="text" placeholder="请输入名称" class="m-wrap small"  name="name" value="<?php echo $_smarty_tpl->tpl_vars['info']->value[0]['name'];?>
 "/>
 													</div>
 												</div>
-                                                                                              
-                                                                                               <div class="control-group">
+                                                                                                
+                                                                                                 <div class="control-group">
 													<label class="control-label">上传图片：</label>
 													<div class="controls" >
-                                                                                                            <img src="<?php echo $_smarty_tpl->tpl_vars['info']->value[0]['photo'];?>
+                                                                                                            <img src="<?php echo $_smarty_tpl->tpl_vars['info']->value[0]['image'];?>
 " width="100" id="upload_img"/>
                                        
 												            <input type="file" value="" name="myfile" class="m-wrap small" style="display:none;"/>
-                                                                                                            <input type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['info']->value[0]['photo'];?>
+                                                                                                            <input type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['info']->value[0]['image'];?>
 " id="upload_url" name="url"/>
 													</div>
 												</div>
-                                                                                                 <div class="control-group">
-													<label class="control-label">英雄职业：</label>
+                                                                                            <div class="control-group">
+													<label class="control-label">英雄列表：</label>
 													<div class="controls">
-													<select  name='vocation_id' value="<?php echo $_smarty_tpl->tpl_vars['info']->value[0]['vocation_id'];?>
-">
-                                                                                                            <?php
+													<select name="hero_id">
+                                                                                                           
+                                                                                                          <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['vocationList']->value, 'v', false, 'k');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars['v']->value) {
 ?>
                                                                                                                 <option value="<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['v']->value['name'];?>
+"><?php echo $_smarty_tpl->tpl_vars['v']->value;?>
 </option>
                                                                                                              <?php
 }
@@ -297,63 +297,16 @@ foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars[
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
+                                                                                                         
+                                                                                                   
+                                                                                                        </select>
                                                                                                         </select>
 													</div>
-												</div>
-                                                                                                 <div class="control-group">
-													<label class="control-label">生存能力：</label>
-													<div class="controls">
-														<input type="text" placeholder="请输入生存能力" class="m-wrap small"  name="live" value="<?php echo $_smarty_tpl->tpl_vars['info']->value[0]['live'];?>
-"/>
-													</div>
-												</div>
-                                                                                                        <div class="control-group">
-													<label class="control-label">攻击伤害：</label>
-													<div class="controls">
-														<input type="text" placeholder="请输入伤害能力" class="m-wrap small"  name="hurt" value="<?php echo $_smarty_tpl->tpl_vars['info']->value[0]['hurt'];?>
-"/>
-													</div>
-												</div>
-                                                                                                  <div class="control-group">
-													<label class="control-label">技能效果：</label>
-													<div class="controls">
-														<input type="text" placeholder="上手难度" class="m-wrap small"  name="effect" value="<?php echo $_smarty_tpl->tpl_vars['info']->value[0]['effect'];?>
-"/>
-													</div>
-												</div>       
-                                                                                                 <div class="control-group">
-													<label class="control-label">上手难度：</label>
-													<div class="controls">
-														<input type="text" placeholder="上手难度" class="m-wrap small"  name="difficulty" value="<?php echo $_smarty_tpl->tpl_vars['info']->value[0]['difficulty'];?>
-" />
-													</div>
-												</div>
-                                                                                                 <div class="control-group">
-													<label class="control-label">本周免费：</label>
-													<div class="controls">
-                                                                                                            <input type="radio" name="free_week" value="1" class="m-wrap small" />否
-                                                                                                            <input type="radio" name="free_week" value="2" class="m-wrap small" />是
-													</div>
-												</div>
-                                                                                                <div class="control-group">
-													<label class="control-label">新手推荐：</label>
-													<div class="controls">
-                                                                                                            <input type="radio" name="new_recomment" value="1" class="m-wrap small" />否
-                                                                                                            <input type="radio" name="new_recomment" value="2" class="m-wrap small" />是
-													</div>
-												</div>
-                                                                                                 <div class="control-group">
-													<label class="control-label">英雄故事：</label>
-													<div class="controls">
-                                                                                                            <textarea name="story" class="m-wrap large" name="story" value="<?php echo $_smarty_tpl->tpl_vars['info']->value[0]['story'];?>
-"><?php echo $_smarty_tpl->tpl_vars['info']->value[0]['story'];?>
-</textarea>
-													</div>
-												</div
+                                                                                        </div>
+                                                                                      
 												<div class="form-actions">
-                                                                                                    <div class="controls">
 													<button type="button" class="btn blue" id="form_submit"><i class="icon-ok"></i> 添加</button>
-                                                                                                    </div>
+													
 												</div>
 
 											</form>
@@ -389,7 +342,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 }
 /* {/block 'content'} */
 /* {block 'js'} */
-class Block_54425a46104d8a7577_89177675 extends Smarty_Internal_Block
+class Block_59655a4efd8ccce011_17331991 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -415,7 +368,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 processData:false,
                 contentType:false,
                 success:function(e){
-                    console.log(e);
+                  {*  console.log(e);*}
                   var e=$.parseJSON(e);
                     if(e.code ==100){
                         alert("上传失败");
@@ -430,14 +383,20 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         });
         
         $("#form_submit").click(function(){
+ 
+            var name = $("input[name='name']").val();
+
+            var url = $("input[name='url']").val();
+            var hero_id = $("select[name='hero_id']").val();
+            console.log(url);
             $.ajax({
                 type:"post",
-                url:"index.php?class=Hero&action=update",
-                data:$("form").serializeArray(),
+                url:"index.php?class=Skin&action=update",
+                data:{name:name,url:url,hero_id:hero_id},
                 success:function(data){
                    data=$.parseJSON(data);
                    if(data.code==200){
-                         window.location.href="index.php?class=Hero&action=HeroList"
+                       window.location.href="index.php?class=Skin&action=skinList"
                    }else{
                        alert(data.message);
                    }

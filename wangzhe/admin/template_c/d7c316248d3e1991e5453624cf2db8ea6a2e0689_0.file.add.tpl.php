@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-04 11:20:15
-  from "F:\phpStudy\WWW\wangzhe\admin\template\Hero\add.tpl" */
+/* Smarty version 3.1.30, created on 2018-01-05 12:05:32
+  from "F:\phpStudy\WWW\wangzhe\admin\template\Skin\add.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a4d9d6f9308a0_68620597',
+  'unifunc' => 'content_5a4ef98cefff78_19690713',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '509cb89732300aabbf1c29f14ae766a0ce9dc73e' => 
+    'd7c316248d3e1991e5453624cf2db8ea6a2e0689' => 
     array (
-      0 => 'F:\\phpStudy\\WWW\\wangzhe\\admin\\template\\Hero\\add.tpl',
-      1 => 1514965607,
+      0 => 'F:\\phpStudy\\WWW\\wangzhe\\admin\\template\\Skin\\add.tpl',
+      1 => 1515120698,
       2 => 'file',
     ),
   ),
@@ -21,42 +21,42 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a4d9d6f9308a0_68620597 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a4ef98cefff78_19690713 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_60625a4d9d6f8df201_71962294', 'title');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_295525a4ef98cec54d4_67141623', 'title');
 ?>
 
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_187675a4d9d6f920666_50682572', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_304415a4ef98cef4b59_82825325', 'content');
 ?>
 
  
  
  <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_309405a4d9d6f92e3d3_72404262', 'js');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_203345a4ef98cefda29_21268024', 'js');
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'title'} */
-class Block_60625a4d9d6f8df201_71962294 extends Smarty_Internal_Block
+class Block_295525a4ef98cec54d4_67141623 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
-英雄管理-添加<?php
+皮肤管理-添加<?php
 }
 }
 /* {/block 'title'} */
 /* {block 'content'} */
-class Block_187675a4d9d6f920666_50682572 extends Smarty_Internal_Block
+class Block_304415a4ef98cef4b59_82825325 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -186,8 +186,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 						<!-- END BEGIN STYLE CUSTOMIZER -->  
 
 						<h3 class="page-title">
-							英雄
-							 <small>英雄添加</small>
+							铭文
+							 <small>铭文添加</small>
 
 						</h3>
 
@@ -204,11 +204,11 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
 							<li>
 
-								<a href="#">技能管理</a>
+								<a href="#">铭文管理</a>
 
 								<span class="icon-angle-right"></span>
                                                         </li>
-                                                        <li><a href="#">英雄技能管理列表</a>
+                                                        <li><a href="#">铭文添加</a>
                                                         </li>
 
 						</ul>
@@ -258,31 +258,32 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 											<!-- BEGIN FORM-->
 											<form action="#" class="form-horizontal">
 												<div class="control-group">
-													<label class="control-label">英雄名称：</label>
+													<label class="control-label">皮肤名称：</label>
 													<div class="controls">
-														<input type="text" placeholder="请输入英雄名称" class="m-wrap small"  name="name"/>
+														<input type="text" placeholder="请输入皮肤" class="m-wrap small"  name="name"/>
 													</div>
 												</div>
-                                                                                              
+                                                                                                
                                                                                                 <div class="control-group">
-													<label class="control-label">上传图片：</label>
+													<label class="control-label">上传头像：</label>
 													<div class="controls" >
                                                                                                             <img src="" width="100" style="display:none" id="upload_img"/>
                                                                                                             <button type="button" id="upload">上传头像</button>
 												            <input type="file" value="" name="myfile" class="m-wrap small" style="display:none;"/>
-                                                                                                            <input type="hidden" value="" id="upload_url" name="photo"/>
-													</div> 
+                                                                                                            <input type="hidden" value="" id="upload_url" name="url"/>
+													</div>
 												</div>
                                                                                             
+                                                                                             
                                                                                             
                                                                                             
-                                                                                                
-                                                                                                 <div class="control-group">
-													<label class="control-label">英雄职业：</label>
+                                                                                            
+                                                                                            <div class="control-group">
+													<label class="control-label">英雄列表：</label>
 													<div class="controls">
-													<select  name='vocation_id'>
+													<select name="hero_id">
                                                                                                             <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['vocationList']->value, 'v', false, 'k');
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['list']->value, 'v', false, 'k');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars['v']->value) {
 ?>
@@ -297,56 +298,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 
                                                                                                         </select>
 													</div>
-												</div>
-                                                                                                 <div class="control-group">
-													<label class="control-label">生存能力：</label>
-													<div class="controls">
-														<input type="text" placeholder="请输入生存能力" class="m-wrap small"  name="live"/>
-													</div>
-												</div>
-                                                                                                        <div class="control-group">
-													<label class="control-label">攻击伤害：</label>
-													<div class="controls">
-														<input type="text" placeholder="请输入伤害能力" class="m-wrap small"  name="hurt"/>
-													</div>
-												</div>
-                                                                                                  <div class="control-group">
-													<label class="control-label">技能效果：</label>
-													<div class="controls">
-														<input type="text" placeholder="上手难度" class="m-wrap small"  name="effect"/>
-													</div>
-												</div>       
-                                                                                                 <div class="control-group">
-													<label class="control-label">上手难度：</label>
-													<div class="controls">
-														<input type="text" placeholder="上手难度" class="m-wrap small"  name="difficulty"/>
-													</div>
-												</div>
-                                                                                                 <div class="control-group">
-													<label class="control-label">本周免费：</label>
-													<div class="controls">
-                                                                                                            <input type="radio" name="free_week" value="1" class="m-wrap small" />否
-                                                                                                            <input type="radio" name="free_week" value="2" class="m-wrap small" />是
-													</div>
-												</div>
-                                                                                                <div class="control-group">
-													<label class="control-label">新手推荐：</label>
-													<div class="controls">
-                                                                                                            <input type="radio" name="new_recomment" value="1" class="m-wrap small" />否
-                                                                                                            <input type="radio" name="new_recomment" value="2" class="m-wrap small" />是
-													</div>
-												</div>
-                                                                                                 <div class="control-group">
-													<label class="control-label">英雄故事：</label>
-													<div class="controls">
-                                                                                                            <textarea name="story" class="m-wrap large" name="story"></textarea>
-													</div>
-                                                                                                 </div>
-                                                                                                        
+                                                                                        </div>
+                                                                                      
 												<div class="form-actions">
-                                                                                                    <div class="controls">
 													<button type="button" class="btn blue" id="form_submit"><i class="icon-ok"></i> 添加</button>
-                                                                                                    </div>
+													
 												</div>
 
 											</form>
@@ -382,7 +338,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 }
 /* {/block 'content'} */
 /* {block 'js'} */
-class Block_309405a4d9d6f92e3d3_72404262 extends Smarty_Internal_Block
+class Block_203345a4ef98cefda29_21268024 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -397,8 +353,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         $("#upload_img").click(function(){
             $("input[type='file']").click();
         })
-        
-        
         
         $("input[type='file']").change(function(){
             var fd = new FormData();
@@ -423,18 +377,20 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 }
             })
         });
-
-        
         
         $("#form_submit").click(function(){
+            var name = $("input[name='name']").val();
+            var url = $("input[name='url']").val();
+            var hero_id = $("select[name='hero_id']").val();
+            console.log(url);
             $.ajax({
                 type:"post",
-                url:"index.php?class=Hero&action=insert",
-                data:$("form").serializeArray(),
+                url:"index.php?class=Skin&action=insert",
+                data:{name:name,url:url,hero_id:hero_id},
                 success:function(data){
                    data=$.parseJSON(data);
                    if(data.code==200){
-                         window.location.href="index.php?class=Hero&action=HeroList"
+                       window.location.href="index.php?class=Skin&action=skinList"
                    }else{
                        alert(data.message);
                    }

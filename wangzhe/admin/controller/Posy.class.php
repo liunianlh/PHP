@@ -1,9 +1,9 @@
 <?php
 
-//道具管理
+//铭文管理
 class Posy extends common{
     
-//    道具管理列表
+//    铭文管理列表
     
     public function PosyList(){
         $list= $this->link->select("select * from mingwen");

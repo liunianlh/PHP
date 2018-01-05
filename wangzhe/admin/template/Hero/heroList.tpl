@@ -246,6 +246,7 @@
                                                                                          <th  style="text-align:center;">最佳搭档</th>                                                                                     
                                                                                         <th  style="text-align:center;">压制英雄</th>
                                                                                          <th  style="text-align:center;">被压制英雄</th>
+                                                                                          <th  style="text-align:center;">出装推荐</th>
                                                                                         <th  style="text-align:center;">操作</th>
 										</tr>
 
@@ -331,7 +332,7 @@
                                                                                         <td style="text-align:center;padding-top: 40px;" class="heroTouch" data-id="{$v.id}" data-type="3">{$v.berepress}</td>
                                                                                         
                                                                                         
-                                                                       
+                                                                                        <td class="tools" data-id="{$v.id}" style="text-align:center;padding-top: 40px;">出装推荐</td>
                                                                                         <td style="text-align:center;padding-top: 40px;">                                                                                       
                                                                                             <a href="index.php?class=Hero&action=edit&id={$v.id}">修改</a>
                                                                                        
@@ -581,13 +582,233 @@
     
                 </div>
 
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
             
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                  
+               {*出装推荐*}
+        <div  id="selectTools" style="width: 100%;height: 100%; display: none;background: rgba(0,0,0,0.5);position:absolute;top: 0px;left: 0px;z-index: 999;">
+                        <div class="modal">
+
+				<div class="modal-header">
+
+                                    <button class="close" type="button" onclick="$('#selectTools').hide();"></button>
+
+					<h3>出装推荐</h3>
+
+				</div>
+
+				<div class="modal-body">
+
+					<!-- BEGIN FORM-->
+
+                                        <form action="#" class="form-horizontal" id="skillForm">
+                                            <p style="color:red; margin-left:200px;" >提示:必须选择6个装备</p>
+                                                                                            <input type="hidden" value="" name="id">
+                                                                                         
+                                                                                            <div class="control-group" id="tools1">
+
+													<label class="control-label" style="font-size: 20px;">出装选择1:</label>
+
+													<div class="controls">
+                                                                                                            <select name="tools1" multiple="multiple" style="width:100px;">
+                                                                                                                {foreach from=$toolsList key=k item=v}
+                                                                                                                    <option value="{$v.id}">{$v.name}</option>
+                                                                                                                {/foreach}
+                                                                                                            </select>
+                                                                                                            <div style="display:inline-block;">
+                                                                                                                <a class="add">=></a>
+                                                                                                                <br/>
+                                                                                                                 <a class="delete"><=</a>
+                                                                                                            </div>
+                                                                                                            <select name="selectTools1" multiple="multiple" style="width:100px;">
+
+                                                                                                            </select>
+													</div>
+
+												</div>
+                                                                                               <div class="control-group">
+													<label class="control-label" style="font-size: 20px;">推荐理由</label>
+													<div class="controls">
+                                                                                                            <textarea name="miaosu1" class="m-wrap"></textarea>                                                                
+													</div>
+
+												</div>
+												<div class="control-group" id="tools2">
+
+													<label class="control-label" style="font-size: 20px;">出装选择2:</label>
+
+													<div class="controls">
+                                                                                                           <select name="tools2" multiple="multiple" style="width:100px;">
+                                                                                                                {foreach from=$toolsList key=k item=v}
+                                                                                                                    <option value="{$v.id}">{$v.name}</option>
+                                                                                                                {/foreach}
+                                                                                                            </select>
+                                                                                                            <div style="display:inline-block;">
+                                                                                                                <a class="add">=></a>
+                                                                                                                <br/>
+                                                                                                                 <a class="delete"><=</a>
+                                                                                                            </div>
+                                                                                                            <select name="selectTools2" multiple="multiple" style="width:100px;">
+
+                                                                                                            </select>
+                                                                                                          
+													</div>
+
+												</div>
+                                                                                                            
+												<div class="control-group">
+													<label class="control-label" style="font-size: 20px;">推荐理由</label>
+													<div class="controls">
+                                                                                                            <textarea name="miaosu2" class=" m-wrap"></textarea>                                                                
+													</div>
+
+												</div>
+                                                                                                            <div class="control-group" style="text-align: center;" id="queren">
+                                                                                                <button type="button" class="btn blue" id="queren">确认</button>
+                                                                                               </div>
+											</form>
+
+											<!-- END FORM-->  
+
+				</div>
+
+			</div>
+    
+                </div>
+                                                                                          
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
+                                                                                                            
                 
 {/block}
 
 {block name=js}
     
     <script>
+{*        出装推荐*}
+    
+    
+    $(".tools").click(function(){
+
+        $("#selectTools").show();
+           var id=$(this).attr("data-id");
+         $("#selectTools input[name='id']").val(id);
+    });
+   
+       
+    var arr1=new Array();
+      var arr2=new Array();
+    $("#tools1 .add").click(function(){       
+            $("select[name='tools1'] option").each(function(){          
+            if($(this).attr("selected")=="selected"){           
+            var val=$(this).val();
+            var text=$(this).html();
+            $("select[name='selectTools1']").append("<option value='"+val+"'>"+text+"</option>");
+           $(this).remove();
+            arr1.unshift(text);
+            console.log(arr1);
+                }               
+            })
+            });
+
+    
+     $("#tools1 .delete").click(function(){       
+            $("select[name='selectTools1'] option").each(function(){           
+            if($(this).attr("selected")=="selected"){
+            var val=$(this).val();
+            var text=$(this).html();
+            $("select[name='tools1']").append("<option value='"+val+"'>"+text+"</option>");
+           $(this).remove();
+        }   
+           
+        
+            })  
+            });
+    
+    
+    
+    
+    
+       $("#tools2 .add").click(function(){       
+            $("select[name='tools2'] option").each(function(){          
+            if($(this).attr("selected")=="selected"){           
+            var val=$(this).val();
+            var text=$(this).html();
+            $("select[name='selectTools2']").append("<option value='"+val+"'>"+text+"</option>");
+           $(this).remove();
+             arr2.unshift(text);
+   
+                }
+                  
+            })
+            });
+
+    
+     $("#tools2 .delete").click(function(){       
+            $("select[name='selectTools2'] option").each(function(){           
+            if($(this).attr("selected")=="selected"){
+            var val=$(this).val();
+            var text=$(this).html();
+            $("select[name='tools2']").append("<option value='"+val+"'>"+text+"</option>");
+           $(this).remove();
+        }   
+            })  
+            });
+    
+    
+    
+         $("#queren").click(function(){
+         var id=$("#selectTools input[name='id']").val();
+    
+         var Tools1=arr1;
+         var Tools2=arr2;
+         var miaosu1=$("textarea[name='miaosu1']").val();
+         var miaosu2=$("textarea[name='miaosu2']").val();
+                     $.ajax({
+                         type:"post",
+                         url:"index.php?class=Hero&action=selectTools",
+                         data:{literal}{id:id,Tools1:Tools1,Tools2:Tools2,miaosu1:miaosu1,miaosu2:miaosu2}{/literal},
+                         success:function(data){
+                          if(data.code==100)
+                            { 
+                            alert(data.message);   
+                                 } else{
+                                 
+                     history.go(0); 
+                                    }
+                                 }
+                            });  
+         
+         
+                });
+           
+    
+            
+
+ 
+    
+    
+    
+    
+       
+        
+        
+        
 {*        英雄关系选择*}
     $(".heroTouch").click(function(){
        

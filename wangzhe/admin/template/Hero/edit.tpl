@@ -220,10 +220,11 @@
                                                                                                  <div class="control-group">
 													<label class="control-label">英雄职业：</label>
 													<div class="controls">
-													<select  name='vocation_id' value="{$info[0].vocation_id}">
+													<select  name='vocation_id'>
                                                                                                             {foreach from=$vocationList key=k item=v}
                                                                                                                 <option value="{$v.id}">{$v.name}</option>
                                                                                                              {/foreach}
+                                                                                                            
                                                                                                         </select>
 													</div>
 												</div>

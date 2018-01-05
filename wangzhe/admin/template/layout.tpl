@@ -641,6 +641,13 @@
 					<span class="selected"></span>
 					</a>
 				</li>
+                                <li class="start ">
+                                    <a href="index.php?class=Skin&action=SkinList">
+					<i class="icon-home"></i>                                           
+					<span class="title">英雄皮肤管理</span>
+					<span class="selected"></span>
+					</a>
+				</li>
 
 			</ul>
 
