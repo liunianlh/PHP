@@ -1,0 +1,991 @@
+/*导航中间部分*/
+.header{
+    position:absolute;
+    left:0;
+    width:100%;
+    min-width:1280px;
+    height:84px;
+    z-index:99;
+    background:#000;
+    background:rgba(0,0,0,0.8);
+}
+.header-inner{
+    width:100%;
+    height:84px;
+    margin:0 auto;
+    position:relative;
+}
+.logo{
+    z-index: 999;
+}
+.main-nav{
+    width:790px;
+    padding-left:50px;
+    list-style: none;
+}
+.main-nav li{
+    float:left;
+    width:110px;
+    height:84px;
+    text-align:center;
+}
+.main-nav li:hover{
+    background: url("../images/index.png") no-repeat;
+    display: inline-block;
+}
+.main-nav li:hover a{
+    color:#e4b653;
+}
+.main-nav li:hover em{
+    color:#91763f;
+}
+.main-nav li a{
+    display:block;
+    width:110px;
+    height:64px;
+    padding:20px 0 0;
+    color:#c9c9dd;
+    font-size:18px;
+    line-height:30px;
+    text-decoration: none;
+}
+.main-nav  li a:hover{
+    text-decoration: none;
+}
+.main-nav li a em{
+    display:block;
+    padding-top:5px;
+    transform:scale(0.95);
+    font-size:12px;
+    line-height:16px;
+    color:#858792;
+}
+/*二级导航*/
+.sub-nav {
+    position:absolute;
+    top:83px;
+    left:0;
+    width:100%;
+    padding-top:15px;
+    padding-bottom:30px;
+    background:rgba(0,0,0,0.7);
+    z-index:3;
+} 
+.sub-nav-inner {
+    width:970px;
+    height:240px;
+    padding-left:230px;
+    margin:0 auto;
+    overflow:hidden;
+    zoom:1;
+}
+.down-nav{
+    float:left;
+    display:inline;
+    width:100px;
+    padding:2px 5px 0;
+    text-align:center;
+    white-space:nowrap;
+}
+.down-nav a{
+    height:30px;
+    line-height:30px;
+    display:block;
+    padding:0;
+    font-size:14px;
+    color:#c9c9dd;
+    text-decoration:none;
+}
+.down-nav a:hover{
+    color:#f3c258;
+    text-decoration:none;
+}
+/*背景图上*/
+.wrapper {
+    min-width: 1200px;
+    width: 100%;
+    position: relative;
+}
+.zk-con1 {
+    padding-top: 84px;
+    overflow: hidden;
+    background: #ccc;
+    background-position: center 0;
+}
+.zk-con {
+    clear: both;
+}
+.con1-pic {
+    width: 100%;
+    height: 798px;
+    overflow: hidden;
+}
+.pic-show-box {
+    width: 1200px;
+    height: 548px;
+    position: relative;
+    margin: 127px auto 0;
+}
+.cover {
+    width: 357px;
+    height: 548px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: 23px;
+    overflow: hidden;
+    background:rgba(0,0,0,.7);
+}
+.cover-title {
+    font-size: 24px;
+    color: #f3c258;
+    line-height: 30px;
+    padding-top: 30px;
+}
+.cover-name {
+    font-size: 50px;
+    font-weight: bold;
+    color: #FFF;
+    line-height: 74px;
+}
+.herodetail-sort {
+    width: 290px;
+    height: 70px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: block;
+    margin-left: 0px;
+}
+.herodetail-sort i {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-indent: -9999em;
+}
+.hidden{
+    display: none;
+}
+/*视频*/
+.hero-video {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 140px;
+    height: 80px;
+    border: solid 1px #727189;
+    border-radius: 2px;
+    background: #000;
+    margin: 20px 0;
+}
+.hero-video span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .4;
+    z-index: 2;
+}
+.hero-video img {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    top: 0;
+}
+.hero-video .ico-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 36px;
+    height: 36px;
+    margin-left: -18px;
+    margin-top: -18px;
+    background-position: -200px -70px;
+    z-index: 5;
+}
+.icon{
+    background: url(../images/item.png) no-repeat;
+    text-indent: -9999px;
+    display: block;
+}
+/*技能值*/
+.cover-list {
+    height: 136px;
+    list-style: none;
+}
+.cover-list li {
+    height: 24px;
+    vertical-align: top;
+    margin-bottom: 12px;
+}
+.cover-list-text {
+    height: 21px;
+    line-height: 19px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 4px;
+}
+.cover-list-bar {
+    position: relative;
+    width: 205px;
+    height: 8px;
+    margin: 8px 0 0 45px;
+    background: #000;
+    border-radius: 0 4px 4px 0;
+}
+.data-bar1 b {
+    background-position: 0 -170px;
+}
+.cover-list-bar b {
+    position: absolute;
+    top: -8px;
+    left: -27px;
+    width: 27px;
+    height: 26px;
+}
+.cover-list li .data-bar2 b{
+    background-position: -30px -170px;
+}
+.cover-list li .data-bar3 b{
+    background-position: -60px -170px;
+}
+.cover-list li .data-bar4 b{
+    background-position: -90px -170px;
+}
+
+.data-bar1 i {
+    background: #1c8fea;
+}
+.data-bar2 i {
+    background: #e7ca63;
+}
+.data-bar3 i {
+    background: #5dd473;
+}
+.data-bar4 i {
+    background: #e84a33;
+}
+.ibar {
+    height: 8px;
+    float: left;
+    border-radius: 0 4px 4px 0;
+}
+/*英雄故事*/
+.cover-btn {
+    overflow: hidden;
+    margin-top: 25px;
+}
+.cover-btn a {
+    float: left;
+    margin-right: 16px;
+    width: 150px;
+    height: 40px;
+    border: solid 2px #fff;
+    border-radius: 4px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+/*皮肤*/
+.pic-pf {
+    position: absolute;
+    right: 0;
+    top: 550px;
+}
+.pic-pf .pf {
+    display: block;
+    width: 25px;
+    height: 62px;
+    float: right;
+    border-radius: 5px;
+    background: #f3c258;
+    line-height: 26px;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 15px;
+    color: #000;
+}
+.pic-pf-list {
+    float: right;
+    width: 780px;
+    height: 110px;
+    overflow: hidden;
+}
+.pic-pf-list li {
+    width: 89px;
+    height: 88px;
+    float: right;
+    display: inline;
+    cursor: pointer;
+}
+.pic-pf-list li i.curr {
+    border-color: #f3c258;
+}
+.pic-pf-list li i {
+    float: left;
+    width: 65px;
+    height: 67px;
+    margin-right: 25px;
+    border: solid 4px #7a7a7a;
+    border-radius: 0 12px;
+    overflow: hidden;
+}
+.pic-pf-list li i img {
+    width: 67px;
+    height: 69px;
+    margin-left: -1px;
+    margin-top: -1px;
+    display: block;
+    border: 0;
+    border-radius: 2px 2px 2px 2px;
+}
+.pic-pf-list li p {
+    font-size: 14px;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0 1px 2px #000;
+}
+/*内容*/
+.zkcontent {
+    width: 100%;
+    min-width: 1200px;
+    min-height: 620px;
+    height: auto;
+    margin: 0 auto;
+    background: #fafafa;
+}
+.zk-con-box {
+    width: 1200px;
+    margin: 0 auto;
+}
+.zk-con {
+    clear: both;
+}
+.crumb {
+    height: 20px;
+    line-height: 20px;
+    color: #464547;
+    font-size: 16px;
+    padding: 35px 0;
+}
+.crumb a{
+    color: black;
+}
+
+.tb1 {
+    background-position: 0 0;
+    margin-right: 6px;
+    margin-top: -5px;
+    margin-left: -4px;
+}
+.tb1, .tb2, .tb3, .tb4, .tb5, .tb6{
+    width: 30px;
+    height: 30px;
+}
+.icon, .skill-u1 li, .equip-list li {
+    background: url(../images/item.png) no-repeat;
+    text-indent: -9999px;
+    display: block;
+}
+.crumb a {
+    text-decoration: underline;
+}
+.crumb a, .crumb span {
+    margin-right: 8px;
+}
+.ls {
+    width: 772px;
+}
+.tlt {
+    color: #000;
+    font-size: 24px;
+    line-height: 24px;
+    height: 24px;
+    position: relative;
+    margin-bottom: 20px;
+}
+/*技能介绍*/
+.tb2 {
+    background-position: -30px 0;
+    margin: -4px 5px 0 0;
+}
+.skill-info, .sugg-info {
+    position: relative;
+    min-height: 280px;
+    background: #fff;
+    border: solid 1px #e5e5e5;
+    margin-bottom: 50px;
+}
+.skill-u1 {
+    height: 100px;
+    padding: 20px 0 0 20px;
+}
+.skill-u1 li {
+    width: 92px;
+    height: 88px;
+    float: left;
+    display: inline;
+    margin-right: 29px;
+    cursor: pointer;
+    background-position: -100px -70px;
+}
+.skill-u1 li img {
+    display: block;
+    border: 0;
+    width: 71px;
+    height: 71px;
+    background: #000;
+    margin: 8px 0 0 11px;
+    border-radius: 50%;
+}
+.skill-u1 li.curr {
+    background-position: 0 -70px;
+}
+.skill-u1 .no5 {
+    display: none;
+}
+.show-list {
+    padding-left: 21px;
+    position: relative;
+    min-height: 150px;
+}
+.skill-name b {
+    font-size: 16px;
+    color: #424242;
+    margin-right: 50px;
+}
+.skill-name span {
+    margin: 0 6px;
+    color: #424242;
+    font-size: 14px;
+}
+.skill-desc {
+    font-size: 14px;
+    color: #535252;
+    margin: 20px 15px 0 0;
+    min-height: 70px;
+    line-height: 20px;
+}
+.skill-tips {
+    padding: 2px 10px;
+    line-height: 24px;
+    width: 710px;
+    background: #f5f5f5;
+    color: #646464;
+    /* position: absolute; */
+    /* bottom: 10px; */
+    margin-bottom: 10px;
+}
+.rs {
+    width: 408px;
+    margin-left: 20px;
+}
+/*铭文搭配建议*/
+.tb3 {
+    background-position: -60px 0;
+    margin: -2px 8px 0 0;
+}
+.sugg-u1 {
+    padding-top: 20px;
+    height: 187px;
+    list-style: none;
+}
+.sugg-u1 li {
+    width: 33.3%;
+    height: 75px;
+    border-radius: 5px;
+    float: left;
+    display: inline;
+    position: relative;
+    text-align: center;
+}
+.sugg-u1 li img {
+    display: block;
+    border: 0;
+    border-radius: 2px 2px 2px 2px;
+}
+.sugg-u1 li p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #535252;
+}
+.sugg-tips {
+    position: absolute;
+    bottom: 12px;
+    left: 10px;
+    width: 365px;
+    padding: 10px;
+    background: #f5f5f5;
+    line-height: 20px;
+    color: #484848;
+    margin: 0 auto;
+}
+.sugg-tlt .tlt {
+    color: #000;
+    font-size: 24px;
+    line-height: 28px;
+    height: 24px;
+    position: relative;
+    margin-bottom: 20px;
+}
+/*技能加点建议*/
+.tb4 {
+    background-position: -90px 0;
+    margin: -1px 8px 0 0;
+}
+.sugg-info2 {
+    padding-left: 20px;
+    padding-top: 16px;
+    position: relative;
+    overflow: hidden;
+    height: 104px;
+    background: #fff;
+    border: solid 1px #e5e5e5;
+    margin-bottom: 36px;
+}
+.sugg-info2 p {
+    display: inline-block;
+    float: left;
+    color: #6d6d6f;
+}
+.sugg-info2 p.sugg-name {
+    line-height: 24px;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+.sugg-name span {
+    display: block;
+}
+.sugg-skill {
+    width: 92px;
+    height: 88px;
+    float: left;
+    margin-right: 22px;
+    display: inline;
+    cursor: pointer;
+    background-position: 0 -70px;
+}
+.sugg-skill img {
+    width: 71px;
+    height: 71px;
+    background: #000;
+    margin: 8px 0 0 11px;
+    border-radius: 50%;
+    display: block;
+    border: 0;
+}
+.sugg-name3 {
+    margin-left: 20px;
+}
+/*英雄关系*/
+.tb5 {
+    background-position: -150px 0;
+    width: 40px;
+    margin: -3px 8px 0 0;
+} 
+.hero-info-box {
+    position: relative;
+    height: 152px;
+    background: #fff;
+}
+.hero-hd {
+    width: 100%;
+    height: 32px;
+    line-height: 30px;
+    text-align: center;
+    background: #f1f1f1;
+    list-style: none;
+}
+.hero-hd .curr {
+    border-bottom-color: #f3c258;
+}
+.hero-hd li {
+    position: relative;
+    float: left;
+    width: 257px;
+    height: 29px;
+    border-bottom: solid 3px transparent;
+    cursor: pointer;
+}
+.hero-info {
+    position: relative;
+    height: 118px;
+    border: solid 1px #e1e1e1;
+    overflow: hidden;
+}
+.hero-f1 {
+    padding: 45px 0 0 22px;
+    width: 136px;
+    line-height: 22px;
+    color: #333;
+    font-size: 18px;
+}
+.hero-f1 i.hr1 {
+    background-position: 0 -30px;
+}
+.hero-f1 i.hr2 {
+    background-position: -30px -30px;
+}
+.hero-f1 i.hr3 {
+    background-position: -60px -30px;
+}
+.hero-f1 i {
+    width: 30px;
+    height: 30px;
+    margin: -3px 12px 0 0;
+}
+.hero-list {
+    padding-top: 20px;
+    position: relative;
+    z-index: 10;
+}
+.hero-list ul{
+    list-style: none;
+}
+.hero-list ul li {
+    float: left;
+    width: 65px;
+    height: 67px;
+    margin-right: 25px;
+    border: solid 4px #7a7a7a;
+    border-radius: 0 16px;
+    overflow: hidden;
+}
+.hero-list ul .cur {
+    border: solid 4px #f3c258;
+}
+.hero-list ul li img {
+    width: 67px;
+    height: 69px;
+    border-radius: 0 15px;
+    margin-left: -1px;
+    margin-top: -1px;
+}
+.hero-list-desc {
+    position: absolute;
+    top: 50%;
+    left: 340px;
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+    width: 410px;
+}
+/*出装建议*/
+.tb6 {
+    background-position: -120px 0;
+    margin: -2px 0px 0 0px;
+}
+.equip-hd {
+    width: 100%;
+    height: 32px;
+    line-height: 30px;
+    text-align: center;
+    background: #f1f1f1;
+    list-style: none;
+}
+.equip-hd li {
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 29px;
+    border-bottom: solid 3px transparent;
+    cursor: pointer;
+}
+.equip-hd li span {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    height: 20px;
+    border-right: solid 1px #e1e1e1;
+}
+.equip-hd .curr {
+    border-bottom-color: #f3c258;
+}
+.equip-bd {
+    position: relative;
+    height: 320px;
+    background: #fff;
+    border: solid 1px #e1e1e1;
+    /* overflow: hidden; */
+}
+.equip-list {
+    width: 120%;
+    padding: 27px 0 0 20px;
+}
+.equip-list li {
+    width: 92px;
+    height: 88px;
+    float: left;
+    margin: 0 44px 14px 0;
+    display: inline;
+    cursor: pointer;
+    background-position: 0 -70px;
+    position: relative;
+}
+.equip-list li a img {
+    width: 71px;
+    height: 71px;
+    background: #000;
+    margin: 8px 0 0 11px;
+    border-radius: 50%;
+    display: block;
+}
+/*悬浮出详情*/
+.itemFromTop {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    background: rgba(0,0,0,.9);
+    opacity: 0.9;
+    border: 1px solid #459ef4;
+    width: 213px;
+    padding: 24px 15px 24px 33px;
+    z-index: 100;
+    font-family: "microsoft yahei";
+}
+.itemFromTop .item-title {
+    height: 74px;
+}
+.itemFromTop .item-title img {
+    float: left;
+    width: 74px;
+    height: 74px;
+    margin-right: 15px;
+    border-radius: 0;
+    display: block;
+}
+.itemFromTop .item-title .cons {
+    float: left;
+    margin-left: 6px;
+}
+.itemFromTop .item-title .cons h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #23ff28;
+    line-height: 26px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-indent: 0;
+}
+.itemFromTop .item-title .cons p {
+    text-indent: 0;
+    font-size: 14px;
+    color: #da951c;
+    line-height: 30px;
+}
+.itemFromTop .item-desc {
+    text-indent: 0;
+    padding: 12px 0;
+    color: #369ff9;
+    font-size: 14px;
+    line-height: 22px;
+}
+.itemFromTop .item-desc p {
+    margin-bottom: 10px;
+}
+.equip-tips {
+    position: absolute;
+    bottom: 12px;
+    left: 10px;
+    width: 365px;
+    padding: 10px;
+    background: #f5f5f5;
+    line-height: 20px;
+    color: #484848;
+    margin: 0 auto;
+}
+/*英雄故事*/
+.pop-story{
+    position: absolute; 
+    display: none; 
+    visibility: visible; 
+    z-index: 9999; 
+    left: 50%; 
+    top: 100px;
+    margin-left: -631.5px; 
+    margin-bottom: 100px; 
+    margin-top: 0px;
+}
+.pop-hd {
+    position: relative;
+    height: 129px;
+    width: 100%;
+    background: url(../images/pop1.png);
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+    font-weight: 800;
+    line-height: 129px;
+    margin-left: -15px;
+}
+.pop-hd .close {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    top: 35px;
+    right: 20px;
+    background: url(../images/pop.png);
+    background-position: -1260px 0;
+}
+.pop-bd {
+    width: 100%;
+    padding: 40px 0;
+    background: #fff;
+    margin-left: -15px;
+}
+.pop-bd p {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 60px;
+    color: #070707;
+    text-indent: 0;
+}
+/*底部*/
+.footer-wrap {
+    position: relative;
+    z-index: 2;
+    height: 362px;
+    background: url(../images/bg_footer.jpg) no-repeat center 0;
+    margin-top: 268px;
+}
+.footer {
+    width: 1200px;
+    padding-top: 80px;
+    margin: 0 auto;
+}
+/*底部上*/
+.foot-t {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #d4d4d4;
+} 
+.foot-logo {
+    width: 377px;
+}
+.foot-logo .logo1 {
+    width: 285px;
+    height: 64px;
+}
+.foot-logo .logo2 {
+    width: 70px;
+    height: 64px;
+    background-position: -285px 0;
+}
+.foot-t .media-pic {
+    margin-top: 17px;
+    margin-left: 36px;
+    letter-spacing: -0.35em;
+    width: 480px;
+    text-align: right;
+}
+.foot-t .media-pic a {
+    letter-spacing: normal;
+    display: inline-block;
+    height: 36px;
+    background: url(../images/cooperative-bg.png) no-repeat;
+}
+.foot-t .media-pic .m1 {
+    width: 108px;
+    background-position: 0 0px;
+}
+.foot-t .media-pic .m6 {
+    width: 75px;
+    background-position: 0 -180px;
+}
+.foot-media {
+    width: 285px;
+    margin-top: 20px;
+    background: #f7f7f7;
+    color: #666666;
+    cursor: pointer;
+}
+.media-tit {
+    width: 270px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    border: 3px solid #b8b8b8;
+    font-size: 15px;
+}
+.arrow-ico-btn {
+    top: 6px;
+    right: 3px;
+    width: 38px;
+    height: 24px;
+    border-left: 1px solid #b8b8b8;
+}
+.arrow-ico-btn  .arrow-ico {
+    display: inline-block;
+    width: 7px;
+    height: 6px;
+    margin: 10px 0 0 15px;
+    background-position: -348px -86px;
+}
+.media-list {
+    width: 280px;
+    height: 200px;
+    margin-top: -3px;
+    border: 3px solid #b8b8b8;
+    overflow-y: auto;
+    background-color: #F7F7F7;
+}
+.media-list li a {
+    display: block;
+    padding-left: 15px;
+    height: 28px;
+    line-height: 28px;
+    background: #f7f7f7;
+    color: black;
+}
+.media-list li:hover a {
+    background: #3589dd;
+    color: white;
+}
+/*底部下*/
+.foot-tips {
+    width: 508px;
+}
+.foot-tips p em {
+    margin-right: 12px;
+    color: #6d6d6d;
+}
+.foot-tips .intro {
+    font-size: 12px;
+    color: #666;
+    margin-top: 6px;
+}
+.foot-b {
+    float: right;
+    width: 632px;
+    text-align: left;
+    padding-top: 18px;
+}
+.foot-b, .foot-b p a {
+    color: #646467;
+}
+.foot-txt {
+    overflow: hidden;
+    margin: 5px 0;
+}
+.foot-b .cb {
+    clear: both;
+    text-align: left;
+}
+.mask{
+    width: 1349px;
+    height: 2125px;
+    position: absolute;
+    top: -95px;
+    left: -45px;
+    z-index:-1;
+    background: rgba(0,0,0,.7);
+}

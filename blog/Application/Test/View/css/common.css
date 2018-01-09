@@ -1,0 +1,65 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+/*------公共------*/
+/*清除浮动*/
+.clearbox:after{
+    content: "";
+    height: 0px;
+    line-height: 0px;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.pr{
+    position:relative
+}
+.pa{
+    position:absolute
+}
+.fl{
+    float:left
+}
+.fr{
+    float:right
+}
+.none{
+    display:none
+}
+.ht{
+    overflow:hidden;
+    text-indent:-9999px;
+    text-decoration:none
+}
+.fb{
+    font-weight:bold
+}
+.fn{
+    font-weight:normal
+}
+.f12{
+    font-size:12px
+}
+.f16{
+    font-size:16px
+}
+.f22{
+    font-size:22px
+}
+.tc{
+    text-align:center
+}
+.tr{
+    text-align:right
+}
+a{
+    text-decoration: none;
+}
+.spr {
+    background: url(../images/spr.png) no-repeat;
+}
+.hidden{
+    display: none;
+}
+

@@ -1,0 +1,505 @@
+
+<html>
+    <head>
+        <title>英雄列表-英雄介绍-王者荣耀官方网站-腾讯游戏</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./View/css/index.css">
+        <link rel="stylesheet" href="./View/css/common.css">
+        <script src="./View/js/jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <!--导航栏-->
+        <div id="header" class="header">
+            <div class="header-inner">
+                <div class="header-inner-nav">
+                    <a href="//pvp.qq.com/" class="logo pa"><img src="./View/images/logo.png"></a>
+                    <ul class="main-nav clearbox">    
+                        <li class="first-nav"><a href="//pvp.qq.com/" title="官网首页">官网首页<em>HOME</em></a></li>       
+                        <li><a href="#" target="_blank" title="游戏资料">游戏资料<em>DATA</em></a></li>       
+                        <li><a href="#" target="_blank" title="攻略中心" >攻略中心<em>RAIDERS</em></a></li>    
+                        <li><a href="#" target="_blank" title="赛事中心">赛事中心<em>MATCH</em></a></li>      
+                        <li><a href="#" target="_blank" title="商城/合作">商城/合作<em>STORE</em></a></li>       
+                        <li><a href="#" title="社区互动">社区互动<em>COMMUNITY</em></a></li>        
+                        <li><a href="#" target="_blank" title="玩家支持">玩家支持<em>PLAYER</em></a></li>        
+                    </ul>   
+                    <!--=====二级导航=====-->      
+                    <div id="subNav" class="sub-nav" style="display: none;">        
+                        <ul class="sub-nav-inner">         
+                            <li class="down-nav"> &nbsp;</li>         
+                            <li class="down-nav">
+                                <a href="#" title="版本介绍">版本介绍</a>             
+                                <a href="#" title="游戏介绍">游戏介绍</a>             
+                                <a href="#" title="英雄资料">英雄资料</a>             
+                                <a href="#" title="爆料站">爆料站</a>            
+                                <a href="#" title="故事站">故事站</a>             
+                                <a href="#" title="游戏壁纸">游戏壁纸</a>          
+                            </li>          
+                            <li class="down-nav">             
+                                <a href="#" title="攻略中心">攻略中心</a> 
+                                <a href="#" title="英雄攻略">英雄攻略</a> 
+                                <a href="#" title="视频中心">视频中心</a>  
+                            </li>          
+                            <li class="down-nav">             
+                                <a href="#" title="KPL职业联赛">KPL职业联赛</a> 
+                                <a href="#" title="KCC王者冠军杯">KCC王者冠军杯</a>
+                                <a href="#" title="KOC王者城市赛">KOC王者城市赛</a>       
+                                <a href="#" title="QGC联赛">QGC联赛</a>           
+                                <a href="#" title="TGA大奖赛">TGA大奖赛</a>             
+                                <a href="#" title="WGC精英赛">WGC精英赛</a>             
+                                <a href="#" title="王者高校联赛">王者高校联赛</a>          
+                            </li>          
+                            <li class="down-nav">             
+                                <a href="#" title="周边商城">周边商城</a>             
+                                <a href="#" title="王者信用卡">王者信用卡</a>  
+                                <a href="#" title="王者文化站">王者文化站</a>            
+                                <a href="#" title="百态王者">百态王者</a>  
+                                <a href="#" title="创意高地">创意高地</a>         
+                            </li>         
+                            <li class="down-nav">
+                                <a href="#" title="官方助手" >官方助手</a>
+                                <a href="#" title="手Q部落">手Q部落</a>           
+                                <a href="#" title="微信圈子">微信圈子</a>            
+                                <a href="#" title="官方微博">官方微博</a>  
+                                <a href="#" title="微信公众号">微信公众号</a> 
+                                <a href="#" title="手Q订阅号">手Q订阅号</a>  
+                                <a href="#" title="同人社区">同人社区</a>       
+                            </li>         
+                            <li class="down-nav">            
+                                <a href="#" title="成长守护平台">成长守护平台</a>            
+                                <a href="#" title="健康系统">健康系统</a>             
+                                <a href="#" title="客服专区">客服专区</a>
+                                <a href="#" title="礼包兑换">礼包兑换</a>             
+                                <a href="#" title="自助服务">自助服务</a>         
+                            </li>        
+                        </ul>     
+                    </div>
+                </div>
+                <div class="info-box clearbox">  
+                    <div class="hero-box fl pr">	
+                        <p id="FreeHeros-Title"><b>周免英雄（<span id="freeHerosPeriod">{$start}-{$end}</span>）</b></p>	
+                        <ul id="FreeHeros-Cont" class="hero-list clearbox">
+                            {foreach from=$weekList key=k item=v}
+                            <li data-img="" class="tou" data-navImg="{$v.image}" data-id="{$v.id}" data-smallImg="{$v.photo}">	
+                                <a href="index.php?c=Info&a=index&id={$v.id}" target="_blank"><img id="{$v.id}" src="./View/{$v.photo}" width="69" height="69"></a>
+                            </li>
+                            {/foreach}
+                        </ul>
+                        <a href="#" title="更多英雄" class="more-hero pa">更<br>多<br>英<br>雄</a>
+                    </div>
+                </div>
+                <div class="login-box clearbox fr pr">	
+                    <a class="avatar pa spr" href="#">
+                        <img src="./View/images/avatar1.jpg" width="75" height="75">
+                        <span class="pa spr level-ico">0</span>
+                    </a>	
+                    <!--=====登录前=====-->	
+                    <div id="unlogin" class="per-infor txt2 fl" style="display:block;">	
+                        <p class="user-name">亲爱的召唤师，欢迎  
+                            <a href="#">登录</a>
+                        </p>	
+                    </div>	
+                </div>
+            </div>
+        </div>
+        <div class="bg" style="background-image:url('./View/images/bg_wrapper2.jpg');">
+            <a href="#" class="link" title="查看详情">查看详情</a>
+        </div>
+        <!--内容-->
+        <div class="wrapper">
+            <div class="zkcontent">
+                <div class="zk-con-box">
+                    <div class="zk-con1 zk-con">
+                        <div class="con1-pos">
+                            <i class="tb1 icon fl"></i>
+                            <a href="#" title="王者荣耀首页">王者荣耀首页</a>
+                            <span>&gt;</span>
+                            <label>英雄介绍</label>
+                        </div>
+                        <h3 class="herolist-title">英雄介绍</h3>
+                        <ul class="herolist-nav">
+                            <li class="current" id="hero"><a href="javascript:;" target="view_window">英雄</a></li>
+                            <li class="" id="prop"><a href="javascript:;" target="view_window">局内道具</a></li>
+                            <li class="" id="summoner"><a href="javascript:;" target="view_window">召唤师技能</a></li>
+                        </ul>
+                    </div>
+                    <div class="herolist-box one" style="display:block;">
+                        <div class="clearbox herolist-types">
+                            <ul class="types-left">
+                                <li>综合</li>
+                                <li>定位</li>
+                            </ul>
+                            <ul class="clearbox types-ms">
+                                <li>
+                                    <input type="radio" name="vocation" value="-1">
+                                    <label>本周免费</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="vocation" value="-2">
+                                    <label>新手推荐</label>
+                                </li>
+                            </ul>
+                            <ul class="clearbox types-ms">
+                                <li class="current">
+                                    <input type="radio" name="vocation" value="0" checked>
+                                    <label>全部</label>
+                                </li>
+                                {foreach from=$vocationList key=k item=v}
+                                <li>
+                                    <input type="radio" name="vocation" value="{$v.id}">
+                                    <label>{$v.name}</label>
+                                </li>
+                                {/foreach}
+                            </ul>'
+                            <div class="herosearch">
+                                <input type="text" id="search" name="search" class="herosearch-input" value="请输入你想要搜索的英雄名">
+                                <a href="#" class="herosearch-icon" title="点击搜索" id="searchBtn"></a>
+                            </div>
+                        </div>
+
+                        <div class="herolist-content">
+                            <p id="JErroTips" style="display:none;">输入英雄不存在，请重新输入</p>
+                            <ul class="herolist1 clearbox" id="heroList">
+                                {foreach from=$heroList key=k item=v}
+                                <li data-freeWeek="{$v.free_week}" data-newRecommend="{$v.new_recommend}" data-vocation="{$v.vocation_id}">
+                                    <a target="_blank" href="index.php?c=Info&a=index&id={$v.id}" class="nav_a"><img src="./View/{$v.photo}" alt="{$v.name}">{$v.name}</a>
+                                </li>
+                                {/foreach}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="herolist-box two" style="display: none;">
+                        <div class="clearbox herolist-types item-types">
+                            <ul class="clearbox types-ms">
+                                <li data-type="0">
+                                    <input type="radio" name="prop" value="0" checked>
+                                    <label>全部</label>
+                                </li>
+                                <li data-type="1">
+                                    <input type="radio" name="prop" value="1">
+                                    <label>攻击</label>
+                                </li>
+                                <li data-type="2">
+                                    <input type="radio" name="prop" value="2">
+                                    <label>法术</label>
+                                </li>
+                                <li data-type="3">
+                                    <input type="radio" name="prop" value="3">
+                                    <label>防御</label>
+                                </li>
+                                <li data-type="4">
+                                    <input type="radio" name="prop" value="4">
+                                    <label>移动</label>
+                                </li>
+                                <li data-type="5">
+                                    <input type="radio" name="prop" value="5">
+                                    <label>打野</label>
+                                </li>
+                                <li data-type="7">
+                                    <input type="radio" name="prop" value="6">
+                                    <label>辅助</label>
+                                </li>
+                            </ul>
+                            <div class="herosearch itemsearch">
+                                <input type="text" id="search" name="search" class="herosearch-input" placeholder="请输入你想要搜索的道具名">
+                                <a href="#" class="herosearch-icon" id="searchBtn"></a>
+                            </div>
+                        </div>
+
+                        <div class="herolist-content clearbox">
+                            <ul class="clearbox herolist" id="Jlist-details">
+                                {foreach from=$propList key=k item=v}
+                                <li class="list" data-propType="{$v.type}">
+                                    <a href="#"><img src="./View/{$v.image}" alt="{$v.name}">{$v.name}</a>
+                                    <div class="itemFromTop">
+                                        <div class="item-title clearbox">
+                                            <img src="./View/{$v.image}">
+                                            <div class="cons">
+                                                <h4>{$v.name}</h4>
+                                                <p>售价：{$v.price}</p>
+                                                <p>总价：{$v.total}</p>
+                                            </div>
+                                        </div>
+                                        <div class="item-desc">
+                                            <p>{$v.attribute}</p>
+                                            <p>{$v.brief}</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                {/foreach}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="herolist-box three" style="display: none;">
+                        <div class="clearbox herolist-types item-types">
+                            <ul id="spellList" class="imgtextlist spell-list">
+                                {foreach from=$summonerList key=k item=v}
+                                <li  class="curr" data-name="{$v.name}" data-bigImg="{$v.big_image}" data-level="{$v.unlock_level}" data-brief="{$v.brief}">
+                                    <img src="./View/{$v.image}" alt="{$v.name}">
+                                    <p>{$v.name}</p>
+                                </li>
+                                {/foreach}
+                            </ul>
+                            <div id="spellDefail" class="spell-defail">
+                                <div class="spell-title">
+                                    <img id="bg" src="./View/{$summonerList.0.big_image}" alt="{$summonerList.0.name}">
+                                    <h4 id="name">{$summonerList.0.name}</h4>
+                                    <p id="level" class="cons">LV.{$summonerList.0.unlock_level}解锁</p>
+                                </div>
+                                <div id="brief" class="spell-desc">{$summonerList.0.brief}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--底部-->
+        <div class="footer-wrap"> 
+            <div class="footer">    
+                <div class="foot-t clearbox">     
+                    <div class="foot-logo fl clearbox">       
+                        <a href="#" class="logo1 spr fl ht">腾讯互动娱乐</a>     
+                        <a href="#" class="logo2 spr fl ht">timi</a>     
+                    </div>      
+                    <div class="fl media-pic">       
+                        <a href="#" class="m1"></a>     
+                        <a href="#" class="m6"></a>     
+                    </div>        
+                    <div id="media" class="foot-media pr fr">       
+                        <h3 class="media-tit">合作媒体</h3>        
+                        <div class="arrow-ico-btn pa"><span class="arrow-ico spr"></span></div>			
+                        <ul style="display: none;" id="mediaCon" class="media-list pa">				
+                            <li><a href="#">任玩堂</a></li>
+                            <li><a href="#">掌游宝</a></li>
+                            <li><a href="#">搞趣网</a></li>
+                            <li><a href="#">多玩</a></li>	
+                            <li><a href="#">游民星空</a></li>
+                            <li><a href="#">兔玩网</a></li>
+                        </ul>      
+                    </div>    
+                </div>    
+                <div class="clearbox">      
+                    <div class="foot-tips fl">        
+                        <p class="fb">温馨提示：本游戏适合16岁(含)以上玩家娱乐</p>       
+                        <p class="f12">
+                            <em>抵制不良游戏</em>
+                            <em>拒绝盗版游戏</em>
+                            <em>注意自我保护</em>
+                            <em>谨防受骗上当</em>
+                            <em>适度游戏益脑</em>
+                            <em>沉迷游戏伤身</em>
+                            <em>合理安排时间</em>
+                            <em>享受健康生活</em>
+                        </p>        
+                        <p class="intro">《王者荣耀》全部背景故事发生于架空世界“王者大陆”中。相关人物、地理、事件均为艺术创作，并非正史。若因观看王者故事对相关历史人物产生兴趣，建议查阅正史记载。</p>      
+                    </div>      
+                    <div class="foot-b f12 tr">          
+                        <p>
+                            <a href="#">腾讯互动娱乐</a> | 
+                            <a href="#">服务条款</a> | 
+                            <a href="#">广告服务</a> | 
+                            <a href="#">腾讯游戏招聘</a> | 
+                            <a href="#">腾讯游戏客服</a> | 
+                            <a href="#">游戏地图</a> | 
+                            <a href="#">游戏活动</a> | 
+                            <a href="#">商务合作</a> | 
+                            <a href="#">网站导航</a>
+                        </p>          
+                        <p class="foot-txt">
+                            <em class="fl">COPYRIGHT © 1998 – 2017 TENCENT. ALL RIGHTS RESERVED.</em>
+                            <a href="#" class="fr">腾讯公司 版权所有</a>
+                        </p>          
+                        <p class="cb">
+                            <a href="#">粤网文[2017]6138-1456号 &amp; ISBN 978-7-7979-8408-9</a> | 
+                            <a href="#">新出网证（粤）字010号</a> | 文网游备字[2016]M-CSG 0059
+                        </p> 
+                        <p class="cb">批准文号：新广出审[2017] 6712号 | 全国文化市场统一举报电话：12318</p> 
+                    </div>   
+                </div>  
+            </div> 
+        </div>
+        <script type="text/javascript">
+//            二级菜单
+            $(function () {
+                $(".header-inner-nav").mouseover(function () {
+                    $(".header-inner-nav").children("#subNav").css("display", "block");
+                });
+                $(".header-inner-nav").mouseout(function () {
+                    $(".header-inner-nav").children("#subNav").css("display", "none");
+                });
+                $("#media").mouseover(function () {
+                    $("#media").children("ul").css("display", "block");
+                });
+                $("#media").mouseout(function () {
+                    $("#media").children("ul").css("display", "none");
+                });
+            });
+            //悬浮框
+            var divs = document.getElementsByClassName("list");
+
+
+            for (var i = 0; i < divs.length; i++) {
+                //鼠标移入事件
+                divs[i].onmouseover = function (event) {
+
+                    var event = event || window.event;
+
+                    //获取鼠标的到div的距离
+
+                    //鼠标距离文档的开始位置的距离
+                    var pageX = event.pageX || event.screenX + document.documentElement.scrollX;
+
+
+                    //当前元素到左边的距离(offsetLeft:当前元素距离父级（定位）的left距离，如果父级没有定位则是距离body)
+                    var divX = this.offsetLeft;
+
+                    //鼠标在div中的距离
+                    var x = pageX - divX;
+
+                    //获取鼠标到右边的距离
+                    var rightX = document.body.clientWidth - pageX;
+
+                    if (rightX > 450) {
+                        var chlid = this.children;
+                        var div = chlid[1];
+                        div.style.display = "block";
+                        div.style.left = (x + 12) + "px";
+                    } else {
+                        var chlid = this.children;
+                        var div = chlid[1];
+                        var x = (50 - x) + 330;
+                        div.style.display = "block";
+                        div.style.left = "-" + x + "px";
+                    }
+
+
+                };
+
+                //监听鼠标移动
+                divs[i].onmousemove = function (event) {
+
+                    var event = event || window.event;
+
+                    //获取鼠标的到div的距离
+
+                    //鼠标距离文档的开始位置的距离
+                    var pageX = event.pageX || event.screenX + document.documentElement.scrollX;
+
+
+                    //当前元素到左边的距离(offsetLeft:当前元素距离父级（定位）的left距离，如果父级没有定位则是距离body)
+                    var divX = this.offsetLeft;
+
+                    //鼠标在div中的距离
+                    var x = pageX - divX;
+                    //获取鼠标到右边的距离
+                    var rightX = document.body.clientWidth - pageX;
+
+                    if (rightX > 450) {
+                        var chlid = this.children;
+                        var div = chlid[1];
+                        div.style.display = "block";
+                        div.style.left = (x + 12) + "px";
+                    } else {
+                        var chlid = this.children;
+                        var div = chlid[1];
+                        var x = (50 - x) + 330;
+                        div.style.display = "block";
+                        div.style.left = "-" + x + "px";
+                    }
+                };
+
+
+
+
+                //鼠标移出事件
+                divs[i].onmouseout = function () {
+                    var chlid = this.children;
+                    var div = chlid[1];
+                    div.style.display = "none";
+                };
+            }
+            //英雄单选按钮
+            $("input[name='vocation']").change(function () {
+                var value = $(this).val();
+                if (value == -1) {
+                    $("#heroList li[data-freeweek='1']").show();
+                    $("#heroList li[data-freeweek='2']").hide();
+                } else if (value == -2) {
+                    $("#heroList li[data-newrecommend='1']").show();
+                    $("#heroList li[data-newrecommend='2']").hide();
+                } else if (value == 0) {
+                    $("#heroList li").show();
+                } else {
+                    $("#heroList li").hide();
+                    $("#heroList li[data-vocation='" + value + "']").show();
+                }
+            });
+            //道具单选按钮
+            $("input[name='prop']").change(function () {
+                var value = $(this).val();
+                if (value == 0) {
+                    $("#Jlist-details li").show();
+                } else {
+                    $("#Jlist-details li").hide();
+                    $("#Jlist-details li[data-proptype='" + value + "']").show();
+                }
+            });
+            //英雄、道具、召唤师技能的切换
+            $("#hero").click(function () {
+                $(".one").css("display", "block");
+                $(".two").css("display", "none");
+                $(".three").css("display", "none");
+                $("#hero").attr("class", "current");
+                $("#prop").attr("class", "");
+                $("#summoner").attr("class", "");
+            });
+            $("#prop").click(function () {
+                $(".one").css("display", "none");
+                $(".two").css("display", "block");
+                $(".three").css("display", "none");
+                $("#hero").attr("class", "");
+                $("#prop").attr("class", "current");
+                $("#summoner").attr("class", "");
+            });
+            $("#summoner").click(function () {
+                $(".one").css("display", "none");
+                $(".two").css("display", "none");
+                $(".three").css("display", "block");
+                $("#hero").attr("class", "");
+                $("#prop").attr("class", "");
+                $("#summoner").attr("class", "current");
+            });
+//            召唤师技能切换
+            $(".curr").click(function () {
+                var img = $(this).attr("data-bigImg");
+                var name = $(this).attr("data-name");
+                var level = $(this).attr("data-level");
+                var brief = $(this).attr("data-brief");
+                $("#bg").attr("src", "../admin1/" + img);
+                $("#name").html(name);
+                $("#level").html("LV." + level + "解锁");
+                $("#brief").html(brief);
+            });
+            //导航头像效果
+            $(".tou").first().addClass("active");
+            var img = $(".tou").first().attr("data-navImg");
+            var id = $(".tou").first().attr("data-id");
+            $("#" + id).attr("src", "../admin1/" + img);
+            $(".tou").mouseover(function () {
+                $(".tou").removeClass("active");
+                var img = $(this).attr("data-navImg");
+                var id = $(this).attr("data-id");
+                $("#" + id).attr("src", "../admin1/" + img);
+                $(this).addClass("active");
+                $(this).attr("data-img", "1");
+            });
+            $(".tou").mouseout(function () {
+                var img = $(this).attr("data-smallImg");
+                var id = $(this).attr("data-id");
+                var img_id=$(".nav_a").children("img").attr("id");
+                $("#" + id).attr("src", "../admin1/" + img);
+            });
+        </script>
+    </body>
+</html>
+

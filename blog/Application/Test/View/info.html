@@ -1,0 +1,745 @@
+<html>
+    <head>
+        <title>{$heroInfo.name}-王者荣耀官网网站</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./View/css/info.css">
+        <link rel="stylesheet" href="./View/css/common.css">
+        <script src="./View/js/jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <!--导航栏-->
+        <div id="header" class="header">
+            <div class="header-inner">
+                <a href="//pvp.qq.com/" class="logo pa"><img src="./View/images/logo.png"></a>
+                <ul class="main-nav clearbox">    
+                    <li class="first-nav"><a href="//pvp.qq.com/" title="官网首页">官网首页<em>HOME</em></a></li>       
+                    <li><a href="#" target="_blank" title="游戏资料">游戏资料<em>DATA</em></a></li>       
+                    <li><a href="#" target="_blank" title="攻略中心" >攻略中心<em>RAIDERS</em></a></li>    
+                    <li><a href="#" target="_blank" title="赛事中心">赛事中心<em>MATCH</em></a></li>      
+                    <li><a href="#" target="_blank" title="商城/合作">商城/合作<em>STORE</em></a></li>       
+                    <li><a href="#" title="社区互动">社区互动<em>COMMUNITY</em></a></li>        
+                    <li><a href="#" target="_blank" title="玩家支持">玩家支持<em>PLAYER</em></a></li>        
+                </ul>   
+                <!--=====二级导航=====-->      
+                <div id="subNav" class="sub-nav" style="display: none;">        
+                    <ul class="sub-nav-inner">         
+                        <li class="down-nav"> &nbsp;</li>         
+                        <li class="down-nav">
+                            <a href="#" title="版本介绍">版本介绍</a>             
+                            <a href="#" title="游戏介绍">游戏介绍</a>             
+                            <a href="#" title="英雄资料">英雄资料</a>             
+                            <a href="#" title="爆料站">爆料站</a>            
+                            <a href="#" title="故事站">故事站</a>             
+                            <a href="#" title="游戏壁纸">游戏壁纸</a>          
+                        </li>          
+                        <li class="down-nav">             
+                            <a href="#" title="攻略中心">攻略中心</a> 
+                            <a href="#" title="英雄攻略">英雄攻略</a> 
+                            <a href="#" title="视频中心">视频中心</a>  
+                        </li>          
+                        <li class="down-nav">             
+                            <a href="#" title="KPL职业联赛">KPL职业联赛</a> 
+                            <a href="#" title="KCC王者冠军杯">KCC王者冠军杯</a>
+                            <a href="#" title="KOC王者城市赛">KOC王者城市赛</a>       
+                            <a href="#" title="QGC联赛">QGC联赛</a>           
+                            <a href="#" title="TGA大奖赛">TGA大奖赛</a>             
+                            <a href="#" title="WGC精英赛">WGC精英赛</a>             
+                            <a href="#" title="王者高校联赛">王者高校联赛</a>          
+                        </li>          
+                        <li class="down-nav">             
+                            <a href="#" title="周边商城">周边商城</a>             
+                            <a href="#" title="王者信用卡">王者信用卡</a>  
+                            <a href="#" title="王者文化站">王者文化站</a>            
+                            <a href="#" title="百态王者">百态王者</a>  
+                            <a href="#" title="创意高地">创意高地</a>         
+                        </li>         
+                        <li class="down-nav">
+                            <a href="#" title="官方助手" >官方助手</a>
+                            <a href="#" title="手Q部落">手Q部落</a>           
+                            <a href="#" title="微信圈子">微信圈子</a>            
+                            <a href="#" title="官方微博">官方微博</a>  
+                            <a href="#" title="微信公众号">微信公众号</a> 
+                            <a href="#" title="手Q订阅号">手Q订阅号</a>  
+                            <a href="#" title="同人社区">同人社区</a>       
+                        </li>         
+                        <li class="down-nav">            
+                            <a href="#" title="成长守护平台">成长守护平台</a>            
+                            <a href="#" title="健康系统">健康系统</a>             
+                            <a href="#" title="客服专区">客服专区</a>
+                            <a href="#" title="礼包兑换">礼包兑换</a>             
+                            <a href="#" title="自助服务">自助服务</a>         
+                        </li>        
+                    </ul>     
+                </div>
+            </div>
+        </div>
+        <!--背景图上-->
+        <div class="wrapper">
+            <div class="zk-con1 zk-con" id="bg" style="background: url('./View/{$skinList.0.big_image}') center 0px;">
+                <div class="con1-pic">
+                    <div class="pic-show-box">
+                        <div class="cover">
+                            <div class="cover-bg"></div>
+                            {if $skinList!=null}
+                            <h3 class="cover-title" id="skin_name">{$skinList.0.name}</h3>
+                            {else}
+                            <h3 class="cover-title">昵称</h3>
+                            {/if}
+                            <h2 class="cover-name">{$heroInfo.name}</h2>
+                            <span class="herodetail-sort">
+                                <i style="background: url('./View/{$vinfo.img}');"></i>
+                            </span>                           
+                            <a href="#" class="hero-video">
+                                <span></span>
+                                {if $heroInfo.video_img!=""}
+                                <img src="./View/{$heroInfo.video_img}" alt="">
+                                {/if}
+                                <i class="icon ico-play"></i>
+                            </a>
+                            <ul class="cover-list">
+                                <li>
+                                    <em class="cover-list-text fl">生存能力</em>
+                                    <span class="cover-list-bar data-bar1 fl"><b class="icon"></b><i class="ibar" style="width:{$heroInfo.live}%"></i></span>
+                                </li>
+                                <li>
+                                    <em class="cover-list-text fl">攻击伤害</em>
+                                    <span class="cover-list-bar data-bar2 fl"><b class="icon"></b><i class="ibar" style="width:{$heroInfo.hurt}%"></i></span>
+                                </li>
+                                <li>
+                                    <em class="cover-list-text fl">技能效果</em>
+                                    <span class="cover-list-bar data-bar3 fl"><b class="icon"></b><i class="ibar" style="width:{$heroInfo.effect}%"></i></span>
+                                </li>
+                                <li>
+                                    <em class="cover-list-text fl">上手难度</em>
+                                    <span class="cover-list-bar data-bar4 fl"><b class="icon"></b><i class="ibar" style="width:{$heroInfo.difficulty}%"></i></span>
+                                </li>
+                            </ul>
+                            <div class="cover-btn">
+                                {if $heroInfo.story!=""}
+                                <a href="javascript:;" class="story">英雄故事</a>
+                                {/if}
+                                {if $heroInfo.history!=""}
+                                <a href="javascript:;" class="history">历史上的ta</a>
+                                {/if}
+                            </div>
+                        </div>
+                        <div class="pic-pf">
+                            <a href="javascript:;" class="pf" title="更多">皮<br>肤</a>
+                            <ul class="pic-pf-list pic-pf-list3">
+                                {foreach from=$skinList key=k item=v}
+                                <li>
+                                    <i class="curr" data-name="{$v.name}" data-bigImg="{$v.big_image}">
+                                        <img src="../admin1/{$v.image}">
+                                    </i>
+                                    <p>{$v.name}</p>
+                                </li>
+                                {/foreach}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 内容-->
+            <div class="zkcontent">
+                <div class="zk-con-box">
+                    <div class="zk-con3 zk-con">
+                        <div class="crumb">
+                            <i class="tb1 icon fl"></i>
+                            <a href="//pvp.qq.com/" title="王者荣耀首页">王者荣耀首页</a>
+                            <span>&gt;</span>
+                            <a href="#" title="英雄介绍">英雄介绍</a>
+                            <span>&gt;</span>
+                            <label>{$heroInfo.name}</label>
+                            <span class="hidden">{$heroInfo.id}</span>
+                        </div>
+                        <div class="skill ls fl">
+                            <h3 class="tlt fn"><i class="tb2 icon fl"></i>技能介绍</h3>
+                            <div class="skill-info l info">
+                                <ul class="skill-u1">
+                                    <li class=""><img src="./images/英雄技能图/明世隐/50100.png" alt=""></li>
+                                    <li><img src="./images/英雄技能图/明世隐/50110.png" alt=""></li>
+                                    <li class=""><img src="./images/英雄技能图/明世隐/50120.png" alt=""></li>
+                                    <li class="curr"><img src="./images/英雄技能图/明世隐/50130.png" alt=""></li>
+                                    <li class="no5" data-img="./images/英雄技能图/明世隐/50140.png"><img src="###" alt=""></li>
+                                </ul>
+                                <div class="skill-show">
+                                    <div class="show-list" style="display: none;">
+                                        <p class="skill-name"><b>大吉大利</b><span>冷却值：0</span><span>消耗：0</span></p>
+                                        <p class="skill-desc">被动：明世隐对同一目标的第三次普攻会对其造成0.75秒晕眩，对同一个目标叠满印记后3秒内无法再次对其叠加印记</p>
+                                        <div class="skill-tips">虽然明世隐是辅助，但是在前期对抗时，该被动会对敌人造成极大的威胁</div>
+                                    </div>
+                                    <div class="show-list" style="display: none;">
+                                        <p class="skill-name"><b>临卦·无忧</b><span>冷却值：3</span><span>消耗：50</span></p>
+                                        <p class="skill-desc">以法器连接一名队友\敌人，增加\减少其150~300点物攻和法攻(受法术加成及师卦·飞翼等级影响)并提升15%移速，强化自身同等物攻和法强并提升15%移速；若目标是敌人，还会每0.5秒造成100/120/140/160/180/200（+20%法术加成）点法术伤害，并对魂链触碰的敌人也造成同等伤害；对目标的属性影响可由师卦·飞翼切换为增加/减少连接的队友/敌人20%~40%物理及法术防御(师卦·飞翼等级影响)；被魂链连接的目标暴露视野；同时只能连接一个目标</p>
+                                        <div class="skill-tips">明世隐的核心技能，进可削弱追杀敌人，退可增强己方核心输出，连接还可解锁大招的释放</div>
+                                    </div>
+                                    <div class="show-list" style="display: none;">
+                                        <p class="skill-name"><b>师卦·飞翼</b><span>冷却值：3</span><span>消耗：50</span></p>
+                                        <p class="skill-desc">明世隐切换法器状态，法器状态切换后，临卦·无忧对目标的连接效果也会相应切换；攻击改变状态：使连接的队友/敌人增加/减少其150/180/210/240/270/300(+15%法术加成)物理及法术攻击，并强化自身2/3该数值的物理及法术攻击；防御改变状态：增加/减少连接的队友/敌人24%/28%/32%/36%/40%/44%物理及法术防御，并强化自身2/3该数值的物理及法术防御</p>
+                                        <div class="skill-tips">当连接到前排坦克时，可以增强/削弱其防御能力，当连接到输出核心时，可增强/削弱其输出能力</div>
+                                    </div>
+                                    <div class="show-list" style="display: block;">
+                                        <p class="skill-name"><b>泰卦·长生</b><span>冷却值：40/35/30</span><span>消耗：120</span></p>
+                                        <p class="skill-desc">明世隐在0.75秒吟唱后，法器会带走他的部分生命，化作能量射向当前连接的目标；如果目标是敌人会造成1000/1500/2000(+150%法术加成)点真实伤害，如果是队友会回复等量生命；法球命中目标瞬间，明世隐会损失等量生命值，损失值不会超过当前生命值，且损失生命值会在之后10秒内逐渐恢复；被动：明世隐脱战后每秒回复百分比已损生命值5%</p>
+                                        <div class="skill-tips">无论连接敌人还是队友释放，由于自己会损失等量生命值，所以需要释放后能立即脱离战场；再者，因为造成真实伤害，所以对坦克的威胁特别大</div>
+                                    </div>
+                                    <div class="show-list" style="display: none;">
+                                        <p class="skill-name"><b></b><span>冷却值：</span><span>消耗：</span></p>
+                                        <p class="skill-desc"></p>
+                                        <div class="skill-tips"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sugg rs fl">
+                            <div class="story-tlt">
+                                <h3 class="tlt fn"><i class="tb3 icon fl"></i>铭文搭配建议</h3>
+                            </div>
+                            <div class="sugg-info info">
+                                <ul class="sugg-u1" data-ming="1514|3515|2520">
+                                    <li>
+                                        <img src="./images/铭文/1514.png" class="sugg-pic1" width="45" height="53" alt="">
+                                        <p><em>梦魇</em></p>
+                                        <p>法术攻击力+4.2</p><p>法术穿透+2.4</p>
+                                    </li>
+                                    <li>
+                                        <img src="./images/铭文/3515.png" class="sugg-pic1" width="45" height="53" alt="">
+                                        <p><em>心眼</em></p>
+                                        <p>攻速加成+0.6%</p><p>法术穿透+6.4</p>
+                                    </li>
+                                    <li>
+                                        <img src="./images/铭文/2520.png" class="sugg-pic1" width="45" height="53" alt="">
+                                        <p><em>狩猎</em></p>
+                                        <p>攻速加成+1%</p><p>移速+1%</p>
+                                    </li>
+                                </ul>
+                                <p class="sugg-tips">Tips：明世隐前期较为强势，铭文也将偏向增加其对线期的伤害能力，移速铭文能保持连接不被轻易拉开</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zk-con4 zk-con">
+                        <div class="hero ls fl">
+                            <div class="sugg-tlt">
+                                <h3 class="tlt fn"><i class="tb4 icon fl"></i>技能加点建议</h3>
+                            </div>
+                            <div class="sugg-info2 info">
+                                <p class="sugg-name"><b>主升</b><span>临卦·无忧</span></p>
+                                <p class="icon sugg-skill">
+                                    <img src="./images/英雄技能图/明世隐/50110.png" class="jn-pic1" width="47" height="47" alt="技能1">
+                                </p>
+                                <p class="sugg-name"><b>副升</b><span>师卦·飞翼</span></p>
+                                <p class="icon sugg-skill"><img src="./images/英雄技能图/明世隐/50120.png" class="jn-pic1" width="47" height="47" alt="技能2"></p>
+                                <p class="sugg-name sugg-name3"><b>召唤师技能</b><span>闪现/治疗术</span></p>
+                                <p id="skill3" data-skill="80115|80102">
+                                <p class="icon sugg-skill"><img src="./images/技能/80115.jpg" alt="" class="jn-pic1" width="47" height="47"></p>
+                                <p class="icon sugg-skill"><img src="./images/技能/80102.jpg" alt="" class="jn-pic1" width="47" height="47"></p>
+                            </div>
+                            <h3 class="tlt fn"><i class="tb5 icon fl"></i>英雄关系</h3>
+                            <div class="hero-info-box">
+                                <ul class="hero-hd">
+                                    <li class="curr">最佳搭档<span></span></li>
+                                    <li>压制英雄<span></span></li>
+                                    <li>被压制英雄</li>
+                                </ul>
+                                <div>
+                                    <div class="hero-info  info" style="display:block;">
+                                        <div class="hero-f1 fl"><i class="hr1 icon fl"></i>最佳搭档</div>
+                                        <div class="hero-list hero-relate-list fl" data-relatename="">
+                                            <ul>
+                                                <li class="cur"><a href="#"><img src="./images/英雄头像/133.jpg" alt=""></a></li>
+                                                <li><a href="#"><img src="./images/英雄头像/139.jpg" alt=""></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="hero-list-desc" style="margin-top: -20px;">
+                                            <p>明世隐能为狄仁杰提供高额的输出提升或削弱敌方坦克，让其无人可挡</p>
+                                            <p style="display:none;">明世隐能够将敌人减速，让老夫子轻松开启战斗</p>
+                                        </div>
+                                    </div>
+                                    <div class="hero-info l info" style="display:none;">
+                                        <div class="hero-f1 fl"><i class="hr2 icon fl"></i>压制英雄</div>
+                                        <div class="hero-list hero-relate-list fl" data-relatename="">
+                                            <ul>
+                                                <li class="cur"><a href="#"><img src="./images/英雄头像/129.jpg" alt=""></a></li>
+                                                <li><a href="#"><img src="./images/英雄头像/144.jpg" alt=""></a></li>
+                                            </ul>                    
+                                        </div>
+                                        <div class="hero-list-desc">
+                                            <p>明世隐针对移动能力不强的近战时，可以轻松与其连接，并让其付出代价</p>
+                                            <p style="display:none;">坦克防御堆砌的再高，也无法减少明世隐大招造成的真实伤害</p>
+                                        </div>
+                                    </div>
+                                    <div class="hero-info l info" style="display:none;">
+                                        <div class="hero-f1 fl"><i class="hr3 icon fl"></i>被压制英雄</div>
+                                        <div class="hero-list hero-relate-list fl" data-relatename="">
+                                            <ul>
+                                                <li class="cur"><a href="#"><img src="./images/英雄头像/196.jpg" alt=""></a></li>
+                                                <li><a href="#"><img src="./images/英雄头像/131.jpg" alt=""></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="hero-list-desc">
+                                            <p>当百里守约远程狙击时，会保持在连接范围外，保证了自身安全</p>
+                                            <p style="display:none;">李白快速的入场和退出，让明世隐无法与其连接</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="equip rs fl">
+                            <h3 class="tlt fn"><i class="tb6 icon fl"></i>出装建议</h3>
+                            <div class="equip-box">
+                                <ul class="equip-hd">
+                                    <li class="curr">推荐出装一<span></span></li>
+                                    <li>推荐出装二</li>                            
+                                </ul>
+                            </div>
+                            <div class="equip-bd">
+                                <div class="equip-info l" style="display:block;">
+                                    <ul class="equip-list fl" data-item="1722|1426|1237|1234|1334|1337">
+                                        <li class="list">
+                                            <a href="javascript:;">
+                                                <img src="images/equit/1722.jpg" alt="">
+                                            </a>
+                                            <div class="itemFromTop">
+                                                <div class="item-title clearbox">
+                                                    <img src="./images/equit/1722.jpg" alt="" id="Jpic">
+                                                    <div class="cons">
+                                                        <h4 id="Jname">救赎之翼</h4>
+                                                        <p id="Jprice">售价：1080</p>
+                                                        <p id="Jtprice">总价：1800</p>
+                                                    </div>
+                                                </div>
+                                                <div class="item-desc">
+                                                    <p>+移动速度+10%<br>+生命值1000</p>
+                                                    <p>所有辅助装备的主动技能均为全队共享冷却时间<br>唯一被动-奉献：如果自己的经验或经济是己方最低，每3秒会额外获得5点经验或金币<br>唯一主动-救援：60秒CD，立即为周围血量最低的友方英雄（包括自己）提供一个吸收（800+英雄等级*80）伤害的护盾，并提升其30%移动速度，持续3秒</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list">
+                                            <a href="javascript:;">
+                                                <img src="images/equit/1426.jpg" alt="">
+                                            </a>
+                                            <div class="itemFromTop"><div class="item-title clearbox">
+                                                    <img src="./images/equit/1426.jpg" alt="" id="Jpic">
+                                                    <div class="cons">
+                                                        <h4 id="Jname">疾步之靴</h4>
+                                                        <p id="Jprice">售价：378</p>
+                                                        <p id="Jtprice">总价：530</p>
+                                                    </div>
+                                                </div>
+                                                <div class="item-desc">
+                                                    <p>唯一被动-神行：脱离战斗后增加60移动速度<br>唯一被动：+60移动速度（所有鞋类装备的移速加成效果不叠加）</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list">
+                                            <a href="javascript:;">
+                                                <img src="images/equit/1237.jpg" alt="">
+                                            </a>
+                                            <div class="itemFromTop">
+                                                <div class="item-title clearbox">
+                                                    <img src="./images/equit/1237.jpg" alt="" id="Jpic">
+                                                    <div class="cons">
+                                                        <h4 id="Jname">时之预言</h4>
+                                                        <p id="Jprice">售价：1254</p><p id="Jtprice">总价：2090</p>
+                                                    </div>
+                                                </div>
+                                                <div class="item-desc">
+                                                    <p>+160法术攻击<br>+600最大法力<br>+800最大生命</p>
+                                                    <p>唯一被动-英勇奖赏：升级后在3秒内回复20%生命值与法力值<br>唯一被动-守护：每5点法功提升1点物理和法术防御，最多提升200点</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list">
+                                            <a href="javascript:;">
+                                                <img src="images/equit/1234.jpg" alt="">
+                                            </a>
+                                            <div class="itemFromTop">
+                                                <div class="item-title clearbox">
+                                                    <img src="./images/equit/1234.jpg" alt="" id="Jpic">
+                                                    <div class="cons">
+                                                        <h4 id="Jname">冰霜法杖</h4>
+                                                        <p id="Jprice">售价：1260</p>
+                                                        <p id="Jtprice">总价：2100</p>
+                                                    </div>
+                                                </div>
+                                                <div class="item-desc">
+                                                    <p>+150法术攻击 <br>+1050最大生命</p>
+                                                    <p>唯一被动-结霜：英雄技能造成伤害会附带20%的减速效果，持续2秒</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list">
+                                            <a href="javascript:;">
+                                                <img src="images/equit/1334.jpg" alt="">
+                                            </a>
+                                            <div class="itemFromTop">
+                                                <div class="item-title clearbox">
+                                                    <img src="./images/equit/1334.jpg" alt="" id="Jpic">
+                                                    <div class="cons">
+                                                        <h4 id="Jname">不死鸟之眼</h4>
+                                                        <p id="Jprice">售价：1260</p>
+                                                        <p id="Jtprice">总价：2100</p>
+                                                    </div>
+                                                </div>
+                                                <div class="item-desc">
+                                                    <p>+100每5秒回血<br>+240法术防御<br>+1200最大生命</p>
+                                                    <p>唯一被动-血统：每损失10%生命值，受到的所有治疗效果会额外增加6%。</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list">
+                                            <a href="javascript:;">
+                                                <img src="images/equit/1337.jpg" alt="">
+                                            </a>
+                                            <div class="itemFromTop">
+                                                <div class="item-title clearbox">
+                                                    <img src="./images/equit/1337.jpg" alt="" id="Jpic">
+                                                    <div class="cons">
+                                                        <h4 id="Jname">贤者的庇护</h4>
+                                                        <p id="Jprice">售价：1248</p>
+                                                        <p id="Jtprice">总价：2080</p>
+                                                    </div>
+                                                </div>
+                                                <div class="item-desc">
+                                                    <p>+140物理防御<br>+140法术防御</p>
+                                                    <p>唯一被动-复生：死亡后2秒原地复活，并获得（2000+英雄等级*100）点生命值，冷却时间：150秒。这个效果每局游戏只能触发2次</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <p class="equip-tips">Tips：辅助出门装，跑线支援迅速，续航较好，作为中场辅助，前可支援坦克，后可增强输出，自身也有一定坦度，不会轻易死去</p>
+                                </div>
+                                <div class="equip-info l" style="display: none;">
+                                    <ul class="equip-list fl" data-item="1233|1424|1235|1234|1231|1238">
+                                        <li>
+                                            <a href="javascript:;">
+                                                <img src="images/equit/1233.jpg" alt="">
+                                                <div class="itemFromTop">
+                                                    <div class="item-title clearbox">
+                                                        <img src="./images/equit/1233.jpg" alt="" id="Jpic">
+                                                        <div class="cons">
+                                                            <h4 id="Jname">回响之杖</h4>
+                                                            <p id="Jprice">售价：1260</p>
+                                                            <p id="Jtprice">总价：2100</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-desc">
+                                                        <p>+240法术攻击 <br>+7%移速 </p>
+                                                        <p>唯一被动-回响：技能命中会触发小范围爆炸造成50（+50%法术加成）法术伤害，这个效果有5秒CD</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <img src="images/equit/1424.jpg" alt="">
+                                                <div class="itemFromTop">
+                                                    <div class="item-title clearbox">
+                                                        <img src="./images/equit/1424.jpg" alt="" id="Jpic">
+                                                        <div class="cons">
+                                                            <h4 id="Jname">秘法之靴</h4>
+                                                            <p id="Jprice">售价：474</p>
+                                                            <p id="Jtprice">总价：710</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-desc">
+                                                        <p>唯一被动：+60移动速度（所有鞋类装备的移速加成效果不叠加）<br>唯一被动：+75法术穿透</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <img src="images/equit/1235.jpg" alt="">
+                                                <div class="itemFromTop">
+                                                    <div class="item-title clearbox">
+                                                        <img src="./images/equit/1235.jpg" alt="" id="Jpic">
+                                                        <div class="cons">
+                                                            <h4 id="Jname">痛苦面具</h4>
+                                                            <p id="Jprice">售价：1224</p>
+                                                            <p id="Jtprice">总价：2040</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-desc">
+                                                        <p>+140法术攻击<br>+5%冷却缩减<br>+500最大生命</p>
+                                                        <p>唯一被动-折磨：技能伤害会造成相当于目标当前生命值8%的法术伤害，这个效果有3秒CD（对野怪伤害上限：200）<br>唯一被动：+75法术穿透</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <img src="images/equit/1234.jpg" alt="">
+                                                <div class="itemFromTop">
+                                                    <div class="item-title clearbox">
+                                                        <img src="./images/equit/1234.jpg" alt="" id="Jpic">
+                                                        <div class="cons">
+                                                            <h4 id="Jname">冰霜法杖</h4>
+                                                            <p id="Jprice">售价：1260</p>
+                                                            <p id="Jtprice">总价：2100</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-desc">
+                                                        <p>+150法术攻击 <br>+1050最大生命</p>
+                                                        <p>唯一被动-结霜：英雄技能造成伤害会附带20%的减速效果，持续2秒</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <img src="images/equit/1231.jpg" alt="">
+                                                <div class="itemFromTop">
+                                                    <div class="item-title clearbox">
+                                                        <img src="./images/equit/1231.jpg" alt="" id="Jpic">
+                                                        <div class="cons">
+                                                            <h4 id="Jname">虚无法杖</h4>
+                                                            <p id="Jprice">售价：1266</p>
+                                                            <p id="Jtprice">总价：2110</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-desc">
+                                                        <p>+180法术攻击<br>+500最大生命值</p>
+                                                        <p>唯一被动：+45%法术穿透</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <img src="images/equit/1238.jpg" alt="">
+                                                <div class="itemFromTop">
+                                                    <div class="item-title clearbox">
+                                                        <img src="./images/equit/1238.jpg" alt="" id="Jpic">
+                                                        <div class="cons">
+                                                            <h4 id="Jname">贤者之书</h4>
+                                                            <p id="Jprice">售价：1794</p>
+                                                            <p id="Jtprice">总价：2990</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-desc">
+                                                        <p>+400法术攻击</p>
+                                                        <p>唯一被动-刻印：增加1400点生命</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="equip-tips">Tips：法术出门装，主要针对敌方制造伤害和削弱其对抗能力，高额法术攻击能让大招的真实伤害对坦克和后排造成巨大威胁</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pop-story" id="hero-story" style="display: none;">
+            <div class="mask" style=""></div>
+            <div class="pop-hd">
+                英雄故事
+                <a href="javascript:;" class="storyClose close"></a>
+            </div>
+            <div class="pop-bd">
+                <p>{$heroInfo.story}</p>    
+            </div>
+        </div>
+        <div class="pop-story" id="history" style="display: none;">
+            <div class="mask" style=""></div>
+            <div class="pop-hd">
+                历史上的TA
+                <a href="javascript:;" class="historyClose close"></a>
+            </div>
+            <div class="pop-bd">
+                <p>{$heroInfo.history}</p>
+            </div>
+        </div>
+        <!--底部-->
+        <div class="footer-wrap"> 
+            <div class="footer">    
+                <div class="foot-t clearbox">     
+                    <div class="foot-logo fl clearbox">       
+                        <a href="#" class="logo1 spr fl ht">腾讯互动娱乐</a>     
+                        <a href="#" class="logo2 spr fl ht">timi</a>     
+                    </div>      
+                    <div class="fl media-pic">       
+                        <a href="#" class="m1"></a>     
+                        <a href="#" class="m6"></a>     
+                    </div>        
+                    <div id="media" class="foot-media pr fr">       
+                        <h3 class="media-tit">合作媒体</h3>        
+                        <div class="arrow-ico-btn pa"><span class="arrow-ico spr"></span></div>			
+                        <ul style="display: none;" id="mediaCon" class="media-list pa">				
+                            <li><a href="#">任玩堂</a></li>
+                            <li><a href="#">掌游宝</a></li>
+                            <li><a href="#">搞趣网</a></li>
+                            <li><a href="#">多玩</a></li>	
+                            <li><a href="#">游民星空</a></li>
+                            <li><a href="#">兔玩网</a></li>
+                        </ul>      
+                    </div>    
+                </div>    
+                <div class="clearbox">      
+                    <div class="foot-tips fl">        
+                        <p class="fb">温馨提示：本游戏适合16岁(含)以上玩家娱乐</p>       
+                        <p class="f12">
+                            <em>抵制不良游戏</em>
+                            <em>拒绝盗版游戏</em>
+                            <em>注意自我保护</em>
+                            <em>谨防受骗上当</em>
+                            <em>适度游戏益脑</em>
+                            <em>沉迷游戏伤身</em>
+                            <em>合理安排时间</em>
+                            <em>享受健康生活</em>
+                        </p>        
+                        <p class="intro">《王者荣耀》全部背景故事发生于架空世界“王者大陆”中。相关人物、地理、事件均为艺术创作，并非正史。若因观看王者故事对相关历史人物产生兴趣，建议查阅正史记载。</p>      
+                    </div>      
+                    <div class="foot-b f12 tr">          
+                        <p>
+                            <a href="#">腾讯互动娱乐</a> | 
+                            <a href="#">服务条款</a> | 
+                            <a href="#">广告服务</a> | 
+                            <a href="#">腾讯游戏招聘</a> | 
+                            <a href="#">腾讯游戏客服</a> | 
+                            <a href="#">游戏地图</a> | 
+                            <a href="#">游戏活动</a> | 
+                            <a href="#">商务合作</a> | 
+                            <a href="#">网站导航</a>
+                        </p>          
+                        <p class="foot-txt">
+                            <em class="fl">COPYRIGHT © 1998 – 2017 TENCENT. ALL RIGHTS RESERVED.</em>
+                            <a href="#" class="fr">腾讯公司 版权所有</a>
+                        </p>          
+                        <p class="cb">
+                            <a href="#">粤网文[2017]6138-1456号 &amp; ISBN 978-7-7979-8408-9</a> | 
+                            <a href="#">新出网证（粤）字010号</a> | 文网游备字[2016]M-CSG 0059
+                        </p> 
+                        <p class="cb">批准文号：新广出审[2017] 6712号 | 全国文化市场统一举报电话：12318</p> 
+                    </div>   
+                </div>  
+            </div> 
+        </div>
+        <script type="text/javascript">
+//            二级菜单
+            $(function () {
+                $(".header-inner").mouseover(function () {
+                    $(".header-inner").children("#subNav").css("display", "block");
+                });
+                $(".header-inner").mouseout(function () {
+                    $(".header-inner").children("#subNav").css("display", "none");
+                });
+                $("#media").mouseover(function () {
+                    $("#media").children("ul").css("display", "block");
+                });
+                $("#media").mouseout(function () {
+                    $("#media").children("ul").css("display", "none");
+                });
+                //英雄故事与历史上的他
+                $(".story").click(function () {
+                    $("#hero-story").css("display", "block");
+                });
+                $(".history").click(function () {
+                    $("#history").css("display", "block");
+                });
+                $(".storyClose").click(function () {
+                    $("#hero-story").css("display", "none");
+                });
+                $(".historyClose").click(function () {
+                    $("#history").css("display", "none");
+                });
+            });
+//            道具悬浮
+            var divs = document.getElementsByClassName("list");
+            for (var i = 0; i < divs.length; i++) {
+                //鼠标移入事件
+                divs[i].onmouseover = function (event) {
+
+                    var event = event || window.event;
+
+                    //获取鼠标的到div的距离
+
+                    //鼠标距离文档的开始位置的距离
+                    var pageX = event.pageX || event.screenX + document.documentElement.scrollX;
+
+
+                    //当前元素到左边的距离(offsetLeft:当前元素距离父级（定位）的left距离，如果父级没有定位则是距离body)
+                    var divX = this.offsetLeft;
+
+                    //鼠标在div中的距离
+                    var x = pageX - divX;
+
+                    //获取鼠标到右边的距离
+                    var rightX = document.body.clientWidth - pageX;
+
+                    if (rightX > 250) {
+                        var chlid = this.children;
+                        var div = chlid[1];
+                        div.style.display = "block";
+                        div.style.left = (x + 50) + "px";
+                    } else {
+                        var chlid = this.children;
+                        var div = chlid[1];
+                        var x = (50 - x) + 200;
+                        div.style.display = "block";
+                        div.style.left = "-" + x + "px";
+                    }
+
+
+                }
+
+                //监听鼠标移动
+                divs[i].onmousemove = function (event) {
+
+                    var event = event || window.event;
+
+                    //获取鼠标的到div的距离
+
+                    //鼠标距离文档的开始位置的距离
+                    var pageX = event.pageX || event.screenX + document.documentElement.scrollX;
+
+
+                    //当前元素到左边的距离(offsetLeft:当前元素距离父级（定位）的left距离，如果父级没有定位则是距离body)
+                    var divX = this.offsetLeft;
+
+                    //鼠标在div中的距离
+                    var x = pageX - divX;
+
+
+                    //获取鼠标到右边的距离
+                    var rightX = document.body.clientWidth - pageX;
+                    console.log(rightX);
+                    if (rightX > 250) {
+                        var chlid = this.children;
+                        var div = chlid[1];
+                        div.style.display = "block";
+                        div.style.left = (x - 850) + "px";
+                    } else {
+                        var chlid = this.children;
+                        var div = chlid[1];
+                        var x = (50 - x) + 200;
+                        div.style.display = "block";
+                        div.style.left = "-" + x + "px";
+                    }
+                }
+
+
+
+
+                //鼠标移出事件
+                divs[i].onmouseout = function () {
+                    var chlid = this.children;
+                    var div = chlid[1];
+                    div.style.display = "none";
+                }
+            }
+//            皮肤的切换
+            $(".curr").hover(function () {
+                var img = $(this).attr("data-bigImg");
+                var name = $(this).attr("data-name");
+                $("#bg").css("background-image", "url(../admin1/" + img + ")");
+                $("#skin_name").html(name);
+            });
+        </script>
+    </body>
+</html>
+

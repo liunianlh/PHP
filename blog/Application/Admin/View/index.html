@@ -1,0 +1,527 @@
+<html lang="en"> 
+    <head>
+
+        <meta charset="utf-8" />
+
+        <title>后台管理系统</title>
+
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+        <meta content="" name="description" />
+
+        <meta content="" name="author" />
+
+        <!-- BEGIN GLOBAL MANDATORY STYLES -->
+
+        <link href="public/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+        <link href="public/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+
+        <link href="public/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+        <link href="public/css/style-metro.css" rel="stylesheet" type="text/css"/>
+
+        <link href="public/css/style.css" rel="stylesheet" type="text/css"/>
+
+        <link href="public/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+
+        <link href="public/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+
+        <link href="public/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+
+        <!-- END GLOBAL MANDATORY STYLES -->
+
+        <!-- BEGIN PAGE LEVEL STYLES -->
+
+        <link rel="stylesheet" type="text/css" href="public/css/select2_metro.css" />
+
+        <link rel="stylesheet" href="public/css/DT_bootstrap.css" />
+
+        <!-- END PAGE LEVEL STYLES -->
+
+        <link rel="shortcut icon" href="public/image/favicon.ico" />
+
+    </head>
+
+    <!-- END HEAD -->
+
+    <!-- BEGIN BODY -->
+
+    <body class="page-header-fixed">
+        <!--添加的弹框-->
+        <div id="addAdmin" style="display: none;width: 100%;height: 100%;background: rgba(0,0,0,0.5);position: absolute;top: 0px;left: 0px;z-index: 9999">
+            <div  class="modal">
+
+                <div class="modal-header">
+
+                    <button data-dismiss="modal" class="close" type="button" onclick="$('#addAdmin').hide();"></button>
+
+                    <h3>添加管理员</h3>
+
+                </div>
+
+                <div class="modal-body">
+                    <form action="#" class="form-horizontal">
+
+                        <div class="control-group">
+
+                            <label class="control-label">用户名</label>
+
+                            <div class="controls">
+
+                                <input type="text" placeholder="请输入用户名" name="add_admin_name">
+
+                            </div>
+
+                        </div>
+                        <div class="control-group">
+
+                            <label class="control-label">密码</label>
+
+                            <div class="controls">
+
+                                <input type="password" placeholder="请输入密码" name="add_admin_pwd">
+
+                            </div>
+
+                        </div>
+                        <div class="control-group" style="text-align: center;">
+                            <span class="help-block" style="color: red;display: none;" id="add_msg"></span>
+                            <button type="button" class="btn blue" id="saveAdmin"><i class="icon-ok"></i>添加</button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- BEGIN HEADER -->
+
+        <div class="header navbar navbar-inverse navbar-fixed-top">
+
+            <!-- BEGIN TOP NAVIGATION BAR -->
+
+            <div class="navbar-inner">
+
+                <div class="container-fluid">
+
+                    <!-- BEGIN LOGO -->
+
+                    <a class="brand" href="index.html">
+
+                        <img src="public/image/logo.png" alt="logo" />
+
+                    </a>
+
+                    <!-- END LOGO -->
+
+                    <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+
+                    <a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+
+                        <img src="public/image/menu-toggler.png" alt="" />
+
+                    </a>          
+
+                    <!-- END RESPONSIVE MENU TOGGLER -->            
+
+                    <!-- BEGIN TOP NAVIGATION MENU -->              
+
+                    <ul class="nav pull-right">
+
+                        <li class="dropdown user">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                                <img alt="" src="public/image/avatar1_small.jpg" />
+
+                                <span class="username">admin</span>
+
+                                <i class="icon-angle-down"></i>
+
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a href="index.php?c=Index&a=quit&m=Admin"><i class="icon-key"></i>退出登录</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <!-- END USER LOGIN DROPDOWN -->
+
+                    </ul>
+
+                    <!-- END TOP NAVIGATION MENU --> 
+
+                </div>
+
+            </div>
+
+            <!-- END TOP NAVIGATION BAR -->
+
+        </div>
+
+        <!-- END HEADER -->
+
+        <!-- BEGIN CONTAINER -->
+
+        <div class="page-container row-fluid">
+
+            <!-- BEGIN SIDEBAR -->
+
+            <div class="page-sidebar nav-collapse collapse">
+
+                <!-- BEGIN SIDEBAR MENU -->        
+
+                <ul class="page-sidebar-menu">
+                    <li class="start active">
+                        <a href="index.php?c=Index&a=index&m=Admin">
+                            <i class="icon-file-text"></i> 
+                            <span class="title">管理员管理</span>
+                            <span class="selected"></span>
+
+                        </a>
+                    </li>
+                    <li class="start">
+                        <a href="index.php?c=User&a=index&m=Admin">
+                            <i class="icon-file-text"></i> 
+                            <span class="title">用户管理</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
+                    <li class="start">
+                        <a href="index.php?c=Blog&a=index&m=Admin">
+                            <i class="icon-file-text"></i> 
+                            <span class="title">博客管理</span>
+                            <span class="selected"></span>
+
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- END SIDEBAR MENU -->
+
+            </div>
+
+            <!-- END SIDEBAR -->
+
+            <!-- BEGIN PAGE -->
+
+            <div class="page-content">
+
+                <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+
+                <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+
+                <!-- BEGIN PAGE CONTAINER-->        
+
+                <div class="container-fluid">
+
+                    <!-- BEGIN PAGE HEADER-->
+
+                    <div class="row-fluid">
+
+                        <div class="span12">
+
+                            <h3 class="page-title">
+
+                                管理员列表
+
+                            </h3>
+
+                        </div>
+
+                        <!-- END PAGE HEADER-->
+
+                        <!-- BEGIN PAGE CONTENT-->
+
+                        <div class="row-fluid">
+
+                            <div class="span12">
+
+                                <div class="portlet-body">
+
+                                    <div class="clearfix">
+
+                                        <div class="btn-group">
+
+                                            <button id="sample_editable_1_new" class="btn green">
+
+                                                添加 <i class="icon-plus"></i>
+
+                                            </button>
+
+                                        </div>
+                                    </div>
+
+                                    <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
+                                        {if $adminList!=null}
+                                        <thead>
+
+                                            <tr>
+
+                                                <th>编号</th>
+
+                                                <th>管理员</th>
+
+                                                <th>状态</th>
+
+                                                <th>操作</th>
+
+                                            </tr>
+
+                                        </thead>
+                                        {/if}
+
+                                        <tbody>
+                                            {foreach from=$adminList item=v name=foo}
+                                            {if $smarty.foreach.foo.index <2}
+                                            <tr class="">
+
+                                                <td>{$v.id}</td>
+
+                                                <td>{$v.name}</td>
+                                                {if $v.name=="admin"}
+                                                <td>开启</td>
+                                                {else}
+                                                <td class="editStatus" data-status="{$v.status}" data-id="{$v.id}">{if $v.status==1}开启{else}关闭{/if}</td>
+                                                {/if}
+                                                {if $v.name=="admin"}
+                                                <td>
+                                                    <a href="javascript:;" class="editPwd" id="{$v.id}">重置密码</a>
+                                                    <a class="delete" href="javascript:;" id="{$v.id}"></a>
+                                                </td>
+                                                {else}
+                                                <td>
+                                                    <a href="javascript:;" class="editPwd" id="{$v.id}">重置密码</a>|
+                                                    <a class="delete" href="javascript:;" id="{$v.id}">删除</a>
+                                                </td>
+                                                {/if}
+
+                                            </tr>
+                                            {/if}
+                                            {foreachelse}
+                                            <tr><td>暂无数据</td></tr>
+                                            {/foreach}
+                                        </tbody>
+
+
+                                    </table>
+                                    <div class="span6" style="float: right;">
+                                        <div class="dataTables_paginate paging_bootstrap pagination">
+                                            <ul>
+                                                {if $adminList["all"]>$adminList["num"]}
+                                                    {if $page>1}
+                                                    <li class="prev disabled">
+                                                        <a href="index.php?c=Index&a=index&m=Admin&page={$page-1}"><span class="hidden-480"><<</span></a>
+                                                    </li>
+                                                    {/if}
+                                                    {for $i=1 to $adminList["countpage"]}
+                                                    <li class="">
+                                                        <a href="index.php?c=Index&a=index&m=Admin&page={$i}">{$i}</a>
+                                                    </li>
+                                                    {/for}
+                                                    {if $page<$adminList["countpage"]}
+                                                    <li class="next">
+                                                        <a href="index.php?c=Index&a=index&m=Admin&page={$page+1}"><span class="hidden-480">>></span></a>
+                                                    </li>
+                                                    {/if}
+                                                {/if}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- END EXAMPLE TABLE PORTLET-->
+
+                        </div>
+
+                    </div>
+
+                    <!-- END PAGE CONTENT -->
+
+                </div>
+
+                <!-- END PAGE CONTAINER-->
+
+            </div>
+
+            <!-- END PAGE -->
+
+        </div>
+
+        <!-- END CONTAINER -->
+
+        <!-- BEGIN FOOTER -->
+
+        <div class="footer">
+
+            <div class="footer-inner">
+
+                2013 &copy; Metronic by keenthemes.Collect from <a href="http://www.cssmoban.com/" title="网站模板" target="_blank">网站模板</a> - More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a>
+
+            </div>
+
+            <div class="footer-tools">
+
+                <span class="go-top">
+
+                    <i class="icon-angle-up"></i>
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- END FOOTER -->
+
+        <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+
+        <!-- BEGIN CORE PLUGINS -->
+
+        <script src="public/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+        <script src="public/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+        <!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+
+        <script src="public/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>      
+
+        <script src="public/js/bootstrap.min.js" type="text/javascript"></script>
+
+        <!--[if lt IE 9]>
+
+        <script src="public/js/excanvas.min.js"></script>
+
+        <script src="public/js/respond.min.js"></script>  
+
+        <![endif]-->   
+
+        <script src="public/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+
+        <script src="public/js/jquery.blockui.min.js" type="text/javascript"></script>  
+
+        <script src="public/js/jquery.cookie.min.js" type="text/javascript"></script>
+
+        <script src="public/js/jquery.uniform.min.js" type="text/javascript" ></script>
+
+        <!-- END CORE PLUGINS -->
+
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+
+        <script type="text/javascript" src="public/js/select2.min.js"></script>
+
+        <script type="text/javascript" src="public/js/jquery.dataTables.js"></script>
+
+        <script type="text/javascript" src="public/js/DT_bootstrap.js"></script>
+
+        <!-- END PAGE LEVEL PLUGINS -->
+
+        <!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+        <script src="public/js/app.js"></script>
+
+        <script src="public/js/table-editable.js"></script>    
+
+        <script>
+                        {literal}
+                        jQuery(document).ready(function () {
+
+                            App.init();
+                            $("#sample_editable_1_new").click(function () {
+                                $("#addAdmin").show();
+                            });
+                            //添加管理员
+                            $("#saveAdmin").click(function () {
+                                var name = $("input[name='add_admin_name']").val();
+                                var pwd = $("input[name='add_admin_pwd']").val();
+                                $.ajax({
+                                    type: "post",
+                                    url: "index.php?c=Index&a=insert&m=Admin",
+                                    data:{
+                                        name: name, 
+                                        pwd: pwd
+                                    },
+                                    success: function (data) {
+                                        data = $.parseJSON(data);
+                                        if (data.code == 100) {
+                                            $("#add_msg").html(data.message);
+                                            $("#add_msg").show();
+                                        } else {
+                                            history.go(0);
+                                        }
+                                    }
+                                });
+                            });
+                            //重置密码
+                            $(".editPwd").click(function () {
+                                var id = $(this).attr("id");
+                                $.ajax({
+                                    type: "post",
+                                    url: "index.php?c=Index&a=reset&m=Admin",
+                                    data: {
+                                        id: id
+                                    },
+                                    success: function (data) {
+                                        data = $.parseJSON(data);
+                                        if (data.code == 100) {
+                                            alert(data.message);
+                                        } else {
+                                            alert(data.message);
+                                        }
+                                    }
+                                });
+                            });
+                            //删除
+                            $(".delete").click(function () {
+                                var id = $(this).attr("id");
+                                $.ajax({
+                                    type: "get",
+                                    url: "index.php?c=Index&a=delete&m=Admin",
+                                    data: {
+                                        id: id
+                                    },
+                                    success: function (data) {
+                                        data = $.parseJSON(data);
+                                        if (data.code == 100) {
+                                            alert(data.message);
+                                        } else {
+                                            history.go(0);
+                                        }
+                                    }
+                                });
+                            });
+                            //修改状态
+                            $(".editStatus").click(function(){
+                                var id=$(this).attr("data-id");
+                                var status=$(this).attr("data-status");
+                                 $.ajax({
+                                     type:"get",
+                                     url:"index.php?c=Index&a=editStatus&m=Admin",
+                                     data:{id:id,status:status},
+                                    success:function(data){
+                                         data = $.parseJSON(data);
+                                         if(data.code==100){
+                                             alert(data.message);
+                                         }else{
+                                            history.go(0);
+                                         }
+                                     }
+                                 });
+                             });
+                        });
+                        {/literal}
+
+        </script>
+
+
+    </body>
+
+    <!-- END BODY -->
+
+</html>
