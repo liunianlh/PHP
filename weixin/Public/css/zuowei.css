@@ -1,0 +1,104 @@
+/*<!--影片详情-->*/
+.top{
+	width: 100%;
+	padding: 0 5% 0 5%;
+}
+.top>div{
+	width: 100%;
+	display: inline-block;
+	border-bottom: 1px solid #D3D3D3;
+}
+.top>div>h4{
+	font-weight: bold;
+}
+.top>div>p{
+	color: #737373;
+}
+
+/*<!--座位详情-->*/
+.xiangqing{
+	padding: 2%;
+	text-align: center;
+	width: 100%;
+}
+.xiangqing>img{
+	margin: 0 2% 0 5%;
+}
+
+/*<!--座位具体位置-->*/
+.weizhi{
+	width: 100%;
+	background: #E3E3E3;
+}
+.ting{
+	width: 50%;
+	background: #D3D3D3;
+	padding-bottom: 2%;
+	font-size: 1.2em;
+	border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+	margin-bottom: 5%;
+}
+.weizhi>div{
+	text-align: center;
+}
+.weizhi>div>table{
+	text-align: center;
+	margin: 0 auto;
+}
+
+/*<!--订单信息-->*/
+.dingdan{
+	display: none;
+	width: 100%;
+	position:fixed;
+    bottom:0;
+	border-top: 1px solid #D3D3D3;
+}
+.dingdan_top{
+	width: 100%;
+	padding: 5%;
+	display: inline-block;
+}
+.dingdan_top_left{
+	width: 60%;
+	float: left;
+}
+.dingdan_top_left>p{
+	color: #737373;
+	margin: 0;
+}
+.dingdan_top_left>div{
+	color: #D3D3D3;
+}
+.dingdan_top_left>div>span{
+	color: #000000;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+.dingdan_top_right{
+	width: 38%;
+	float: right;
+	display: block;
+}
+.dingdan_top_right>a{
+	width: 100%;
+	color: #D3D3D3;
+	display: inline-block;
+	text-align: right;
+}
+.dingdan_top_right>a>span{
+	color: red;
+}
+.dingdan_top_right>a>span>span{
+	font-size: 1.5em;
+	font-weight: bold;
+}
+.dingdan_bottom{
+	width: 100%;
+	background: red;
+	padding: 5% 0;
+	text-align: center;
+	color: #fff;
+	font-size: 1.5em;
+}

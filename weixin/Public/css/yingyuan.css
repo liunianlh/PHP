@@ -1,0 +1,74 @@
+/*影院列表*/
+.main{
+	padding: 0 5%;
+}
+.main>div{
+	display: inline-block;
+	width: 100%;
+	padding: 5% 0;
+	border-bottom: 1px solid #D3D3D3;
+	position: relative;
+}
+.main>div>div{
+	margin: 5px 0;
+}
+.main>div>p{
+	width: 83%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: #AAAAAA;
+}
+.mingzi>h4{
+	width: 83%;
+	margin: 0;
+	display: inline-flex;
+}
+.mingzi>h4>font{
+	width: 75%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.mingzi>h4>span{
+	margin-left: 2px;
+	font-size: 12px;
+	color: #AAAAAA;
+}
+.mingzi>h4>span>a{
+	color: red;
+	font-size: 12px;
+}
+
+.biaoqian span{
+	color: blue;
+	border: 1px solid blue;
+	padding: 0 1%;
+	margin-right: 1%;
+}
+.cu>a{
+	background: #FF8800;
+	color: #fff;
+	margin-right: 10px;
+	border-radius: 2px;
+	padding: 1px;
+	font-size: 12px;
+}
+.hui>a{
+	background: #FF8800;
+	color: #fff;
+	margin-right: 10px;
+	border-radius: 2px;
+	padding: 1px;
+	font-size: 12px;
+}
+.juli{
+	position: absolute;
+	right: 1%;
+	top: 40%;
+	color: #888888;
+}
+/*影院列表*/
+
+
+

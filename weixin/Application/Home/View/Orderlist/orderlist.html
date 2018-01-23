@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>订单列表</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		<script type="text/javascript" src="bootstrap/js/jquery-1.12.3.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		<style>
+		    *{
+			
+			}
+			body{
+			margin:0;
+			padding:0;
+				width: 100%;
+				background-color: #E3E3E3;
+			}
+			.main{
+				width: 100%;
+			}
+			.content{
+				width: 100%;
+				color: #D3D3D3;
+				background: #fff;
+				text-indent:20px;
+				display: inline-block;
+				position: relative;
+				margin-bottom: 5%;
+			}
+			.content>h3{
+				font-weight: bold;
+				width: 75%;
+			}
+			.content>h3>span{
+				font-size: 18px;
+			}
+			.content>div:nth-of-type(1){
+				width: 75%;
+				margin: 0;
+			}
+			.content>p{
+				width: 75%;
+			}
+			.money{
+				position: absolute;
+				top: 25%;
+				right: 5%;
+				color: red;
+				font-size: 2em;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="main">
+                    {if $list}
+                    {foreach from=$list key=k item=v}
+			<div class="content">
+                            <a href="?m=Home&c=Dingdan&a=DingdanInfo&m_id={$v.list['m_id']}&seat={$v['seat']}&date={$v.list['date']}&time={$v.list['time']}" style="text-decoration: none;color:black;display: block;">
+				<h3>{$v.list.list["name"]} &nbsp;<span>1张</span></h3>
+				<div>
+					<span>{$v.list["date"]} {$v.list["time"]} ({$v.list.list["language"]}2D)</span>
+				</div>
+				<p>{$v.list["t_id"]} {$v.list["h_id"]} {$v.list["people_row"]}排 {$v.list["people_line"]}座</p>
+				<div class="money">
+					{$v.list["money"]}
+				</div>
+                                </a>
+			</div>
+			{/foreach}
+                        {else}
+                        <div style="text-align:center;width: 100%;color: #D3D3D3;background: #fff;display: inline-block;position: relative;margin-bottom: 5%;color:red;">
+				<h1>您还没有购买电影票哦</h1>
+			</div>
+                        {/if}
+			
+		</div>
+		
+	</body>
+</html>

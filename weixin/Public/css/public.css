@@ -1,0 +1,57 @@
+/*公共样式*/
+body{
+	margin: 0 auto;
+	width: 100%;
+}
+div{
+	margin: 0 auto;
+	padding: 0;
+}
+a{
+	text-decoration: none !important;
+	font-size: 16px;
+	color: #333;
+}
+a:hover{
+	text-decoration: none;
+	color: #fff;
+}
+li{
+	list-style: none;
+}
+
+/*公共样式*/
+
+
+
+/*底部导航*/
+.bottom_nav{
+	background: #fff;
+	width: 100%;
+	padding-top: 3%;
+	position:fixed;
+    bottom:0;
+    border-top: 1px;
+    opacity: 0.95;
+    border-top: 1px solid #DDDDDD;
+}
+.bottom_nav>a>div{
+	width: 33%;
+	float: left;
+	text-align: center;
+    color: #333;
+}
+.bottom_nav>a>div>img{
+	width: 18%;
+}
+.bottom_nav>a>div>p{
+	font-size:10px;
+	margin: 0;
+}
+.bottom_nav .color{
+	color: red;
+}
+.bottom_nav .wode>img{
+	transform: rotateY(180deg);
+}
+/*底部导航*/

@@ -1,0 +1,171 @@
+/*顶部导航*/
+.header{
+	width:100%;
+	margin: 0 auto;
+	height: 40px;
+	background: #fff;
+}
+/*地区*/
+.diqu{
+	width: 30%;
+	float: left;
+	line-height: 40px;
+}
+.diqu img{
+	width: 30px;
+    height: 30px;
+    margin: 5% 5% 0 5%;
+    float: left;
+}
+.diqu>a{
+	width: 50%;
+    color: #AAAAAA;
+    font-size: 14px;
+}
+.diqu>a>span{
+	margin-left: 5px;
+}
+/*热映上映*/
+.top_nav{
+	width: 60%;
+	float: right;
+	line-height: 40px;
+}
+.top_nav>div{
+	float: left;
+	padding: 0 10px;
+}
+.top_nav>div>a{
+	color: #A9A9A9;
+}
+.hongxian{
+	border-bottom: 2px solid red;
+}
+.hongzi{
+	color: red !important;
+}
+/*顶部导航*/
+
+/*轮播*/
+ul,ol,li,div {
+	margin: 0;
+	padding: 0;
+}
+ul,ol {
+	list-style: none;
+}
+
+.ft-carousel {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.ft-carousel .carousel-inner {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+}
+
+.ft-carousel .carousel-inner .carousel-item {
+	float: left;
+	height: 100%;
+}
+
+.ft-carousel .carousel-item img {
+	width: 100%;
+}
+
+.ft-carousel .carousel-indicators {
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	width: 100%;
+	font-size: 0;
+	margin: 0 auto;
+}
+
+.ft-carousel .carousel-indicators span {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background-color: #fff;
+	margin: 0 4px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.ft-carousel .carousel-indicators span.active {
+	background-color: #de3a3a;
+}
+
+.ft-carousel .carousel-btn {
+	position: absolute;
+	top: 50%;
+	width: 50px;
+	height: 45px;
+	margin-top: -25px;
+	cursor: pointer;
+}
+/*影片列表*/
+.main{
+	margin: 0 3%;
+}
+.main>div{
+	display: inline-block;
+	width: 100%;
+	padding: 5% 0;
+	border-bottom: 1px solid #D3D3D3;
+}
+.main>div>img{
+	width: 20%;
+	float: left;
+	margin-right: 2%;
+	display: block;
+}
+.main_content{
+	width: 50%;
+	display: inherit;
+}
+.main_content>h5{
+	margin: 0 auto;
+	margin-bottom: 3%;
+	width: 100%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.main_content>div{
+	width: 100%;
+	margin: 4% 0;
+}
+.main_content>div>img{
+	width: 10%;
+}
+.main_content>p{
+	width: 100%;
+	margin-bottom: 4%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.goupiao{
+	float: right;
+	text-align: center;
+	margin-right: 5%;
+    margin-top: 10%;
+}
+.goupiao>a{
+	color: #fff;
+    background: red;
+    padding: 1px 5px;
+    border-radius: 15px;
+}
+.goupiao>p{
+	color: #AAAAAA;
+	font-size: 12px;
+}
+/*影片列表*/
+

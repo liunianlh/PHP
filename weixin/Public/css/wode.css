@@ -1,0 +1,33 @@
+
+.top>div{
+	margin-top: 5%;
+	width: 30%;
+	border-radius: 50%;
+	border: 5px solid #fff;
+}
+.top>div>img{
+	width: 100%;
+	border-radius: 50%;
+	border: 2px solid #AAAAAA;
+}
+.top>p{
+	font-size: 2em;
+	color: #fff;
+}
+.center{
+	width: 100%;
+	padding: 0 5% 5% 5%;
+	margin: 5% 0;
+	background: #fff;
+}
+.center>div{
+	padding: 5% 0;
+	border-bottom: 1px solid #AAAAAA;
+}
+.center>div>img{
+	margin-right: 5%;
+}
+
+
+
+
