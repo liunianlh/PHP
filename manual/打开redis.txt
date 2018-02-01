@@ -1,0 +1,7 @@
+redis打开
+cmd 找到redis文件夹
+redis-sever.exe redis.conf
+
+再打开cmd
+cmd 找到redis文件夹
+redis-cli.exe -h 127.0.0.1 -p 6379
