@@ -32,17 +32,10 @@
                     <div class="panel panel-default" style="background-color: silver;">
                         <div class="panel-heading">推荐新闻</div>
                         <div class="panel-body">
-                            <div class="list-group">
-                                <a class="list-group-item" href="">这4点，可能对你求职面试有帮助<p class="navbar-right" style="padding-right: 10px;">浏览量:12540</p></a>
-                            	<a class="list-group-item" href="">中国的程序猿培训是不是有问题？<p class="navbar-right" style="padding-right: 10px;">浏览量:5345</p></a>
-                            	<a class="list-group-item" href="">天神娱乐基于Motion区块链游戏发行平台开发游戏产品<p class="navbar-right" style="padding-right: 10px;">浏览量:8465</p></a>
-                            	<a class="list-group-item" href="">人民日报评直播问答：百舸争流背后同质化弊病已显现<p class="navbar-right" style="padding-right: 10px;">浏览量:4958</p></a>
-                            	<a class="list-group-item" href="">理想的程序猿<p class="navbar-right" style="padding-right: 10px;">浏览量:7643</p></a>
-                            	 <a class="list-group-item" href="">这4点，可能对你求职面试有帮助<p class="navbar-right" style="padding-right: 10px;">浏览量:12540</p></a>
-                            	<a class="list-group-item" href="">中国的程序猿培训是不是有问题？<p class="navbar-right" style="padding-right: 10px;">浏览量:5345</p></a>
-                            	<a class="list-group-item" href="">天神娱乐基于Motion区块链游戏发行平台开发游戏产品<p class="navbar-right" style="padding-right: 10px;">浏览量:8465</p></a>
-                            	<a class="list-group-item" href="">人民日报评直播问答：百舸争流背后同质化弊病已显现<p class="navbar-right" style="padding-right: 10px;">浏览量:4958</p></a>
-                            	<a class="list-group-item" href="">理想的程序猿<p class="navbar-right" style="padding-right: 10px;">浏览量:7643</p></a>
+                            <div class="list-group">                               
+                                 {foreach $index as $vo}                               
+                                <a class="list-group-item" href="">{$vo.news}<p class="navbar-right" style="padding-right: 10px;">浏览量:{$vo.look}</p></a>
+                                 {/foreach}
                             </div>
                         </div>
                     </div>
@@ -54,11 +47,9 @@
                         </div>
                         <div class="panel-body">
                             <div class="list-group">                            	
-                                <a class="list-group-item" href="" style="font-size: 20px;"><img src="__BOOSIMG__/144041_699493.jpg" alt=".." class="img-thumbnail" style="width: 60px; height: 60px;margin-right:14px ;">理想的程序猿<p class="navbar-right" style="padding-right: 10px;">浏览量:12540</p></a>
-                           		<a class="list-group-item" href="" style="font-size: 20px;"><img src="__BOOSIMG__/144041_699493.jpg" alt=".." class="img-thumbnail" style="width: 60px; height: 60px;margin-right:14px ;">理想的程序猿<p class="navbar-right" style="padding-right: 10px;">浏览量:12540</p></a>
-                           		<a class="list-group-item" href="" style="font-size: 20px;"><img src="__BOOSIMG__/144041_699493.jpg" alt=".." class="img-thumbnail" style="width: 60px; height: 60px;margin-right:14px ;">理想的程序猿<p class="navbar-right" style="padding-right: 10px;">浏览量:12540</p></a>
-                           		<a class="list-group-item" href="" style="font-size: 20px;"><img src="__BOOSIMG__/144041_699493.jpg" alt=".." class="img-thumbnail" style="width: 60px; height: 60px;margin-right:14px ;">理想的程序猿<p class="navbar-right" style="padding-right: 10px;">浏览量:12540</p></a>
-                           		<a class="list-group-item" href="" style="font-size: 20px;"><img src="__BOOSIMG__/144041_699493.jpg" alt=".." class="img-thumbnail" style="width: 60px; height: 60px;margin-right:14px ;">理想的程序猿<p class="navbar-right" style="padding-right: 10px;">浏览量:12540</p></a>
+                                   {foreach $index as $vo}                               
+                                <a class="list-group-item" href="">{$vo.news}<p class="navbar-right" style="padding-right: 10px;">浏览量:{$vo.look}</p></a>
+                                 {/foreach}
                             </div>
                         </div>
                     </div>

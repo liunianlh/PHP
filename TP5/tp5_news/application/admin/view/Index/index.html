@@ -62,24 +62,26 @@
 										<h4 class="modal-title" id="myModalLabel">添加新闻</h4>
 									</div>
 									<div class="modal-body">
-										<form>
+										 <form action="{:url('admin/Index/add')}" method="post">
 											<div class="form-group">
 												<label for="exampleInputEmail1">新闻标题</label>
-												<input type="email" class="form-control" id="exampleInputEmail1" placeholder="请输入新闻标题">
+												<input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入新闻标题" name="news">
 											</div>
 											<div class="form-group">
 												<label for="exampleInputPassword1">新闻内容</label>
-												<input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入新闻内容">
+												<input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入新闻内容" name="details">
 											</div>
 											
 											
-											<button type="submit" class="btn btn-default">添加</button>
-										</form>
+											
+										
 									</div>
 									<div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-										<button type="button" class="btn btn-primary">提交更改</button>
+										
+										<button type="submit" class="btn btn-default">添加</button>
+                                                                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
 									</div>
+                                                                    </form>
 								</div>
 								<!-- /.modal-content -->
 							</div>
@@ -92,20 +94,64 @@
 								<th>新闻内容</th>
                                                                 <th>新闻类型</th>
 								<th>浏览量</th>
+                                                                <th>添加时间</th>
+                                                                <th>修改时间</th>
 								<th>操作</th>
 							</tr>
 						</thead>
 						<tbody>
-                                                      {foreach $admin as $vo} 
+                                                       {foreach $list as $vo}
 							
 							<tr>
 								<td>{$vo.news}</td>
 								<td>{$vo.details}</td>
 								<td>{$vo.type}</td>
                                                                 <td>{$vo.look}</td>
-								<td>
-									<a href="#">删除</a>
-									<a href="#">修改</a>
+                                                                <td>{$vo.add_time}</td>
+                                                                <td>{$vo.up_time}</td>
+								<td>                                                                    
+									<a href="{:url('admin/index/delete',['id'=>$vo['id']])}">删除</a>
+                                                                        
+                                                                        <!-- 按钮触发模态框 -->
+						<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#my" id="xiugai" value="{$vo.id}">修改</button>
+						<!--<a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">添加</a>-->
+						<!-- 模态框（Modal） -->
+						<div class="modal fade" id="my" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                 
+                                                   
+							<div class="modal-dialog">
+                                                            
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+										<h4 class="modal-title" id="myModalLabel">修改新闻</h4>
+									</div>
+									<div class="modal-body">
+										 <form action="{:url('admin/Index/updata')}" method="post">
+                                                                                      <input type="text" id="id" name="id">
+											<div class="form-group">
+												<label for="exampleInputEmail1">新闻标题</label>
+												<input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入新闻标题" name="news" value="{$vo.news}">
+											</div>
+											<div class="form-group">
+												<label for="exampleInputPassword1">新闻内容</label>
+												<input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入新闻内容" name="details"  value="{$vo.details}">
+											</div>
+											
+											
+											
+										
+									</div>
+									<div class="modal-footer">
+										
+										<button type="submit" class="btn btn-default">修改</button>
+                                                                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+									</div>
+                                                                    </form>
+								</div>
+								<!-- /.modal-content -->
+							</div>
+									
 								</td>
 							</tr>
                                                         {/foreach}
@@ -186,12 +232,21 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
-
 		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 		<script src="__BOOSTRAP__/dist/js/bootstrap.min.js"></script>
 	</body>
 
 </html>
+<script>
+    $(function(){
+   
+        $(".btn").click(function(){
+                
+           var id=$(this).attr("value");
+      
+          $("#my").find("#id").attr("value",id);
+        });
+    });
+</script>
