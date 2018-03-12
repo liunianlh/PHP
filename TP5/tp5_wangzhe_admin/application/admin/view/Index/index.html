@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>admin</title>
+		<link href="__BOOSTRAP__/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="__BOOSTRAP__/dist/css/style.css" />
+	</head>
+
+	<body>
+		<div class="container">
+
+			<ul id="myTab" class="nav nav-tabs">
+				<li class="active">
+					<a href="#home" data-toggle="tab">
+						推荐新闻管理
+					</a>
+				</li>
+				<li>
+					<a href="#ios" data-toggle="tab">图文新闻管理</a>
+				</li>
+				<li class="dropdown">
+					<a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">各种新闻管理
+						<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+						<li>
+							<a href="#jmeter" tabindex="-1" data-toggle="tab">前端开发</a>
+						</li>
+						<li>
+							<a href="#ejb" tabindex="-1" data-toggle="tab">后端开发</a>
+						</li>
+						<li>
+							<a href="#AI" tabindex="-1" data-toggle="tab">人工智能</a>
+						</li>
+						<li>
+							<a href="#IT" tabindex="-1" data-toggle="tab">编程语言</a>
+						</li>
+						<li>
+							<a href="#youxi" tabindex="-1" data-toggle="tab">游戏开发</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<div id="myTabContent" class="tab-content">
+				<div class="tab-pane fade in active" id="home">
+					<!-- On rows -->
+					<table class="table">
+
+						<!-- 按钮触发模态框 -->
+						<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">添加</button>
+						<!--<a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">添加</a>-->
+						<!-- 模态框（Modal） -->
+						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+										<h4 class="modal-title" id="myModalLabel">添加新闻</h4>
+									</div>
+									<div class="modal-body">
+										 <form action="{:url('admin/Index/add')}" method="post">
+											<div class="form-group">
+												<label for="exampleInputEmail1">新闻标题</label>
+												<input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入新闻标题" name="news">
+											</div>
+											<div class="form-group">
+												<label for="exampleInputPassword1">新闻内容</label>
+												<input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入新闻内容" name="details">
+											</div>
+											
+											
+											
+										
+									</div>
+									<div class="modal-footer">
+										
+										<button type="submit" class="btn btn-default">添加</button>
+                                                                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+									</div>
+                                                                    </form>
+								</div>
+								<!-- /.modal-content -->
+							</div>
+							<!-- /.modal -->
+						</div>
+
+						<thead>
+							<tr>
+								<th>新闻标题</th>
+								<th>新闻内容</th>
+                                                                <th>新闻类型</th>
+								<th>浏览量</th>
+                                                                <th>添加时间</th>
+                                                                <th>修改时间</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+                                                       {foreach $list as $vo}
+							
+							<tr>
+								<td>{$vo.news}</td>
+								<td>{$vo.details}</td>
+								<td>{$vo.type}</td>
+                                                                <td>{$vo.look}</td>
+                                                                <td>{$vo.add_time}</td>
+                                                                <td>{$vo.up_time}</td>
+								<td>                                                                    
+									<a href="{:url('admin/index/delete',['id'=>$vo['id']])}">删除</a>
+                                                                        
+                                                                        <!-- 按钮触发模态框 -->
+						<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#my" id="xiugai" value="{$vo.id}">修改</button>
+						<!--<a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">添加</a>-->
+						<!-- 模态框（Modal） -->
+						<div class="modal fade" id="my" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                 
+                                                   
+							<div class="modal-dialog">
+                                                            
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+										<h4 class="modal-title" id="myModalLabel">修改新闻</h4>
+									</div>
+									<div class="modal-body">
+										 <form action="{:url('admin/Index/updata')}" method="post">
+                                                                                      <input type="text" id="id" name="id">
+											<div class="form-group">
+												<label for="exampleInputEmail1">新闻标题</label>
+												<input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入新闻标题" name="news" value="{$vo.news}">
+											</div>
+											<div class="form-group">
+												<label for="exampleInputPassword1">新闻内容</label>
+												<input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入新闻内容" name="details"  value="{$vo.details}">
+											</div>
+											
+											
+											
+										
+									</div>
+									<div class="modal-footer">
+										
+										<button type="submit" class="btn btn-default">修改</button>
+                                                                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+									</div>
+                                                                    </form>
+								</div>
+								<!-- /.modal-content -->
+							</div>
+									
+								</td>
+							</tr>
+                                                        {/foreach}
+                                                        
+						</tbody>
+					</table>
+			
+
+				</div>
+				<div class="tab-pane fade" id="ios">
+					<div class="panel-body">
+						<div class="list-group">
+							<a class="list-group-item" href="" style="font-size: 20px;"><img src="__BOOSIMG__/144041_699493.jpg" alt=".." class="img-thumbnail" style="width: 60px; height: 60px;margin-right:14px ;">理想的程序猿
+								<p class="navbar-right" style="padding-right: 10px;">浏览量:12540</p>
+							</a>
+							<a class="list-group-item" href="" style="font-size: 20px;"><img src="__BOOSIMG__/144041_699493.jpg" alt=".." class="img-thumbnail" style="width: 60px; height: 60px;margin-right:14px ;">理想的程序猿
+								<p class="navbar-right" style="padding-right: 10px;">浏览量:12540</p>
+							</a>
+							<a class="list-group-item" href="" style="font-size: 20px;"><img src="__BOOSIMG__/144041_699493.jpg" alt=".." class="img-thumbnail" style="width: 60px; height: 60px;margin-right:14px ;">理想的程序猿
+								<p class="navbar-right" style="padding-right: 10px;">浏览量:12540</p>
+							</a>
+							<a class="list-group-item" href="" style="font-size: 20px;"><img src="__BOOSIMG__/144041_699493.jpg" alt=".." class="img-thumbnail" style="width: 60px; height: 60px;margin-right:14px ;">理想的程序猿
+								<p class="navbar-right" style="padding-right: 10px;">浏览量:12540</p>
+							</a>
+							<a class="list-group-item" href="" style="font-size: 20px;"><img src="__BOOSIMG__/144041_699493.jpg" alt=".." class="img-thumbnail" style="width: 60px; height: 60px;margin-right:14px ;">理想的程序猿
+								<p class="navbar-right" style="padding-right: 10px;">浏览量:12540</p>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="jmeter">
+					<div class="panel-body">
+						<div class="list-group">
+
+							<a class="list-group-item" href="" style="font-size: 20px;"><img src="__BOOSIMG__/144041_699493.jpg" alt=".." class="img-thumbnail" style="width: 60px; height: 60px;margin-right:14px ;">理想的程序猿
+								<p class="navbar-right" style="padding-right: 10px;">浏览量:12540</p>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="ejb">
+					<div class="panel-body">
+						<div class="list-group">
+
+							<a class="list-group-item" href="" style="font-size: 20px;"><img src="__BOOSIMG__/144041_699493.jpg" alt=".." class="img-thumbnail" style="width: 60px; height: 60px;margin-right:14px ;">理想的程序猿
+								<p class="navbar-right" style="padding-right: 10px;">浏览量:12540</p>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="AI">
+					<div class="panel-body">
+						<div class="list-group">
+
+							<a class="list-group-item" href="" style="font-size: 20px;"><img src="__BOOSIMG__/144041_699493.jpg" alt=".." class="img-thumbnail" style="width: 60px; height: 60px;margin-right:14px ;">理想的程序猿
+								<p class="navbar-right" style="padding-right: 10px;">浏览量:12540</p>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="IT">
+					<div class="panel-body">
+						<div class="list-group">
+
+							<a class="list-group-item" href="" style="font-size: 20px;"><img src="__BOOSIMG__/144041_699493.jpg" alt=".." class="img-thumbnail" style="width: 60px; height: 60px;margin-right:14px ;">理想的程序猿
+								<p class="navbar-right" style="padding-right: 10px;">浏览量:12540</p>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="youxi">
+					<div class="panel-body">
+						<div class="list-group">
+
+							<a class="list-group-item" href="" style="font-size: 20px;"><img src="__BOOSIMG__/144041_699493.jpg" alt=".." class="img-thumbnail" style="width: 60px; height: 60px;margin-right:14px ;">理想的程序猿
+								<p class="navbar-right" style="padding-right: 10px;">浏览量:12540</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+		<script src="__BOOSTRAP__/dist/js/bootstrap.min.js"></script>
+	</body>
+
+</html>
+<script>
+    $(function(){
+   
+        $(".btn").click(function(){
+                
+           var id=$(this).attr("value");
+      
+          $("#my").find("#id").attr("value",id);
+        });
+    });
+</script>
