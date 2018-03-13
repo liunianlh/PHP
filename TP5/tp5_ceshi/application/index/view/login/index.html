@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>登录</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--引文件都使用的是网络的绝对地址(带有域名)，不能使用相对地址-->
+        <link rel="stylesheet" href="__PUBLIC__static/login.css"/>
+    </head>
+    <body>
+        <!--{:url('模块/控制器/方法')}-->
+        <form action="{:url('index/login/check')}" method="post">
+            用户名:<input type="text" name="name"/>
+            密码：<input type="text" name="pwd"/>
+            <input type="submit" value="登录"/>
+        </form>
+    </body>
+</html>
