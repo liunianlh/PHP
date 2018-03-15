@@ -9,8 +9,9 @@ class Pin extends Controller{
         
 //    品牌管理
       public function index(){
-
-       $list=Role::all();
+        $Role=new Role();
+          $list=$Role->paginate(2);
+      
        $this->assign("list",$list);
           return $this->fetch();
                  
@@ -55,4 +56,52 @@ class Pin extends Controller{
        }
 
     }
+    
+    
+    
+            
+     
+//    修改数据
+//    
+              public function update($id){
+         //    使用role表中的数据
+             $list=Role::get($id);
+             
+//             $role=new Role();
+//             $data=$role->field("name,id")->select();
+//             
+//              $this->assign("data",$data);
+           $this->assign("list",$list);
+           
+             return $this->fetch();
+         }
+    
+                 
+
+         
+         
+         
+         public function updata(){
+//         $adminModel = new adminModel();
+         $data=input("post.");
+//       var_dump($data);
+         
+         
+//         $rel=$adminModel->isUpdate(true)->save($data);
+       //  var_dump($Admin);
+       //  
+
+     
+                $role=new Role;
+                if($role->save($data,["id"=>$data["id"]])){
+//                    except("password1")排除字段
+                    $this->success("修改成功","admin/pin/index");
+                }else{
+                   $this->success("修改成功");
+                }
+      
+
+          }
+         
+            
 }

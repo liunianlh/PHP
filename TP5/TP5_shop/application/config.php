@@ -235,5 +235,10 @@ return [
         'type'      => 'bootstrap',
         'var_page'  => 'page',
         'list_rows' => 15,
+    ], 
+    'view_replace_str'  =>  [
+        "__BOOSTRAP__"=>"/TP5_shop/public/",
+         
     ],
+    
 ];

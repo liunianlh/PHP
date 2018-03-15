@@ -5,8 +5,8 @@ use think\Controller;
 use think\Db;
 use app\admin\model\Role;
 use app\admin\model\Admin as adminModel;
-
 use think\Loader;
+use think\Paginator;
 class Admin extends Controller{
 //    管理员列表
         
@@ -17,10 +17,13 @@ class Admin extends Controller{
       public function index(){
 //              $info=Role::get(1);
 //        dump($info->admin->toArray());
-       $list=adminModel::all();
+          
+          $adminModel=new adminModel();
+          $list=$adminModel->paginate(2);
+          
+
        $this->assign("list",$list);
-          return $this->fetch();
-                 
+          return $this->fetch();                
        }
          public function add(){
          //    使用role表中的数据
@@ -71,34 +74,44 @@ class Admin extends Controller{
 //    
               public function update($id){
          //    使用role表中的数据
-             $list=Role::all();
-           $this->assign("role",$list);
+             $list=adminModel::get($id);
+             $role=new Role();
+             $data=$role->field("name,id")->select();
+             
+              $this->assign("data",$data);
+           $this->assign("list",$list);
+           
              return $this->fetch();
          }
     
                  
-     public function updata($id){
 
-      
          
          
          
-         $adminModel = new adminModel();
+         public function updata(){
+//         $adminModel = new adminModel();
          $data=input("post.");
-       $rel=$adminModel->isUpdate(true)->save($data,['id'=>$id]);
+//        var_dump($data);
+         
+         
+//         $rel=$adminModel->isUpdate(true)->save($data);
        //  var_dump($Admin);
        //  
- 
-// post数组中只有name和email字段会写入
-//     $Admin->allowField(['news','details'])->save();
-            if($new_id){
-           $this->success('修改成功', 'Index/index');   
-       }else{
-           $this->error('修改失败', 'Index/index'); 
-       }
-//
-         }
 
-//    
+           $validate=Loader::validate('Admin');
+        if(!$validate->check($data)){
+           $this->error($validate->getError());
+        }else{
+                $adminModel=new adminModel;
+                if($adminModel->except("password1")->save($data,["id"=>$data["id"]])){
+//                    except("password1")排除字段
+                    $this->success("添加成功","admin/admin/index");
+                }else{
+                   $this->success("添加成功");
+                }
+        }
+
+          }
          
 }

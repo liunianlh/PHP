@@ -67,7 +67,7 @@
 
 								
 
-								<form action="{:url('admin/pinpai/insert')}" method='post' id="form_sample_2" class="form-horizontal">
+								<form action="{:url('admin/pinpai/insert')}" method='post' id="form_sample_2" class="form-horizontal" enctype="multipart/form-data">
 
 									<div class="alert alert-error hide">
 
@@ -97,13 +97,19 @@
 
 									</div>
 
-									<div class="control-group">
+<!--
+                                                                <form action="{:url('admin/pinpai/upload')}" enctype="multipart/form-data" method="post">-->
+<!--                                                                <input type="file" name="image" /> <br> 
+                                                                <input type="submit" value="上传" /> 
+                                                                </form> -->
 
-										<label class="control-label">login</label>
+                                                            <div class="control-group">
+
+										<label class="control-label">logio</label>
 
 										<div class="controls">
 
-											<input name="login" type="password" class="span6 m-wrap"/>
+											 <input type="file" name="image" name="image" />
 
 										</div>
 

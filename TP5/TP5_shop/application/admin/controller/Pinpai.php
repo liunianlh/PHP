@@ -10,8 +10,9 @@ class Pinpai extends Controller{
         
 //    品牌管理
       public function index(){
-
-       $list=Brand::all();
+        $Brand=new Brand();
+          $list=$Brand->paginate(2);
+     
        $this->assign("list",$list);
           return $this->fetch();
                  
@@ -25,17 +26,46 @@ class Pinpai extends Controller{
          
                   
           public function insert(){
+                
+              
+          // 获取表单上传文件 例如上传了001.jpg
+    $file = request()->file('image');
+    // 移动到框架应用根目录/public/uploads/ 目录下
+    $info = $file->move(ROOT_PATH . 'public' . DS . 'uploads');
+    if($info){
+        // 成功上传后 获取上传信息
+        // 输出 jpg
 
+       // 输出 20160820/42a79759f284b767dfcb2a0197904287.jpg
+      $img=$info->getSaveName();
+      echo $img;
+        // 输出 42a79759f284b767dfcb2a0197904287.jpg
+
+    }else{
+        // 上传失败获取错误信息
+       echo $file->getError();
+    }
+
+
+              
+          
+              
+              
+              
+              
+              
+              
+          
                 $Role = new Brand($_POST);
-//                echo $Role;
+                echo $Role;
            
             // post数组中只有name和email字段会写入
-                 $Role->allowField(['title','login','site'])->save();
-             if($Role){
-                       $this->success('添加成功', 'pinpai/index');   
-                   }else{
-                       $this->success('添加失败', 'pinpai/index'); 
-                   }
+//                 $Role->allowField(['title','login','site'])->save();
+//             if($Role){
+//                       $this->success('添加成功', 'pinpai/index');   
+//                   }else{
+//                       $this->success('添加失败', 'pinpai/index'); 
+//                   }
 
             }
             
@@ -52,6 +82,54 @@ class Pinpai extends Controller{
        }
 
     }
+    
+    
+    
+      
+//    修改数据
+//    
+              public function update($id){
+         //    使用role表中的数据
+             $list=Brand::get($id);
+             
+//             $role=new Role();
+//             $data=$role->field("name,id")->select();
+//             
+//              $this->assign("data",$data);
+           $this->assign("list",$list);
+           
+             return $this->fetch();
+         }
+    
+                 
+
+         
+         
+         
+         public function updata(){
+//         $adminModel = new adminModel();
+         $data=input("post.");
+//       var_dump($data);
+         
+         
+//         $rel=$adminModel->isUpdate(true)->save($data);
+       //  var_dump($Admin);
+       //  
+
+     
+                $role=new Brand;
+                if($role->save($data,["id"=>$data["id"]])){
+//                    except("password1")排除字段
+                    $this->success("修改成功","admin/pinpai/index");
+                }else{
+                   $this->success("修改成功");
+                }
+      
+
+          }
+         
+    
             
+ 
   
 }
